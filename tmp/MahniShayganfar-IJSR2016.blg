@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MahniShayganfar-IJSR2016.aux
+The style file: abbrv.bst
+Database file #1: mshayganfar.bib.bib
+Warning--can't use both volume and number fields in hudlicka:emotinos-reasons
+Too many commas in name 1 of "Rafael A. Calvo, Sidney D'Mello, Jonathan Gratch, Arvid Kappas" for entry paiva:emotion-modeling
+while executing---line 1090 of file abbrv.bst
+You've used 69 entries,
+            2118 wiz_defined-function locations,
+            892 strings with 16841 characters,
+and the built_in function-call counts, 26621 in all, are:
+= -- 2584
+> -- 1266
+< -- 32
++ -- 508
+- -- 424
+* -- 1806
+:= -- 4236
+add.period$ -- 225
+call.type$ -- 69
+change.case$ -- 401
+chr.to.int$ -- 0
+cite$ -- 70
+duplicate$ -- 1102
+empty$ -- 2148
+format.name$ -- 424
+if$ -- 5774
+int.to.chr$ -- 0
+int.to.str$ -- 69
+missing$ -- 78
+newline$ -- 347
+num.names$ -- 152
+pop$ -- 503
+preamble$ -- 1
+purify$ -- 342
+quote$ -- 0
+skip$ -- 783
+stack$ -- 0
+substring$ -- 1574
+swap$ -- 323
+text.length$ -- 32
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 256
+warning$ -- 1
+while$ -- 251
+width$ -- 71
+write$ -- 769
+(There was 1 error message)

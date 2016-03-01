@@ -1,0 +1,413 @@
+\begin{thebibliography}{10}
+
+\bibitem{adam:bdi-emotional-companion}
+C.~Adam and E.~Lorini.
+\newblock A {BDI} emotional reasoning engine for an artificial companion.
+\newblock In {\em Workshop on Agents and multi-agent Systems for AAL and
+  e-HEALTH (PAAMS)}, volume 430, pages 66--78. Springer, 2014.
+
+\bibitem{arnold:emotion-personality}
+M.~B. Arnold.
+\newblock {\em Emotion and personality}.
+\newblock Cassell & Co., 1960.
+
+\bibitem{bach:micropsi-agent-architecture}
+J.~Bach.
+\newblock {The MicroPsi Agent Architecture}.
+\newblock {\em In Proceeding of ICCM-5}, pages 15--20, 2003.
+
+\bibitem{bach:psi}
+J.~Bach.
+\newblock {\em Principles of Synthetic Intelligence PSI: An Architecture of
+  Motivated Cognition}.
+\newblock Oxford University Press, Inc., 2009.
+
+\bibitem{bach:motivaitional-system-ai}
+J.~Bach.
+\newblock A motivational system for cognitive ai.
+\newblock In J.~Schmidhuber, K.~R. Th$\acute{o}$risson, and M.~Looks, editors,
+  {\em Artificial General Intelligence}, volume 6830 of {\em Lecture Notes in
+  Computer Science}, pages 232--242. Springer Berlin Heidelberg, 2011.
+
+\bibitem{bach:next-generation-micropsi}
+J.~Bach.
+\newblock Micropsi 2: The next generation of the micropsi framework.
+\newblock In {\em Proceedings of the 5th International Conference on Artificial
+  General Intelligence}, AGI'12, pages 11--20. Springer-Verlag, 2012.
+
+\bibitem{bratman:intentions-plans}
+M.~E. Bratman.
+\newblock {\em Intention, Plans, and Practical Reason}.
+\newblock Cambridge, Mass.: Harvard University Press, 1987.
+
+\bibitem{breazeal:expressive-behavior}
+C.~Breazeal.
+\newblock Role of expressive behaviour for robots that learn from people.
+\newblock {\em Philosophical transactions of the Royal Society of London.
+  Series B, Biological sciences}, 364(1535):3527--38, 2009.
+
+\bibitem{breazeal:humanoid-robots}
+C.~Breazeal, A.~Brooks, J.~Gray, G.~Hoffman, C.~Kidd, H.~Lee, J.~Lieberman,
+  A.~Lockerd, and D.~Mulanda.
+\newblock Humanoid robots as cooperative partners for people.
+\newblock {\em Journal of Humanoid Robots}, 1(2):1--34, 2004.
+
+\bibitem{clancey:agent-assistants-collaboration}
+W.~J. Clancey.
+\newblock Roles for agent assistants in field science: Understanding personal
+  projects and collaboration.
+\newblock {\em IEEE Transactions on Systems, Man and Cybernetics, special issue
+  on Human-Robot Interaction}, 34(2):125--137, 2004.
+
+\bibitem{cohen:teamwork}
+P.~Cohen and H.~J. Levesque.
+\newblock {\em Teamwork}.
+\newblock SRI International, 1991.
+
+\bibitem{gratch:reverse-appraisal}
+C.~M. de~Melo, J.~Gratch, P.~Carnevale, and S.~J. Read.
+\newblock Reverse appraisal: The importance of appraisals for the effect of
+  emotion displays on people's decision-making in social dilemma.
+\newblock In {\em Proceedings of the 34th Annual Meeting of the Cognitive
+  Science Society ({CogSci})}, 2012.
+
+\bibitem{esau:integrating-emotion-collaboration}
+N.~Esau, L.~Kleinjohann, and B.~Kleinjohann.
+\newblock Integrating emotional competence into man-machine collaboration.
+\newblock In {\em Biologically-Inspired Collaborative Computing, September 8-9,
+  Milano, Italy}, pages 187--198, 2008.
+
+\bibitem{garcia:collaboration-emotional-awareness}
+O.~Garc$\acute{i}$a, J.~Favela, G.~Licea, and R.~Machorro.
+\newblock Extending a collaborative architecture to support emotional
+  awareness.
+\newblock In {\em Emotion Based Agent Architectures (ebaa’99}, pages 46--52,
+  1999.
+
+\bibitem{goffman:self-presentation}
+E.~Goffman.
+\newblock {\em The Presentation of Self in Everyday Life}.
+\newblock Anchor, 1959.
+
+\bibitem{castro:autonomous-robot-fear}
+A.~C. Gonzalez, M.~Malfaz, and M.~A. Salichs.
+\newblock An autonomous social robot in fear.
+\newblock {\em IEEE Transactions Autonomous Mental Development}, 5(2):135--151,
+  2013.
+
+\bibitem{gratch:assessing-appraisal}
+J.~Gratch, S.~Marsella, N.~Wang, and B.~Stankovic.
+\newblock Assessing the validity of appraisal-based models of emotion.
+\newblock In {\em International Conference on Affective Computing and
+  Intelligent Interaction}. IEEE, 2009.
+
+\bibitem{grosz:intention-dynamics-collaboration}
+B.~J. Grosz and L.~Hunsberger.
+\newblock The dynamics of intention in collaborative activity.
+\newblock {\em Cognitive Systems Research}, 7(2-3):259--272, 2007.
+
+\bibitem{grosz:planning-acting}
+B.~J. Grosz, L.~Hunsberger, and S.~Kraus.
+\newblock Planning and acting together.
+\newblock {\em {AI} Magazine}, 20(4):23--34, 1999.
+
+\bibitem{grosz:collaboration}
+B.~J. Grosz and S.~Kraus.
+\newblock Collaborative plans for complex group action.
+\newblock {\em Artificial Intelligence}, 86(2):269--357, 1996.
+
+\bibitem{grosz:discourse-structure}
+B.~J. Grosz and C.~L. Sidner.
+\newblock Attention, intentions, and the structure of discourse.
+\newblock {\em Computational Linguistics}, 12(3):175--204, July 1986.
+
+\bibitem{grosz:plans-discourse}
+B.~J. Grosz and C.~L. Sidner.
+\newblock Plans for discourse.
+\newblock In P.~R. Cohen, J.~Morgan, and M.~E. Pollack, editors, {\em
+  Intentions in Communication}, pages 417--444. MIT Press, Cambridge, MA, 1990.
+
+\bibitem{hudlicka:emotinos-reasons}
+E.~Hudlicka.
+\newblock Reasons for emotinos: Modeling emotinos in integrated cognitive
+  systems.
+\newblock In W.~D. Gary, editor, {\em Integrated Models of Cognitive Systems},
+  volume~59, pages 1--37. New York: Oxford University Press, 2007.
+
+\bibitem{marinier:emotion-reinforcement}
+R.~P.~M. III and J.~E. Laird.
+\newblock Emotion-driven reinforcement learning.
+\newblock In {\em CogSci 2008}, 2008.
+
+\bibitem{kabil:coordination-mechanisms}
+A.~Kabil, C.~D. Keukelaere, and P.~Chavaillier.
+\newblock Coordination mechanisms in human-robot collaboration.
+\newblock In {\em Proceeding of the 7th International Conference on Advances in
+  Computer-Human Interactions}, pages 389--394, 2014.
+
+\bibitem{kim:model-hri-appraisal}
+H.-R. Kim and D.-S. Kwon.
+\newblock Computational model of emotion generation for human-robot interaction
+  based on the cognitive appraisal theory.
+\newblock {\em Journal of Intelligent and Robotic Systems}, 60(2):263--283,
+  2010.
+
+\bibitem{kiryazov:modeling-appraisal-pad}
+K.~Kiryazov, R.~Lowe, C.~Becker-Asano, and T.~Ziemke.
+\newblock Modelling embodied appraisal in humanoids : Grounding pad space for
+  augmented autonomy.
+\newblock In {\em Proceedings of the Workshop on Standards in Emotion
+  Modeling}, 2011.
+
+\bibitem{kitano:robocup}
+H.~Kitano, M.~Asada, Y.~Kuniyoshi, I.~Noda, E.~Osawai, and H.~Matsubara.
+\newblock Robocup: {A} challenge problem for {AI}.
+\newblock {\em {AI} Magazine}, 18(1):73--85, 1997.
+
+\bibitem{lazarus:emotion-adaptation}
+R.~S. Lazarus.
+\newblock {\em Emotion and Adaptation}.
+\newblock OXFORD University Press, 1991.
+
+\bibitem{levesque:acting-together}
+H.~J. Levesque, P.~R. Cohen, and J.~H.~T. Nunes.
+\newblock On acting together.
+\newblock In {\em AAAI}, pages 94--99. AAAI Press / The MIT Press, 1990.
+
+\bibitem{Litman:discourse-commonsense}
+D.~J. Litman and J.~F. Allen.
+\newblock Discourse processing and commonsense plans.
+\newblock In P.~R. Cohen, J.~Morgan, and M.~E. Pollack, editors, {\em
+  Intentions in Communication}, pages 365--388. MIT Press, Cambridge, MA, 1990.
+
+\bibitem{liu:affect-robot-behavior}
+C.~Liu and N.~Sarkar.
+\newblock Online affect detection and robot behavior adaptation for
+  intervention of children with autism.
+\newblock {\em IEEE TRANSACTIONS ON ROBOTICS}, 24(4):883--896, 2008.
+
+\bibitem{lochbaum:collaborative-planning}
+K.~E. Lochbaum.
+\newblock A collaborative planning model of intentional structure.
+\newblock {\em Computational Linguistics}, 24(4):525--572, 1998.
+
+\bibitem{lochbaum:plan-models}
+K.~E. Lochbaum, B.~J. Grosz, and C.~L. Sidner.
+\newblock Models of plans to support communication: An initial report.
+\newblock In {\em Proceedings of the Eighth National Conference on Artificial
+  Intelligence}, pages 485--490. AAAI Press, 1990.
+
+\bibitem{parkinson:emotion-social-interaction}
+C.~Marinetti, P.~Moore, P.~Lucas, and B.~Parkinson.
+\newblock Emotions in social interactions: Unfolding emotional experience.
+\newblock In {\em Emotion-Oriented Systems, Cognitive Technologies}, pages
+  31--46. Springer Berlin Heidelberg, 2011.
+
+\bibitem{marsella:robocup}
+S.~Marsella, J.~Adibi, Y.~Al-Onaizan, A.~Erdem, R.~Hill, G.~A. Kaminka, Z.~Qiu,
+  and M.~Tambe.
+\newblock Using an explicit teamwork model and learning in robocup: An extended
+  abstract.
+\newblock In {\em RoboCup-98: Robot Soccer World Cup II}, volume 1604, pages
+  237--245. Springer Berlin Heidelberg, 1999.
+
+\bibitem{marsella:ema-process-model}
+S.~C. Marsella and J.~Gratch.
+\newblock {EMA}: A process model of appraisal dynamics.
+\newblock {\em Cognitive Systems Research}, 10(1):70--90, March 2009.
+
+\bibitem{scott:modeling-empathy-agent}
+S.~W. McQuiggan and J.~C. Lester.
+\newblock Modeling and evaluating empathy in embodied companion agents.
+\newblock {\em International Journal of Human-Computer Studies},
+  65(4):348--360, 2007.
+
+\bibitem{montreuil:planning-robot-activity}
+V.~Montreuil, A.~Clodic, M.~Ransan, and R.~Alami.
+\newblock Planning human centered robot activities.
+\newblock In {\em Proceedings of the {IEEE} International Conference on
+  Systems, Man and Cybernetics}, pages 2618--2623, 2007.
+
+\bibitem{mutlu:coordination-robot}
+B.~Mutlu, A.~Terrell, and C.-M. Huang.
+\newblock Coordination mechanisms in human-robot collaboration.
+\newblock In {\em Proceedings of the HRI 2013 Workshop on Collaborative
+  Manipulation}, 2013.
+
+\bibitem{nikolaidis:collaboration-joint-action}
+S.~Nikolaidis, P.~A. Lasota, G.~F. Rossano, C.~Martinez, T.~A. Fuhlbrigge, and
+  J.~A. Shah.
+\newblock Human-robot collaboration in manufacturing: Quantitative evaluation
+  of predictable, convergent joint action.
+\newblock In {\em ISR}, pages 1--6, 2013.
+
+\bibitem{paiva:agent-care}
+A.~Paiva, J.~Dias, D.~Sobral, R.~Aylett, P.~Sobreperez, S.~Woods, C.~Zoll, and
+  L.~Hall.
+\newblock Caring for agents and agents that care: Building empathic relations
+  with synthetic agents.
+\newblock In {\em Proceedings of the Third International Joint Conference on
+  Autonomous Agents and Multiagent Systems-Volume 1}, pages 194--201, 2004.
+
+\bibitem{paiva:emotion-modeling}
+A.~Paiva, I.~Leite, and T.~Ribeiro.
+\newblock Emotion modeling for sociable robots.
+\newblock In J.~G. A.~K. Rafael A.~Calvo, Sidney~D'Mello, editor, {\em Handbook
+  of Affective Computing}, pages 296--308. Oxford University Press, 2014.
+
+\bibitem{planalp:communicating-emotion}
+S.~Planalp.
+\newblock {\em Communicating Emotion: Social, Moral, and Cultural Processes}.
+\newblock Cambridge University Press, 1999.
+
+\bibitem{pontier:women-robot-men}
+M.~Pontier and J.~F. Hoorn.
+\newblock How women think robots perceive them - as if robots were men.
+\newblock In {\em International Conference on Agents and Artificial
+  Intelligence (ICAART-2)}, pages 496--504, 2013.
+
+\bibitem{ravenscroft:folk}
+I.~Ravenscroft.
+\newblock {\em Folk Psychology as a Theory}.
+\newblock Stanford Encyclopedia of Philosophy, 2004.
+
+\bibitem{rich:collaboration-manager}
+C.~Rich and C.~L. Sidner.
+\newblock {COLLAGEN}: A collaboration manager for software interface agents.
+\newblock {\em User Modeling User-Adapted Interaction}, 8(3-4):315--350, 1998.
+
+\bibitem{rich:discourse}
+C.~Rich, C.~L. Sidner, and N.~Lesh.
+\newblock {COLLAGEN}: Applying collaborative discourse theory to human-computer
+  interaction.
+\newblock {\em AI Magazine}, 22(4):15--26, 2001.
+
+\bibitem{rickel:discourse-theory-dialogue}
+J.~Rickel, N.~Lesh, C.~Rich, C.~L. Sidner, and A.~Gertner.
+\newblock Collaborative discourse theory as a foundation for tutorial dialogue.
+\newblock In {\em Proceedings Sixth International Conference on Intelligent
+  Tutoring Systems}, 2002.
+
+\bibitem{roseman:appraisal-theory}
+I.~J. Roseman and C.~A. Smith.
+\newblock Appraisal theory:overview, assumptions, varieties, controversies.
+\newblock In K.~R. Scherer, A.~Schorr, and T.~Johnstone, editors, {\em
+  Appraisal process in emotion}, pages 3--34. NY: Oxford University Press,
+  2001.
+
+\bibitem{sander:systems-approach-appraisal}
+D.~Sander, D.~Grandjean, and K.~R. Scherer.
+\newblock A systems approach to appraisal mechanisms in emotion.
+\newblock {\em Neural Networks}, 18(4):317--352, 2005.
+
+\bibitem{scerri:robot-agent-person}
+P.~Scerri, D.~Pynadath, L.~Johnson, P.~Rosenbloom, M.~Si, N.~Schurr, and
+  M.~Tambe.
+\newblock A prototype infrastructure for distributed robot-agent-person teams.
+\newblock In {\em The Second International Joint Conference on Autonomous
+  Agents and Multiagent Systems}, 2003.
+
+\bibitem{scerri:prototype-distributed-teams}
+P.~Scerri, D.~Pynadath, L.~Johnson, P.~Rosenbloom, M.~Si, N.~Schurr, and
+  M.~Tambe.
+\newblock A prototype infrastructure for distributed robot-agent-person teams.
+\newblock In {\em Proceedings of the Second International Joint Conference on
+  Autonomous Agents and Multiagent Systems}, AAMAS '03, pages 433--440, New
+  York, NY, USA, 2003. ACM.
+
+\bibitem{scherer:nature-function-emotion}
+K.~R. Scherer.
+\newblock On the nature and function of emotion: A component process approach.
+\newblock In K.~R. Scherer and P.~Ekman, editors, {\em Approaches To Emotion},
+  pages 293--317. Lawrence Erlbaum, Hillsdale, NJ, 1984.
+
+\bibitem{scherer:emotions-emergent}
+K.~R. Scherer.
+\newblock Emotions are emergent processes: they require a dynamic computational
+  architecture.
+\newblock {\em Philosophical Transactions of the Royal Society B: Biological
+  Sciences}, 364(1535):3459--3474, 2009.
+
+\bibitem{scherer:appraisal-processes}
+K.~R. Scherer, A.~Schorr, and T.~Johnstone.
+\newblock {\em Appraisal Processes in Emotion: Theory, Methods, Research}.
+\newblock Oxford University Press, 2001.
+
+\bibitem{shayganfar:methodology}
+M.~Shayganfar, C.~Rich, and C.~L. Sidner.
+\newblock A design methodology for expressing emotion on robot faces.
+\newblock In {\em IROS}, pages 4577--4583. IEEE, 2012.
+
+\bibitem{sidner:enagagement-robot}
+C.~L. Sidner and M.~Dzikovska.
+\newblock A first experiment in engagement for human-robot interaction in
+  hosting activities.
+\newblock In {\em Advances in Natural Multimodal Dialogue Systems}, volume~30
+  of {\em Cognitive Technologies}, pages 55--76. Springer Netherlands, 2005.
+
+\bibitem{sofge:collaboration-humanoid-space}
+D.~Sofge, M.~D. Bugajska, J.~G. Trafton, D.~Perzanowski, S.~Thomas, M.~Skubic,
+  S.~Blisard, N.~Cassimatis, D.~P. Brock, W.~Adams, and A.~C. Schultz.
+\newblock Collaborating with humanoid robots in space.
+\newblock {\em International Journal of Humanoid Robotics}, 2(2):181--201,
+  2005.
+
+\bibitem{tambe:flexible-teamwork}
+M.~Tambe.
+\newblock Towards flexible teamwork.
+\newblock {\em Journal of Artificial Intelligence Research}, 7:83--124, 1997.
+
+\bibitem{urban:pecs}
+C.~Urban.
+\newblock Pecs: A reference model for human-like agents.
+\newblock In {\em Deformable Avatars}. Netherlands: Kluwer Academic Publishers,
+  2001.
+
+\bibitem{hooft:sharing-emotions}
+S.~van Hooft.
+\newblock Scheler on sharing emotions.
+\newblock {\em Philosophy Today}, 38(1):18--28, 1994.
+
+\bibitem{velasquez:emotions-motivations-agents}
+J.~D. Vel$\grave{a}$squez.
+\newblock Modeling emotions and other motivations in synthetic agents.
+\newblock In {\em Proceedings of the 14th Nnational Conference on Artificial
+  Intelligence AAAI-97}, pages 10--15, 1997.
+
+\bibitem{vogiatzis:robot-museum}
+D.~Vogiatzis, C.~Spyropoulos, V.~Karkaletsis, Z.~Kasap, C.~Matheson, and
+  O.~Deroo.
+\newblock An affective robot guide to museums.
+\newblock In {\em Proceedings of the 4th International Workshop on
+  Human-Computer Conversation}, 2008.
+
+\bibitem{wehrle:motivations-modeling-emotion}
+T.~Wehrle.
+\newblock Motivations behind modeling emotional agents: Whose emotion does your
+  robot have?, 1998.
+
+\bibitem{wisecup:sociology-emotions}
+A.~K. Wisecup, D.~T. Robinson, and L.~Smith-Lovin.
+\newblock {\em The Sociology of Emotions}.
+\newblock SAGE Publications, Inc., 2007.
+
+\bibitem{yen:cast}
+J.~Yen, J.~Yin, T.~R. Ioerger, M.~S. Miller, D.~Xu, and R.~A. Volz.
+\newblock Cast: Collaborative agents for simulating teamwork.
+\newblock In {\em Proceedings of IJCAI’2001}, pages 1135--1142, 2001.
+
+\bibitem{yin:knowledge-based-sharedplans}
+J.~Yin, M.~S. Miller, T.~R. Ioerger, J.~Yen, and R.~A. Volz.
+\newblock A knowledge-based approach for designing intelligent team training
+  systems.
+\newblock In {\em Proceedings of the Fourth International Conference on
+  Autonomous Agents}, pages 427--434. ACM, 2000.
+
+\bibitem{zeng:affect-recognition}
+Z.~Zeng, M.~Pantic, G.~I. Roisman, and T.~S. Huang.
+\newblock A survey of affect recognition methods: Audio, visual and spontaneous
+  expressions.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  31(1):39--58, 2009.
+
+\end{thebibliography}
