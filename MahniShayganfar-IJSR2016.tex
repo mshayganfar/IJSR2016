@@ -58,6 +58,11 @@ grestore
 \usepackage{algorithm}
 \usepackage{enumitem, kantlipsum}
 
+\usepackage{times}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+
 %
 % \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
@@ -83,6 +88,8 @@ grestore
 }}
 
 \begin{document}
+
+\renewcommand{\labelitemi}{$\bullet$}
 
 \title{Toward Improving Human-Robot Collaboration with Emotional Awareness}%\thanks{Grants or
 % other notes about the article that should go on the front page should be
@@ -884,6 +891,7 @@ i.e., it includes the Robot's utterances, primitive actions and emotional
 expressions.
 
 \subsection{Mental States \& Emotion Instances}
+\label{sec:mental-states}
 
 The Mental States shown in Fig.\,\ref{fig:theory} comprise the knowledge base
 required for all the mechanisms in the overall framework.
@@ -907,6 +915,15 @@ a new appraisal or a new motive, or external events such as the human's offer,
 question or request, and general beliefs about the environment in which the
 Robot is situated. Beliefs can be created and updated by different processes.
 They also affect how these processes function as time passes.
+
+Beliefs have attributes and they impact different processes of the framework
+such as the evaluation of an external event by the Appraisal mechanism, and
+updates to the collaboration plan. We use three belief attributes in the Appraisal mechanism.
+Belief \textit{strength} is about how strongly the self holds salient beliefs
+about an object, an entity, or an anticipated behavior. The \textit{saliency} of
+a belief is a cognitive attribute that pertains to how easily the self becomes
+aware of a belief. The \textit{persistence} of a belief refers to how resistant
+the belief is to changes.
 
 \subsubsection{Intentions}
 \label{sec:intentions}
@@ -937,18 +954,22 @@ provides solution for this concern.
 \subsubsection{Motives}
 \label{sec:motives}
 
-\textit{Motives} are emotion-driven goal-directed mental constructs which can
-initiate, direct and maintain goal-directed behaviors. They are created by the
-emotion-regulated Motivation mechanism. Motives can cause the formation of a new
-intention for the Robot according to: a) its own emotional states (how the Robot
-feels about something), b) its own private goal (how an action helps the Robot
-to make progress), c) the collaboration goal (how an action helps to achieve the
-shared goal), and d) the human's anticipated beliefs (how an action helps the
-human). Motives also possess a set of attributes, e.g., \textit{insistence} or
-\textit{failure disruptiveness}. These attributes are involved in the comparison
-of newly generated motives based on the current state of the collaboration.
-Ultimately, the Robot forms or updates an intention about the winning motive in
-the Mental States.
+\textit{Motives} are mental constructs which can initiate, direct and maintain
+goal-directed behaviors. They are created by the emotion-regulated Motivation
+mechanism. They are created by the emotion-regulated Motivation mechanism.
+Motives can cause the formation of a new intention for the robot according to:
+a) its own emotional states, b) its own private goal, c) the collaboration
+(shared) goal, and d) other's anticipated beliefs. Motives possess a set of
+attributes. The Motivation mechanism compares motives based on the quality of
+these attributes and chooses the one which is the most related to the current
+state of the collaboration. We use two motive attributes in Appraisal
+mechanisms. The \textit{importance} of a motive is determined by the
+corresponding beliefs about the effects of achieving or not achieving the
+associated goal. The \textit{urgency} of a motive defines how much time the self
+has to acknowledge and address that motive before it is too late. These
+attributes are involved in the comparison of newly generated motives based on
+the current state of the collaboration. Ultimately, the Robot forms or updates
+an intention associated with the winning motive in the Mental States.
 
 \subsubsection{Goals}
 \label{sec:goals}
@@ -1083,12 +1104,12 @@ corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}.
 \label{sec:appraisal}
 
 We consider four appraisal variables to be the most important appraisal
-variables in a collaboration context, i.e., \textit{Relevance} (Algorithm
-\ref{alg:relevance}), \textit{Desirability} (Algorithm \ref{alg:desirability}),
-\textit{Expectedness} (Algorithm \ref{alg:expectedness}), and
-\textit{Controllability} (Algorithm \ref{alg:controllability}). There are other
-appraisal variables introduced in psychological
-\cite{scherer:appraisal-processes} and computational literature
+variables in a collaboration context, i.e., \textit{Relevance} (since other
+appraisals are only computed for relevant events), \textit{Desirability}
+(Algorithm \ref{alg:desirability}), \textit{Expectedness} (Algorithm
+\ref{alg:expectedness}), and \textit{Controllability} (since it is associated
+with the agent's coping ability). There are other appraisal variables introduced
+in psychological \cite{scherer:appraisal-processes} and computational literature
 \cite{gratch:domain-independent}. We believe most of these variables can be
 straightforwardly added to our appraisal mechanism later. All of the algorithms
 in this section use mental states of the robot (discussed in Section
@@ -1098,29 +1119,41 @@ at each turn.
 
 \subsection{Relevance}
 
-Relevance as an appraisal variable measures the significance of an event for the
-robot. An event can be evaluated to be relevant if it has a positive utility or
-it can causally impact a state with a positive utility
-\cite{marsella:ema-process-model}. Relevance is an important appraisal variable
-since the other appraisal variables are more meaningful only for relevant
-events.
+Relevance is an important appraisal variable since the other appraisal variables
+are meaningful only for relevant events. Relevance as an appraisal variable
+measures the significance of an event for the self. An event can be evaluated to
+be relevant if it has a non-zero utility \cite{marsella:ema-process-model}.
+However, the utility of an event is also influenced by the other collaborator's
+emotional expressions as the reflection of the other collaborator's mental state
+with respect to the status of the collaborative environment. Other appraisal
+models only consider the utility of an event based on the self's (robot's) goal
+and plan.
 
 Algorithm \ref{alg:relevance} determines the relevance of the given event with
 respect to the current mental state. The relevance of the event depends on the
-significance of the event with respect to the current collaboration status.
-The significance of an event is determined based on the utility of the event as
-it is also presented in
-\cite{gratch:domain-independent,marsella:ema-process-model}. We believe although
-the utility of the event represents the significance of the event, the other
-collaborator's expressed emotion also plays a role by influencing the
-significance of the utility through a threshold value. As a result, evaluating
-the relevance of the events can cause a collaborative robot to respond
-effectively to the events which can positively impact the status of the shared
-goal, without dedicating all resources to every single event. The relevance
-process also benefits from the information that the collaboration structure
-contains, e.g., shared goal.
+significance of the event with respect to the collaboration status, which is
+determined based on the utility of the event as presented in
+\cite{gratch:domain-independent,marsella:ema-process-model}. Our algorithm for
+computing the relevance of an event during collaboration involves other factors
+that other appraisal models do not consider. For instance, the human's
+perceived emotion, recurrence of a belief, or occurrence of a belief about an
+unrelated goal by the human play important roles by influencing the utility
+of an event during collaboration. As a result, evaluating the relevance of
+events can cause a collaborative robot to respond effectively which can
+positively impact the status of the shared goal, without dedicating all its
+resources to every event.
 
-\vspace*{-2mm}
+After perceiving an event, the belief about that event represents the event in
+the robot's mental state. \textit{recognizeGoal} returns the goal to which the
+current event contributes, unless it is \textit{ambiguous}\footnote{Ambiguity
+introduces some extra complexities which are beyond scope of this paper.};
+$g_{t}$ represents the shared goal at time (turn) $t$ within the shared plan. We
+compute the utility ($-1 \leq \mathcal{U} \leq 1$) of the event using the values
+of the attributes associated with the existing beliefs, and the attributes of
+the motive associated with the recognized goal (see details below). We use three
+belief attributes (see Section \ref{sec:mental-states}) to compute the
+belief-related part of the utility:
+
 \begin{algorithm}
 	\caption{(Relevance)}
 	\label{alg:relevance}
@@ -1141,72 +1174,135 @@ contains, e.g., shared goal.
 	\end{algorithmic}
 \end{algorithm}
 
-\vspace*{-3mm}
-After perceiving an event, it is the belief about that event which represents
-the event in the robot's mental state. Also, \textit{recognizeGoal} returns
-the goal ($g_{t}$) to which the current event contributes, unless it is
-\textit{ambiguous}; $g_{t}$ represents the shared goal at time (turn) $t$ within
-the shared plan. We compute the utility ($0 \leq \mathcal{U} \leq 1$) of the
-event based on the values of the attributes associated with the existing beliefs
-in the mental state, as well as the attributes of the motive associated with the
-recognized goal. We use three of the belief attributes discussed in Section
-\ref{sec:belief} to compute the belief related part of the utility: 
-
-\vspace*{-2mm}
 \begin{itemize}[leftmargin=2pt]
   \setlength\itemsep{0.2mm}
-  \item \textit{Strength}: The extent to which the pre and postconditions of a
-  goal and its predecessors and/or contributing goals are \textsc{satisfied} or
-  \textsc{unsatisfied} makes a belief about the goal stronger.
-  Respectively, an \textsc{unknown} pre and postcondition status of a goal and
-  its predecessors and/or contributing goals forms beliefs with lower strength.
-  \item \textit{Saliency}: Beliefs related to the goal at the top of the focus
-  stack are more salient than beliefs related to any other goal in the plan,
-  whether those goals are already \textsc{achieved} or \textsc{failed}, or they
-  will be pursued in the future.
-  \item \textit{Persistence}: The recurrence of a belief over the passage of
-  time (turns) increases the persistence of the belief. Beliefs occurring only
-  in one turn have the lowest value of persistence.
+  \item \textit{Strength}: The extent to which the preconditions ($\alpha$),
+  postconditions ($\beta$), predecessors ($\lambda$), and contributing goals
+  ($\mu$) of a goal are known (\textsc{satisfied} or \textsc{unsatisfied}) makes
+  beliefs about the goal stronger. An \textsc{unknown} pre and postcondition
+  status of a goal and its predecessors and contributing goals forms weaker
+  beliefs. For instance, if one knows all predecessors of a pursued goal (e.g.,
+  ``Press Bread Slices'') are \textsc{satisfied} (i.e., ``Spread Peanut Butter''
+  and ``Spread Strawberry Jam''), failure of the pursued goal will elicit one's
+  negative emotion (due to the strong beliefs related to the goal); whereas not
+  knowing the status of the goal-related factors (e.g., whether Mary could find
+  the knife to cut the sandwich in half) causes one to form weaker beliefs about
+  the goal.
+  \item \textit{Saliency (S)}: Beliefs related to the focused goal are more
+  salient than beliefs related to any other goal in the plan; according to
+  Figure \ref{fig:taskModel}, if one is making a boiled egg sandwich, beliefs
+  related to all of the other \textit{live} (\textsc{pending} or \textsc{in
+  progress}) goals (e.g. ``Pack Sandwich'') will be less salient than beliefs
+  related to the focused goal, i.e., ``Add Pickles''. Beliefs' saliency
+  decreases according to their corresponding \textit{live} goal's distance from
+  the focused goal in the shared plan. \textit{Non-live} goals will not be
+  salient.
+  \item \textit{Persistence (P)}: The recurrence of a belief over time (turns)
+  increases the persistence of the belief. Beliefs occurring only once have the
+  lowest value of persistence. For instance, if Mary keeps saying that she can
+  not find the knife to cut the sandwich in half, one could pursue a new goal
+  outside of the shared plan to acknowledge Mary's concern.
 \end{itemize}
 
-\noindent We also use two of the motive attributes discussed in Section
-\ref{sec:motive} to compute the motive related part of the utility
+\noindent We also use two motive attributes discussed in Section
+\ref{sec:mental-states} to compute the motive related part of the utility
 ($\mathcal{U}$):
 
-\vspace*{-1mm}
 \begin{itemize}[leftmargin=2pt]
-  \setlength\itemsep{1mm}
-  \item \textit{Urgency}: There are two factors impacting the urgency of
-  a motive: a) whether the goal directing the given motive is the predecessor of
+  \setlength\itemsep{0.05mm}
+  \item \textit{Urgency ($\gamma$)}: There are two factors impacting the urgency
+  of a motive: a) whether the goal directing the given motive is the predecessor of
   another goal for which the other collaborator is responsible, and b) whether
   achieving the goal directing the given motive can mitigate the other
-  collaborator's negative valenced emotion.
-  \item \textit{Importance}: A motive is important if failure of the directing
-  goal causes an impasse in the shared plan (i.e., no further goal is available
-  to achieve), or achievement of the directing goal removes an existing impasse.
+  collaborator's negative valenced emotion. For instance, if one has a private
+  goal to prepare for making the second sandwich (e.g. get the eggs) while Mary
+  is waiting to get the first sandwich and cut it in half, pressing bread slices
+  and passing them to Mary will be more urgent than one's private goal.
+  \item \textit{Importance ($\eta$)}: A motive is important if failure of the
+  directing goal causes an impasse in the shared plan (i.e., no further goal is
+  available to achieve), or achievement of the directing goal removes an
+  existing impasse. For example, if one cannot find white bread on which to
+  spread peanut butter (an impasse to make the peanut butter sandwich), and Mary
+  offers to use wheat bread instead (external motive), the new motive becomes
+  important to remove the impasse in the shared plan.
 \end{itemize}
 
-\vspace*{-2mm}
-We compute the utility of an event based on these five attributes. The value of
-each attribute is between 0 and 1, and we consider the same weight for each
-attribute. These weights can be learned or modified when our framework is fully
-implemented. The value of the overall utility is computed using a simple
-weighted averaging function which results in an overall value between 0 and 1.
+We provide the utility function ($\mathcal{U}$) in Equation \ref{eqn:utility}.
+This function uses: saliency (\textit{S}) and persistence (\textit{P}) of the
+belief related to the recognized goal, the recognized goal's status
+($\upsilon$), and the aggregation of belief and motive attributes ($\Psi$)
+according to Equation \ref{eqn:power}.
 
-The significance of an event in a collaborative environment is based not
-only on the utility of the event, but it is also influenced by the perceived
-emotion of the human collaborator. The human's emotion influences the decision
-about the utility of the event in the form of a threshold value $\tau_{t}$ (see
-Algorithm \ref{alg:relevance}). For instance, a positively expressed emotion of
-the human reduces the threshold value which consequently makes the robot find an
-event relevant with even a slightly positive utility. This threshold value
-($\tau_{t}$) is currently determined based on whether the valence of the
-human's perceived emotion is positive (e.g., happiness) or negative (e.g.,
-anger). Consequently, an event can be considered \textsc{irrelevant} even though
-the utility has a relatively positive value, because relevance is influenced by
-the human's perceived emotional state.
+\begin{equation}
+    \mathcal{U}(\varepsilon_t)= 
+    \begin{dcases}
+       \upsilon\!P\cdot S^{\Psi} & \Psi \textgreater 0 \\
+       0               			 & \Psi = 0
+    \end{dcases}
+    \label{eqn:utility}
+\end{equation}
 
-\vspace*{-1mm}
+Intuitively, we use $\upsilon$ to generate positive and negative utility values.
+The $\upsilon$'s value becomes +1 if the status of the corresponding goal is
+\textsc{achieved}, \textsc{pending}, or \textsc{in progress}, and $\upsilon$'s
+value becomes -1 if the status of the corresponding goal is \textsc{failed,
+blocked}, or \textsc{inapplicable}. The \textit{P} influences the value of
+utility only as a coefficient since recurrent beliefs are not formed frequently
+during collaboration. The $\Psi$ value indicates the magnitude of the influence
+of beliefs and motives using their attributes. Hence, the $\Psi$ value impacts
+the saliency value of beliefs exponentially, helping to differentiate between
+beliefs.
+
+In equation \ref{eqn:power}, the subscript \textit{k} refers to the
+\textit{known} goal-related factors (\textsc{satisfied} or
+\textsc{unsatisfied}); whereas the subscript \textit{all} includes both
+\textit{known} and \textit{unknown} goal-related factors. In this equation, both
+urgency ($\gamma$) and importance ($\eta$) attributes of motives can impact the
+outcome of the goal-related belief attributes' ratio, and ultimately the $\Psi$
+value.
+
+\begin{equation}
+    \Psi = \frac{\alpha_{_k} + \beta_{_k} + \lambda_{_k} +
+    \mu_{_k}}{\alpha_{_{all}} + \beta_{_{all}} + \lambda_{_{all}} +
+    \mu_{_{all}}} + \eta + \gamma
+    \label{eqn:power}
+\end{equation}
+
+\begin{center} 
+    $\eta, \gamma \in \mathbb{N}, \qquad\qquad \eta, \gamma \geq 0$\\
+    $\alpha_{_k}, \beta_{_k}, \lambda_{_k}, \mu_{_k} \in \mathbb{N},
+    \qquad\qquad \alpha_{_k}, \beta_{_k}, \lambda_{_k}, \mu_{_k} \geq 0$\\
+    $\alpha_{_{all}}, \lambda_{_{all}}, \mu_{_{all}} \in \mathbb{N},
+    \qquad\qquad \alpha_{_{all}}, \lambda_{_{all}}, \mu_{_{all}} \geq 0$\\
+    $\beta_{_{all}} \in \mathbb{N}, \qquad\qquad \beta_{_{all}} \geq 1$
+\end{center}
+
+The significance of an event in a collaborative environment is based on the
+utility of the event and the human's perceived emotion. The human's perceived
+emotion influences the relevance of the event in the form of a threshold value
+$\tau_{t}$. In Equation \ref{eqn:threshold}, we use the valence of the perceived
+emotion ($\mathcal{V}_{e_h}$) to compute $\tau_{t}$.
+
+\begin{equation}
+    \tau_{t}= 
+    \begin{dcases}
+       1-\mathcal{V}_{e_h} & \mathcal{V}_{e_h} > 0 \\
+       |\mathcal{V}_{e_h}| & \mathcal{V}_{e_h} \leq  0
+    \end{dcases}
+    \label{eqn:threshold}
+\end{equation}
+
+\begin{center} 
+    $\mathcal{V}_{e_h} \in \mathbb{R}, \qquad\qquad -1 \leq \mathcal{V}_{e_h}
+    \leq 1$
+\end{center}
+
+Hence, perceiving human's positive emotion (e.g., happiness) reduces the
+threshold value which makes the robot find an event \textsc{relevant} with even
+a slightly positive utility. Similarly, an event can be considered
+\textsc{irrelevant} even though the utility has a relatively positive value,
+because of perceiving the human's negative emotion.
+
 \subsection{Desirability}
 
 Desirability characterizes the value of an event to the robot in terms of

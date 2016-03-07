@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  7 MAR 2016 12:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  7 MAR 2016 16:02
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -647,16 +647,125 @@ Package: xparse 2013/12/31 v4634 L3 Experimental document command parser
 . ignored.
 .................................................
 )
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count170
+\calc@Bcount=\count171
+\calc@Adimen=\dimen194
+\calc@Bdimen=\dimen195
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count172
+\calc@Cskip=\skip55
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks31
+\ex@=\dimen196
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen197
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count173
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count174
+\leftroot@=\count175
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count176
+\DOTSCASE@=\count177
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box77
+\strutbox@=\box78
+\big@size=\dimen198
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count178
+\c@MaxMatrixCols=\count179
+\dotsspace@=\muskip16
+\c@parentequation=\count180
+\dspbrk@lvl=\count181
+\tag@help=\toks32
+\row@=\count182
+\column@=\count183
+\maxfields@=\count184
+\andhelp@=\toks33
+\eqnshift@=\dimen199
+\alignsep@=\dimen200
+\tagshift@=\dimen201
+Normal \dimen register pool exhausted, switching to extended pool.
+\tagwidth@=\dimen256
+\totwidth@=\dimen257
+\lineht@=\dimen258
+\@envbody=\toks34
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks35
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count185
+\l_MT_multwidth_dim=\dimen259
+\origjot=\skip59
+\l_MT_shortvdotswithinadjustabove_dim=\dimen260
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen261
+\l_MT_above_intertext_sep=\dimen262
+\l_MT_below_intertext_sep=\dimen263
+\l_MT_above_shortintertext_sep=\dimen264
+\l_MT_below_shortintertext_sep=\dimen265
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/picture.sty
 Package: picture 2009/10/11 v1.3 Dimens for picture macros (HO)
-Package picture Info: Calculation method: etex.
+Package picture Info: Calculation method: calc.
 )
 (./MahniShayganfar-IJSR2016.aux
 
 LaTeX Warning: Label `sec:tom-mech' multiply defined.
+
+
+LaTeX Warning: Label `eqn:power' multiply defined.
 
 
 LaTeX Warning: Label `fig:taskModel' multiply defined.
@@ -664,36 +773,39 @@ LaTeX Warning: Label `fig:taskModel' multiply defined.
 )
 \openout1 = `MahniShayganfar-IJSR2016.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 90.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
 Unknown journal: specify \journalname{<name of your journal>} in preambel
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count170
-\scratchdimen=\dimen194
-\scratchbox=\box77
-\nofMPsegments=\count171
-\nofMParguments=\count172
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count173
-\MPscratchDim=\dimen195
-\MPnumerator=\count174
-\makeMPintoPDFobject=\count175
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count186
+\scratchdimen=\dimen266
+\scratchbox=\box79
+\nofMPsegments=\count187
+\nofMParguments=\count188
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count189
+\MPscratchDim=\dimen267
+\MPnumerator=\count190
+\makeMPintoPDFobject=\count191
+\everyMPtoPDFconversion=\toks37
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -739,137 +851,142 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box78
+\AtBeginShipoutBox=\box80
 
 SVJour3 warning: Missing \journalname
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 117.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 117.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 117.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 117.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
+LaTeX Font Info:    Try loading font information for U+msa on input line 124.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 124.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (2.3364pt too wide) in paragraph at lines 128--139
+\OT1/ptm/m/n/10 Af-fec-tive Mo-ti-va-tional Col-lab-o-ra-tion The-ory, that com
+-bines emotion-based pro-cesses,
+ []
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
-LaTeX Warning: Reference `sec:wt-exp1' on page 3 undefined on input line 231.
+LaTeX Warning: Reference `sec:wt-exp1' on page 3 undefined on input line 238.
 
 
-LaTeX Warning: Reference `sec:wt-exp3' on page 3 undefined on input line 232.
+LaTeX Warning: Reference `sec:wt-exp3' on page 3 undefined on input line 239.
 
 
-LaTeX Warning: Reference `sec:wtce' on page 3 undefined on input line 236.
+LaTeX Warning: Reference `sec:wtce' on page 3 undefined on input line 243.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 303--320
+Underfull \hbox (badness 10000) in paragraph at lines 310--327
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 337--345
+Underfull \hbox (badness 10000) in paragraph at lines 344--352
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 405--408
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 412.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 412.
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--417
+Underfull \hbox (badness 10000) in paragraph at lines 422--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--422
+Underfull \hbox (badness 10000) in paragraph at lines 425--429
 
  []
 
 
-LaTeX Warning: Reference `sec:wt-exp1' on page 6 undefined on input line 435.
+LaTeX Warning: Reference `sec:wt-exp1' on page 6 undefined on input line 442.
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 467--470
+Underfull \hbox (badness 10000) in paragraph at lines 474--477
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--478
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--481
+Underfull \hbox (badness 10000) in paragraph at lines 486--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--484
+Underfull \hbox (badness 10000) in paragraph at lines 489--491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--497
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 485--487
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 488--490
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 497--498
+Underfull \hbox (badness 10000) in paragraph at lines 569--572
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 562--565
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--569
+Underfull \hbox (badness 10000) in paragraph at lines 577--579
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--572
+Underfull \hbox (badness 10000) in paragraph at lines 580--582
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--575
+Underfull \hbox (badness 10000) in paragraph at lines 628--631
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 621--624
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 628--629
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 630--632
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 633--636
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
 
  []
 
@@ -889,13 +1006,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 644--646
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--652
+Underfull \hbox (badness 10000) in paragraph at lines 647--650
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 653--655
 
+Underfull \hbox (badness 10000) in paragraph at lines 651--653
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
+[]\OT1/ptm/b/it/9 D8. Robot: \OT1/ptm/m/n/10 Thanks. I will. $[]$
+ []
+
+
+Underfull \hbox (badness 4634) detected at line 658
+[]\OT1/ptm/b/it/9 D8. Robot: \OT1/ptm/m/n/10 Thanks. I will. $[]$
  []
 
 
@@ -903,47 +1030,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 658--659
 
  []
 
-[11] <figure/theory-general-croped.pdf, id=49, 430.60875pt x 294.09875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 660--662
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+
+ []
+
+[10] [11] <figure/theory-general-croped.pdf, id=49, 430.60875pt x 294.09875pt>
 File: figure/theory-general-croped.pdf Graphic file (type pdf)
 
 <use figure/theory-general-croped.pdf>
-Package pdftex.def Info: figure/theory-general-croped.pdf used on input line 75
-6.
+Package pdftex.def Info: figure/theory-general-croped.pdf used on input line 76
+3.
 (pdftex.def)             Requested size: 335.87346pt x 229.39609pt.
- [12] [13 <./figure/theory-general-croped.pdf>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 766.
+ [12 <./figure/theory-general-croped.pdf>]
 
-LaTeX Warning: Reference `sec:wtce' on page 14 undefined on input line 802.
+LaTeX Warning: Reference `sec:wtce' on page 13 undefined on input line 809.
 
-[14] [15] [16] [17]
-<figure/collaborationStructure-croped.pdf, id=80, 343.2825pt x 184.69pt>
+[13] [14] [15] [16]
+<figure/collaborationStructure-croped.pdf, id=74, 343.2825pt x 184.69pt>
 File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
 
 <use figure/collaborationStructure-croped.pdf>
 Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
- line 996.
+ line 1017.
 (pdftex.def)             Requested size: 270.40103pt x 145.47794pt.
- [18 <./figure/collaborationStructure-croped.pdf>]
+ [17 <./figure/collaborationStructure-croped.pdf>]
+Overfull \hbox (4.79668pt too wide) in paragraph at lines 1034--1038
+[]\OT1/ptm/m/it/10 topLevelGoalStatus($\OML/cmm/m/it/10 g[]$\OT1/ptm/m/it/10 ) 
+\OT1/ptm/m/n/10 re-turns the sta-tus of the top level goal whether it is \OT1/p
+tm/m/sc/10 achieved,
+ []
 
-LaTeX Warning: Citation `rich:focused-unfocused-users' on page 19 undefined on 
-input line 1038.
+
+LaTeX Warning: Citation `rich:focused-unfocused-users' on page 18 undefined on 
+input line 1059.
 
 
-LaTeX Warning: Reference `sec:mental-states' on page 19 undefined on input line
- 1095.
+Overfull \hbox (13.47617pt too wide) in paragraph at lines 1057--1060
+[][]\OT1/ptm/m/it/10 isNecessaryFocusShift($\OML/cmm/m/it/10 g[]$\OT1/ptm/m/it/
+10 ) \OT1/ptm/m/n/10 re-turns \OT1/ptm/m/it/10 true \OT1/ptm/m/n/10 if the sta-
+tus of the pre-vi-ous fo-cus was \OT1/ptm/m/sc/10 achieved\OT1/ptm/m/n/10 ;
+ []
 
-[19]
+[18] [19] [20]
 
-LaTeX Warning: Reference `sec:belief' on page 20 undefined on input line 1153.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 1239.
 
-[20]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 1239
+.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1239.
 
-LaTeX Warning: Reference `sec:motive' on page 21 undefined on input line 1173.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 1239.
 
 [21]
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont BLOCKED}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1288 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
+l.1384 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -954,7 +1110,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont PENDING}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1294 ...\fontsize{7}{8}\selectfont INPROGRESS})}
+l.1390 ...\fontsize{7}{8}\selectfont INPROGRESS})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -965,7 +1121,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont BLOCKED}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1306 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
+l.1402 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -976,7 +1132,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont PENDING}) \OR 
                                                   \\ \hspace {1mm} \hspace *...
-l.1311 ...\fontsize{7}{8}\selectfont INPROGRESS})}
+l.1407 ...\fontsize{7}{8}\selectfont INPROGRESS})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -988,7 +1144,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...(\mathit {g}_{t})}\hspace *{2mm}\OR 
                                                   $ \\ \hspace *{13mm}$\text...
-l.1347 ...ccessaryFocusShift}{(\mathit{g}_{t})})$}
+l.1443 ...ccessaryFocusShift}{(\mathit{g}_{t})})$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -996,83 +1152,84 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[23]
 
-LaTeX Warning: Citation `rich:focused-unfocused-users' on page 24 undefined on 
-input line 1371.
+LaTeX Warning: Citation `rich:focused-unfocused-users' on page 23 undefined on 
+input line 1467.
 
-[24] [25] [26]
+[23] [24] [25]
 
-LaTeX Warning: Reference `fig:cpm' on page 27 undefined on input line 1617.
+LaTeX Warning: Reference `fig:cpm' on page 26 undefined on input line 1713.
 
 
-LaTeX Warning: Citation `shayganfar:amct-symbiotic' on page 27 undefined on inp
-ut line 1626.
+LaTeX Warning: Citation `shayganfar:amct-symbiotic' on page 26 undefined on inp
+ut line 1722.
 
-<figure/ActionSelection-croped.pdf, id=141, 200.75pt x 85.31876pt>
+<figure/ActionSelection-croped.pdf, id=136, 200.75pt x 85.31876pt>
 File: figure/ActionSelection-croped.pdf Graphic file (type pdf)
 
 <use figure/ActionSelection-croped.pdf>
 Package pdftex.def Info: figure/ActionSelection-croped.pdf used on input line 1
-634.
+730.
 (pdftex.def)             Requested size: 270.40103pt x 114.93707pt.
- [27 <./figure/ActionSelection-croped.pdf>]
+ [26]
 File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
- <use figure/collaborationStructure-croped.pdf>
+
+<use figure/collaborationStructure-croped.pdf>
 Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
- line 1681.
+ line 1777.
 (pdftex.def)             Requested size: 270.40103pt x 145.47794pt.
- [28] [29]
-<figure/taskModel-croped.pdf, id=164, 553.06625pt x 182.6825pt>
+ [27 <./figure/ActionSelection-croped.pdf>] [28]
+<figure/taskModel-croped.pdf, id=158, 553.06625pt x 182.6825pt>
 File: figure/taskModel-croped.pdf Graphic file (type pdf)
 
 <use figure/taskModel-croped.pdf>
-Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 1795.
+Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 1891.
 (pdftex.def)             Requested size: 455.23883pt x 149.38527pt.
 
-Overfull \hbox (117.23883pt too wide) in paragraph at lines 1795--1796
+Overfull \hbox (117.23883pt too wide) in paragraph at lines 1891--1892
  [][][] 
  []
 
+[29]
+
+LaTeX Warning: Reference `sec:appraisal-process' on page 30 undefined on input 
+line 1967.
+
 [30 <./figure/taskModel-croped.pdf>]
-
-LaTeX Warning: Reference `sec:appraisal-process' on page 31 undefined on input 
-line 1871.
-
-<figure/question-sample-croped.pdf, id=186, 303.1325pt x 95.35625pt>
+<figure/question-sample-croped.pdf, id=182, 303.1325pt x 95.35625pt>
 File: figure/question-sample-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample-croped.pdf>
 Package pdftex.def Info: figure/question-sample-croped.pdf used on input line 1
-880.
+976.
 (pdftex.def)             Requested size: 270.40103pt x 85.06175pt.
- [31]
-<figure/question-sample2-croped.pdf, id=192, 308.15125pt x 105.39375pt>
+
+<figure/question-sample2-croped.pdf, id=183, 308.15125pt x 105.39375pt>
 File: figure/question-sample2-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample2-croped.pdf>
 Package pdftex.def Info: figure/question-sample2-croped.pdf used on input line 
-1903.
+1999.
 (pdftex.def)             Requested size: 270.40103pt x 92.48946pt.
 
-<figure/question-sample3-croped.pdf, id=193, 303.1325pt x 119.44624pt>
+<figure/question-sample3-croped.pdf, id=184, 303.1325pt x 119.44624pt>
 File: figure/question-sample3-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample3-croped.pdf>
 Package pdftex.def Info: figure/question-sample3-croped.pdf used on input line 
-1923.
+2019.
 (pdftex.def)             Requested size: 270.40103pt x 106.55103pt.
- [32 <./figure/question-sample-croped.pdf> <./figure/question-sample2-croped.pd
+ [31 <./figure/question-sample-croped.pdf> <./figure/question-sample2-croped.pd
 f
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/question-sample2-croped.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
-LaTeX Warning: Reference `sec:appraisal-process' on page 33 undefined on input 
-line 1937.
+LaTeX Warning: Reference `sec:appraisal-process' on page 32 undefined on input 
+line 2033.
 
-[33 <./figure/question-sample3-croped.pdf>] (./MahniShayganfar-IJSR2016.bbl
+[32 <./figure/question-sample3-croped.pdf>] (./MahniShayganfar-IJSR2016.bbl
 ! Misplaced alignment tab character &.
 l.12 \newblock Cassell &
                          Co., 1960.
@@ -1083,15 +1240,14 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[34]
-Missing character: There is no â in font cmti8!
-Missing character: There is no € in font cmti8!
-Missing character: There is no ™ in font cmti8!
- [35] [36]
-Missing character: There is no â in font cmti8!
-Missing character: There is no € in font cmti8!
-Missing character: There is no ™ in font cmti8!
-) [37] (./MahniShayganfar-IJSR2016.aux)
+Missing character: There is no â in font ptmri7t!
+Missing character: There is no € in font ptmri7t!
+Missing character: There is no ™ in font ptmri7t!
+[33] [34] [35]
+Missing character: There is no â in font ptmri7t!
+Missing character: There is no € in font ptmri7t!
+Missing character: There is no ™ in font ptmri7t!
+) [36] (./MahniShayganfar-IJSR2016.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1100,40 +1256,36 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17985 strings out of 493304
- 358401 string characters out of 6139871
- 735726 words of memory out of 5000000
- 21091 multiletter control sequences out of 15000+600000
- 12847 words of font info for 43 fonts, out of 8000000 for 9000
+ 19485 strings out of 493304
+ 378853 string characters out of 6139871
+ 736726 words of memory out of 5000000
+ 22522 multiletter control sequences out of 15000+600000
+ 39687 words of font info for 83 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,14n,59p,10429b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-
-Output written on MahniShayganfar-IJSR2016.pdf (37 pages, 555313 bytes).
+ 56i,14n,59p,10429b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb
+i8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MahniShayganfar-IJSR2016.pdf (36 pages, 450685 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
+ 321 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
