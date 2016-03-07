@@ -1326,40 +1326,8 @@ collaboration's point of view.
 % Reciprocally, the appraisal mechanism and in this case the desirability process
 % use the collaboration structure to obtain their required information.
 
-Algorithm \ref{alg:desirability} provides a process in which the desirability of
-an event is computed with regard to the status of the shared goal; i.e., it
-operates based on whether and how the event changes the status of the current
-shared goal. It distinguishes between the top level goal and the current goal
-because the top level goal's change of status attains a higher positive or
-negative value of desirability. For instance, failure of the top level goal
-(e.g., installing solar panel) is more undesirable than failure of a primitive
-goal (e.g., measuring the quality of the installed panel).
-
-An \textsc{ambiguous} goal is a goal associated with the current event
-($\varepsilon_t$) which is not recognized in the robot's plan; therefore it is
-\textsc{undesirable} for a collaborative robot. A top level goal' status must be
-\textsc{achieved} (i.e., \textsc{satisfied} postcondition) to consider the event
-\textsc{most-desirable}. When the goal's status is \textsc{failed} (i.e.,
-\textsc{unsatisfied} postcondition) or \textsc{blocked}, the associated event
-has the \textsc{most-undesirable} or \textsc{undesirable} values respectively.
-A goal is \textsc{blocked} if any of the required goals or goals recursively
-through the parent goal are not \textsc{achieved}. An \textsc{inapplicable} goal
-is also considered as \textsc{undesirable}. A goal is \textsc{inapplicable} if
-any of its predecessors are not \textsc{achieved}, and/or its preconditions are
-not \textsc{satisfied}. For \textsc{pending} and \textsc{inprogress} top level
-goals, the status of the current goal associated with the top level goal
-determines the status of the event $\varepsilon_t$. Only a non-primitive goal
-can have \textsc{inprogress} status, if it has been started but is not yet
-completed. A goal can be \textsc{pending} if it is live, or if it is a
-non-primitive goal that has not been started yet. \textsc{Achieved} current
-goals mark an event ($\varepsilon_t$) as \textsc{desirable}, while
-\textsc{failed} or \textsc{blocked} current goals render the event associated
-with them as \textsc{most-undesirable} and \textsc{undesirable} respectively.
-\textsc{Pending} or \textsc{inprogress} current goals mark their associated
-events as \textsc{neutral}.
-
 \vspace*{-1mm}
-\begin{algorithm}
+\begin{algorithm}[t]
 	\caption{(Desirability)}
 	\label{alg:desirability}
 	\begin{algorithmic}[1]
@@ -1412,24 +1380,72 @@ events as \textsc{neutral}.
 	\end{algorithmic}
 \end{algorithm}
 
+Algorithm \ref{alg:desirability} provides a process in which the desirability of
+an event is computed with regard to the status of the shared goal; i.e., it
+operates based on whether and how the event changes the status of the current
+shared goal. It distinguishes between the top level goal and the current goal
+because the top level goal's change of status attains a higher positive or
+negative value of desirability. For instance, failure of the top level goal
+(e.g., installing solar panel) is more undesirable than failure of a primitive
+goal (e.g., measuring the quality of the installed panel).
+
+An \textsc{ambiguous} goal is a goal associated with the current event
+($\varepsilon_t$) which is not recognized in the robot's plan; therefore it is
+\textsc{undesirable} for a collaborative robot. A top level goal' status must be
+\textsc{achieved} (i.e., \textsc{satisfied} postcondition) to consider the event
+\textsc{most-desirable}. When the goal's status is \textsc{failed} (i.e.,
+\textsc{unsatisfied} postcondition) or \textsc{blocked}, the associated event
+has the \textsc{most-undesirable} or \textsc{undesirable} values respectively.
+A goal is \textsc{blocked} if any of the required goals or goals recursively
+through the parent goal are not \textsc{achieved}. An \textsc{inapplicable} goal
+is also considered as \textsc{undesirable}. A goal is \textsc{inapplicable} if
+any of its predecessors are not \textsc{achieved}, and/or its preconditions are
+not \textsc{satisfied}. For \textsc{pending} and \textsc{inprogress} top level
+goals, the status of the current goal associated with the top level goal
+determines the status of the event $\varepsilon_t$. Only a non-primitive goal
+can have \textsc{inprogress} status, if it has been started but is not yet
+completed. A goal can be \textsc{pending} if it is live, or if it is a
+non-primitive goal that has not been started yet. \textsc{Achieved} current
+goals mark an event ($\varepsilon_t$) as \textsc{desirable}, while
+\textsc{failed} or \textsc{blocked} current goals render the event associated
+with them as \textsc{most-undesirable} and \textsc{undesirable} respectively.
+\textsc{Pending} or \textsc{inprogress} current goals mark their associated
+events as \textsc{neutral}.
+
 \vspace*{-2mm}
 \subsection{Expectedness}
 
 Expectedness is the extent to which the truth value of a state could have been
-predicted from causal interpretation of an event
-\cite{marsella:ema-process-model}. In the collaboration context the expectedness
-of an event evaluates the congruency of the event with respect to the existing
-knowledge about the shared goal. Thus, expectedness underlies a collaborative
-robot's attention. Congruent beliefs in a robot's mental state will lead to more
-consistent and effective outcomes of the processes in the overall architecture.
-The collaboration mechanism uses expectedness to maintain the robot's attention
-and subsequently its mental state with respect to the shared goal. Reciprocally,
-the appraisal mechanism uses the underlying information of the collaboration
-structure to evaluate the expectedness of an event. Therefore, a collaborative
-robot uses expectedness to maintain its own mental state towards the shared
-goal. The robot will also be able to respond to unexpected but relevant events.
+predicted from causal interpretation of an event. In the collaboration context
+the expectedness of an event evaluates the congruency of the event with respect
+to the existing knowledge about the shared goal. Thus, expectedness underlies a
+collaborative robot's attention. The collaboration mechanism uses expectedness
+to maintain the robot's attention and subsequently its mental state with respect
+to the shared goal. Reciprocally, the appraisal mechanism uses the underlying
+information of the collaboration structure to evaluate the expectedness of an
+event.
 
-\begin{algorithm}
+In Algorithm \ref{alg:expectedness} we provide the process of computing the
+expectedness based on the shared plan and status of the shared goal. The key
+point in this algorithm is the status of the current shared goal
+($\mathit{g}_{t}$), which is associated with the event $\varepsilon_t$ and its
+relationship with the top level goal ($\mathit{g}_{_{top}}$).
+
+The intuition captured here is that one expects the current goal to be finished
+before undertaking another activity, but the goals that can be the next focus of
+attention are also to be expected. Therefore, if the goal is live, the algorithm
+checks whether the goal has not changed, or whether the interpretation of the
+last event results in a necessary focus shift. Shifting the focus to a new goal
+is necessary when the former goal is achieved and a new goal is required.
+Consequently the new event is the \textsc{most-expected} one. However, even if
+the focus shift is not necessary, the new event can be considered as
+\textsc{expected}, since the corresponding goal is already live. For goals that
+have not yet been started (that is, are not live), the algorithm must determine
+how unexpected it would be to pursue one now; if the goal is at least in the
+plan, i.e., on the path to the top level goal, it is just \textsc{unexpected}
+while any others are \textsc{most-unexpected}.
+
+\begin{algorithm}[t]
 	\caption{(Expectedness)}
 	\label{alg:expectedness}
 	\begin{algorithmic}[1]
@@ -1455,27 +1471,6 @@ goal. The robot will also be able to respond to unexpected but relevant events.
 		\EndFunction
 	\end{algorithmic}
 \end{algorithm}
-
-In Algorithm \ref{alg:expectedness} we provide the process of computing the
-expectedness based on the shared plan and status of the shared goal. The key
-point in this algorithm is the status of the current shared goal
-($\mathit{g}_{t}$) that is associated with the event $\varepsilon_t$ and its
-relationship with the top level goal ($\mathit{g}_{_{top}}$).
-
-The intuition captured here is that one expects the current goal to be finished
-before undertaking another activity, but the goals that are the next focus of
-attention are also to be expected \cite{rich:focused-unfocused-users}.
-Therefore, if the goal is live, the algorithm checks whether the goal has not
-changed, or the interpretation of the last event results in a necessary focus
-shift. Shifting the focus to a new goal is necessary when the former goal is
-achieved and a new goal is required. Consequently the new event is the
-\textsc{most-expected} one. However, even if the focus shift is not necessary,
-the new event can be considered as \textsc{expected}, since the corresponding
-goal is already live. For goals that have not yet been started (that is, are not
-live), the algorithm must determine how unexpected it would be to pursue one
-now; if the goal is at least in the plan, i.e., on the path to the top level
-goal, it is just \textsc{unexpected} while any others are
-\textsc{most-unexpected}.
 
 \subsection{Controllability}
 \label{sec:controllability}

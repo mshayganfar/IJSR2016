@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  7 MAR 2016 16:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  7 MAR 2016 16:37
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1121,7 +1121,7 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 1239.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont BLOCKED}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1384 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
+l.1352 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1132,7 +1132,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont PENDING}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1390 ...\fontsize{7}{8}\selectfont INPROGRESS})}
+l.1358 ...\fontsize{7}{8}\selectfont INPROGRESS})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1143,7 +1143,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont BLOCKED}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1402 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
+l.1370 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1154,7 +1154,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont PENDING}) \OR 
                                                   \\ \hspace {1mm} \hspace *...
-l.1407 ...\fontsize{7}{8}\selectfont INPROGRESS})}
+l.1375 ...\fontsize{7}{8}\selectfont INPROGRESS})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1166,7 +1166,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...(\mathit {g}_{t})}\hspace *{2mm}\OR 
                                                   $ \\ \hspace *{13mm}$\text...
-l.1443 ...ccessaryFocusShift}{(\mathit{g}_{t})})$}
+l.1459 ...ccessaryFocusShift}{(\mathit{g}_{t})})$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1174,73 +1174,68 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-LaTeX Warning: Citation `rich:focused-unfocused-users' on page 23 undefined on 
-input line 1467.
-
 [23]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 1544.
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 1539.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1544.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1539.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1544.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1539.
  [24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1698--1707
+Underfull \hbox (badness 10000) in paragraph at lines 1693--1702
 
  []
 
 
 LaTeX Warning: Citation `shayganfar:amct-symbiotic' on page 26 undefined on inp
-ut line 1719.
+ut line 1714.
 
 <figure/ActionSelection-croped.pdf, id=136, 200.75pt x 85.31876pt>
 File: figure/ActionSelection-croped.pdf Graphic file (type pdf)
 
 <use figure/ActionSelection-croped.pdf>
 Package pdftex.def Info: figure/ActionSelection-croped.pdf used on input line 1
-727.
+722.
 (pdftex.def)             Requested size: 270.40103pt x 114.93707pt.
  [26]
 File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
 
 <use figure/collaborationStructure-croped.pdf>
 Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
- line 1774.
+ line 1769.
 (pdftex.def)             Requested size: 270.40103pt x 145.47794pt.
  [27 <./figure/ActionSelection-croped.pdf>] [28]
 <figure/taskModel-croped.pdf, id=158, 553.06625pt x 182.6825pt>
 File: figure/taskModel-croped.pdf Graphic file (type pdf)
 
 <use figure/taskModel-croped.pdf>
-Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 1888.
+Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 1883.
 (pdftex.def)             Requested size: 455.23883pt x 149.38527pt.
 
-Overfull \hbox (117.23883pt too wide) in paragraph at lines 1888--1889
+Overfull \hbox (117.23883pt too wide) in paragraph at lines 1883--1884
  [][][] 
  []
 
-[29]
+[29 <./figure/taskModel-croped.pdf>]
 
 LaTeX Warning: Reference `sec:appraisal-process' on page 30 undefined on input 
-line 1964.
+line 1959.
 
-[30 <./figure/taskModel-croped.pdf>]
-<figure/question-sample-croped.pdf, id=182, 303.1325pt x 95.35625pt>
+<figure/question-sample-croped.pdf, id=179, 303.1325pt x 95.35625pt>
 File: figure/question-sample-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample-croped.pdf>
 Package pdftex.def Info: figure/question-sample-croped.pdf used on input line 1
-973.
+968.
 (pdftex.def)             Requested size: 270.40103pt x 85.06175pt.
-
+ [30]
 <figure/question-sample2-croped.pdf, id=183, 308.15125pt x 105.39375pt>
 File: figure/question-sample2-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample2-croped.pdf>
 Package pdftex.def Info: figure/question-sample2-croped.pdf used on input line 
-1996.
+1991.
 (pdftex.def)             Requested size: 270.40103pt x 92.48946pt.
 
 <figure/question-sample3-croped.pdf, id=184, 303.1325pt x 119.44624pt>
@@ -1248,7 +1243,7 @@ File: figure/question-sample3-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample3-croped.pdf>
 Package pdftex.def Info: figure/question-sample3-croped.pdf used on input line 
-2016.
+2011.
 (pdftex.def)             Requested size: 270.40103pt x 106.55103pt.
  [31 <./figure/question-sample-croped.pdf> <./figure/question-sample2-croped.pd
 f
@@ -1258,7 +1253,7 @@ PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
 LaTeX Warning: Reference `sec:appraisal-process' on page 32 undefined on input 
-line 2030.
+line 2025.
 
 [32 <./figure/question-sample3-croped.pdf>] (./MahniShayganfar-IJSR2016.bbl
 ! Misplaced alignment tab character &.
@@ -1289,11 +1284,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  19495 strings out of 493304
  378996 string characters out of 6139871
- 736726 words of memory out of 5000000
+ 734726 words of memory out of 5000000
  22532 multiletter control sequences out of 15000+600000
  41606 words of font info for 87 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,14n,59p,10429b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,14n,59p,10429b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
@@ -1313,7 +1308,7 @@ s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type
 /urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb
 i8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MahniShayganfar-IJSR2016.pdf (36 pages, 451615 bytes).
+Output written on MahniShayganfar-IJSR2016.pdf (36 pages, 451350 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  214 compressed objects within 3 object streams
