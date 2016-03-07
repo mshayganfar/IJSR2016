@@ -51,6 +51,13 @@ grestore
 \usepackage{perpage}
 \usepackage{enumerate}
 \MakePerPage{footnote}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,automata}
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithm}
+\usepackage{enumitem, kantlipsum}
+
 %
 % \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
@@ -240,6 +247,125 @@ each mechanism using JESS (JAVA Expert System Shell), in order to generate the
 same type of collaborative behaviors as appear in our examples. In the future,
 we are going to use these rules and the processes involved in each mechanism to
 develop collaborative behaviors in an interactive robot.
+
+\section{Related Work}
+\label{sec:related-work}
+
+The prominent collaboration theories are mostly based on plans and joint
+intentions
+\cite{cohen:teamwork,grosz:plans-discourse}, and they were derived from
+the BDI paradigm developed by Bratman \cite{bratman:intentions-plans} which is
+fundamentally reliant on folk psychology \cite{ravenscroft:folk}. The two
+theories, Joint Intentions \cite{cohen:teamwork} and SharedPlans
+\cite{grosz:plans-discourse}, have been extensively used to examine and describe
+teamwork and collaboration. The SharedPlans theory is a general theory of
+collaborative planning which accommodates multi-level action decomposition
+hierarchies, and allows the process of generating complete plans. The
+SharedPlans theory shows how a group of collaborators can incrementally form and
+execute a shared plan, and describes how a shared plan coordinates their
+activities towards achieving a shared goal. Furthermore, SharedPlans theory
+emphasizes that collaborative plans are an interleaving of collaborators' mutual
+beliefs and intentions about the actions in the plan
+\cite{grosz:planning-acting,grosz:collaboration,grosz:plans-discourse}. In
+contrast, the Joint Intentions theory as another formal theory of collaboration
+is based on the idea of individual and joint intentions to act as a team member.
+In this theory, a joint intention is a shared commitment to perform an action
+while in a group mental state. Joint Intentions theory describes how team
+members can jointly act together by sharing mental states about their actions
+while an intention is viewed as a commitment to perform an action
+\cite{cohen:teamwork}.
+
+There are many research focusing on different aspects of collaboration based on
+different collaboration theories, i.e., SharedPlans, Joint Intentions, and
+hybrid theories of collaboration, e.g., STEAM \cite{tambe:flexible-teamwork}.
+Some of these works present algorithms and computational models in a
+teamwork environment based on the underlying structure of the SharedPlans theory
+\cite{lochbaum:collaborative-planning,lochbaum:plan-models,yen:cast,yin:knowledge-based-sharedplans},
+and Joint Intentions theory
+\cite{breazeal:humanoid-robots,mutlu:coordination-robot}. The hybrid teamwork
+model, STEAM \cite{tambe:flexible-teamwork}, has also been successfully applied
+to a variety of domains
+\cite{kabil:coordination-mechanisms,kitano:robocup,marsella:robocup,scerri:robot-agent-person}.
+All of the works presented in this section lack a systematic integration of
+collaboration theories with some theories capable of describing underlying
+collaboration processes. Therefore, they either do not explain the structure and
+the underlying processes of collaboration, or their approach in either or both
+of these views is application oriented. The collaboration structure of Affective
+Motivational Collaboration Theory is based on the SharedPlans theory
+\cite{grosz:planning-acting,grosz:collaboration,grosz:plans-discourse}, and it
+focuses on the processes that generate, maintain and update this structure based
+on mental states. COLLAGEN \cite{rich:collaboration-manager,rich:discourse} 
+incorporates certain algorithms for discourse generation and interpretation, and
+is able to maintain a segmented interaction history, which facilitates the
+discourse between a human and a robot \cite{rickel:discourse-theory-dialogue}.
+We use its latest incarnation, i.e., Disco, for our implementation.
+
+Furthermore, there are some works focusing on the concepts of robot assistants
+\cite{clancey:agent-assistants-collaboration}, or teamwork and its challenges in
+cognitive and behavioral levels
+\cite{nikolaidis:collaboration-joint-action,scerri:prototype-distributed-teams}.
+Some researchers have an overall look at a collaboration concept at the
+architectural level
+\cite{esau:integrating-emotion-collaboration,garcia:collaboration-emotional-awareness,sofge:collaboration-humanoid-space}.
+There are other concepts such as joint actions and commitments
+\cite{grosz:intention-dynamics-collaboration}, dynamics of intentions during
+collaboration \cite{levesque:acting-together} providing more depth in the
+context of collaboration. Some of these works emphasize the applicability of
+emotions in their architectures, and some others emphasize the collaborative
+aspect of their robots. The applications of different prominent collaboration
+theories show the importance and the applicability of these theories in robots
+and collaborative systems. The following examples briefly review some of the
+applications of artificial emotions and appraisal theory of emotions in robots
+and autonomous agents.\\
+
+\textbf{Applications of Artificial Emotions} -- There are many research areas,
+including robotics and autonomous agents, that employ the structure and/or
+functions of emotions in their work with a variety of motivations behind
+modeling emotions \cite{wehrle:motivations-modeling-emotion}. Some of these
+works are inspired by specific psychological theories, some are freely using the
+concept of emotion without using the theoretical background in social sciences
+\cite{urban:pecs}, and some are using a combination of concepts from the
+psychological theories \cite{kiryazov:modeling-appraisal-pad}. We can also see
+the application of emotion theories in designing companion robots, robots
+capable of expressing emotions and social behaviors, as well as robots which can
+convey certain types of emotion products, e.g., empathy
+\cite{breazeal:expressive-behavior,paiva:emotion-modeling,shayganfar:methodology}.
+Robots also use emotions theories for some other purposes such as automatic
+affect recognition using different modalities \cite{zeng:affect-recognition},
+and behavior adaptation \cite{liu:affect-robot-behavior}.
+
+Furthermore, emotions have different intra/interpersonal functions. Motivation
+is one of the crucial functions of emotions, since it can initiate, direct and
+maintain goal-directed behaviors. The motivation mechanism in our work is
+inspired by Murray's theory as well as Bach's approach on D$\ddot{o}$rner's
+theory
+\cite{bach:micropsi-agent-architecture,bach:psi,bach:motivaitional-system-ai,bach:next-generation-micropsi}.
+It is focused on the role of emotion-driven motives in cognitive processes,
+e.g., intention formation, during collaboration.\\
+
+\textbf{Applications of Appraisal Theory} -- Appraisal theories of emotion were
+first formulated by Arnold \cite{arnold:emotion-personality} and Lazarus
+\cite{lazarus:emotion-adaptation} and then were actively developed in the early
+80s by Ellsworth and Scherer and their students
+\cite{roseman:appraisal-theory,sander:systems-approach-appraisal,scherer:nature-function-emotion,scherer:emotions-emergent,scherer:appraisal-processes}.
+Computational appraisal models have been applied to a variety of uses including
+contributions to psychology, robotics, AI, and HCI. For instance, Marsella and
+Gratch have used EMA \cite{marsella:ema-process-model} to generate specific
+predictions about how human subjects will appraise and cope with emotional
+situations and argue that empirical tests of these predictions have implications
+for psychological appraisal theory \cite{gratch:assessing-appraisal}. However,
+EMA does not focus on the dynamics of collaborative contexts. There are several
+examples in artificial intelligence and robotics of applying appraisal theory
+\cite{adam:bdi-emotional-companion,kim:model-hri-appraisal,marsella:ema-process-model}.
+In robotics, appraisal theory has been used to establish and maintain a better
+interaction between a robot and a human
+\cite{kim:model-hri-appraisal,sander:systems-approach-appraisal,vogiatzis:robot-museum}.
+Appraisal theory has also been used in robots' decision making
+\cite{castro:autonomous-robot-fear}, or in their cognitive systems
+\cite{hudlicka:emotinos-reasons,marinier:emotion-reinforcement}. In the virtual
+agents community, empathy and affective decision-making is a research topic that
+has received much attention in the last decade
+\cite{scott:modeling-empathy-agent,paiva:agent-care,pontier:women-robot-men,velasquez:emotions-motivations-agents}.
 
 \section{Example Scenarios}
 \label{sec:example-scenario}
@@ -853,665 +979,822 @@ the Appraisal mechanism. These emotion instances include the Robot's own
 emotions as well as the anticipated emotions of the human which are created with
 the help of the processes in the Theory of Mind mechanism.
 
-\section{Computational Walkthroughs}
-\label{sec:wtce}
+\section{Collaboration}
 
-In this section, we explain in detail how the individual computational
-mechanisms described in Section \ref{sec:computational-framework} generate the
-Robot's behaviors in each example in Section \ref{sec:example-scenario}. Since
-our walkthrough explanation of underlying processes is based on the
-collaborators' utterances, we use verbal expression of emotions. However,
-nonverbal emotional expression (e.g., facial expressions) can provide the same
-impact during collaboration. The following four walkthroughs are in the same
-order as the four examples in Section \ref{sec:example-scenario}. The names of
-the mechanisms written in parentheses and bold below indicate which mechanism
-is involved in each step. There are also specific processes indicated after the
-mechanism, if appropriate.
+The Collaboration mechanism constructs a hierarchy of goals associated with
+tasks in the form of a hierarchical task network (see Figure \ref{fig:cs}), and
+also manages and maintains the constraints and other required details of the
+collaboration including the inputs and outputs of individual tasks, the
+\textit{preconditions} (specifying whether it is appropriate to perform a task),
+and the \textit{postconditions} (specifying whether a just-completed task was
+successful). Collaboration also keeps track of the focus of attention, which
+determines the salient objects, properties and relations at each point, and
+shifts the focus of attention during the interaction.
 
-\subsection{Agreeing on the Shared Goal (Emotion Awareness)}
-\label{sec:wt-exp1}
+\vspace*{-2mm}
+\begin{figure}[tbh]
+  \centering
+  \includegraphics[width=0.474\textwidth]{figure/collaborationStructure-croped.pdf}
+  \vspace*{-6mm}
+  \caption{{\fontsize{9}{9}\selectfont Collaboration structure (shared plan).}}
+  \label{fig:cs}
+  \vspace*{-2mm}
+\end{figure}
 
-This section provides a step-by-step walkthrough of the example presented in
-Section \ref{sec:exp1}, beginning with the Astronaut's utterance below:\\
+Here, we briefly describe the methods which retrieve information about the
+collaboration structure, and are used in our algorithms to compute the values of
+appraisal variables. In these methods, $\varepsilon_t$ is the event
+corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}. 
 
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{A1. Astronaut:}}} Oh no!
-Finishing the quality check of our installation with this measurement problem is
-so frustrating. I think we should stop now!\end{varwidth}}\\ \\
-
-%\fontsize{9pt}{10pt}\selectfont
-\noindent \textbf{(Perception)} The Robot perceives the Astronaut's utterances
-and emotion.\\
+\begin{itemize}[leftmargin=2pt]
+  \setlength\itemsep{0.2mm}
+  \item \textit{recognizeGoal($\varepsilon_t$)} returns the unique goal to which
+  the given event (action, utterance, or emotional expression) directly
+  contributes, or \textit{ambiguous} if this method does not recognize a goal in
+  the plan.
   
-First, the Robot perceives the Astronaut's utterances as well as her emotion in
-the first turn (A1). The output of Perception is beliefs about the task in the
-Astronaut's focus of attention, and also the Astronaut's emotion which she has
-expressed verbally. The beliefs formed about the task (i.e., installing the
-panel) include:
-
-\begin{itemize}
-  \item[$\bullet$] the Astronaut's proposal of \textit{stopping} the task,
-  \item[$\bullet$] which is a \textit{future} event,
-  \item[$\bullet$] and is \textit{caused by} the measurement tool problem.
+  \item \textit{topLevelGoalStatus($g_t$)} returns the status of the top level
+  goal whether it is \textsc{achieved, failed, blocked, inapplicable, pending,}
+  or \textsc{in progress}.
+  In our example, ``Install Solar Panels'' is the top level goal.
+  
+  \item \textit{currGoalStatus($g_t$)} returns the current goal status whether
+  it is \textsc{achieved, failed, blocked, inapplicable, pending,} or \textsc{in
+  progress}. In our example, ``Prepare Measurement Tool'' is the current
+  (focused) goal.
+  
+  \item \textit{precondStatus($g_t$)} returns the status of the precondition for
+  the given goal whether it is \textsc{satisfied, unsatisfied} or
+  \textsc{unknown}. For instance, the precondition for fixing a panel is whether
+  the panel is appropriately located on its frame.
+  
+  \item \textit{isLive($g_t$)} returns \textit{true} if all the predecessors of
+  the given goal are \textsc{achieved} and all the preconditions of the goal are
+  \textsc{satisfied}; otherwise returns \textit{false}.
+  
+  \item \textit{isFocusShift($g_t$)} returns \textit{true} if the given
+  goal is not the previous focus (top of the stack); otherwise returns
+  \textit{false}.
+  
+  \item \textit{isNecessaryFocusShift($g_t$)} returns \textit{true} if the
+  status of the previous focus was \textsc{achieved}; otherwise returns
+  \textit{false} \cite{rich:focused-unfocused-users}.
+  
+  \item \textit{isPath($g_1$, $g_2$)} returns \textit{true} if there is a path
+  between $g_1$ and $g_2$ in a plan tree structure; otherwise returns
+  \textit{false}.
+  
+  \item \textit{doesContribute($g_t$)} returns whether the given goal
+  contributes to another goal in the higher level of the plan hierarchy. For
+  instance, an abstract (nonprimitive) goal of ``Bring Panels'' contributes to
+  the higher level goal of ``Install Solar Panels''.
+  
+  \item \textit{extractContributingGoals($g_t$)} returns all the contributing
+  goals of the given goal. For instance, ``Prepare Measurement Tool'' and
+  ``Measure Quality'' are two goals contributing to the ``Check Panels''
+  nonprimitive goal.
+  
+  \item \textit{extractPredecessors($g_t$)} returns the predecessors of the
+  given goal. For instance, the ``Fix Panels'' goal is the predecessor of
+  another goal called ``Check Panels''.
+  
+  \item \textit{extractInputs($g_t$)} returns all the required inputs for
+  the given goal. For example, the goal ``Fix Panels'' requires inputs such as
+  the \textit{welding tool} and the \textit{panel}.
+  
+  \item \textit{isAvailable($g_t$)} returns whether the given input is
+  available. For instance, if the \textit{welding tool} is required for the goal
+  ``Fix Panels'', is it available now?
+  
+  \item \textit{isAchieved($g_t$)} returns whether the given goal is achieved,
+  i.e., whether all the postconditions of the given goal are \textsc{satisfied}.
+  
+  \item \textit{isFocused($g_t$)} returns whether the focus is on given
+  goal now. In this example, the focus is on the goal ``Prepare Measurement
+  Tool''. The focused goal is the goal that the robot is currently pursuing.
+  
+  \item \textit{getResponsible($g_t$)} returns responsible agents of the given
+  goal. In a dyadic collaboration, both of the agents can be partly responsible
+  for a nonprimitive goal, while each is responsible for one or more primitive
+  goals. For instance, both the robot and the astronaut are responsible for the
+  nonprimitive goal of ``Install Solar Panels'', whereas it is only the
+  astronaut who is responsible for the primitive goal of ``Prepare Measurement
+  Tool''.
 \end{itemize}
 
-\noindent Also, beliefs formed about the Astronaut's emotion (i.e., frustration)
-include:
+\section{Appraisal Processes}
+\label{sec:appraisal}
 
-\begin{itemize}
-  \item[$\bullet$] the existence of a \textit{negative-valenced} emotion,
-  \item[$\bullet$] and is verbally conveyed as \textit{frustration}.\\
+We consider four appraisal variables to be the most important appraisal
+variables in a collaboration context, i.e., \textit{Relevance} (Algorithm
+\ref{alg:relevance}), \textit{Desirability} (Algorithm \ref{alg:desirability}),
+\textit{Expectedness} (Algorithm \ref{alg:expectedness}), and
+\textit{Controllability} (Algorithm \ref{alg:controllability}). There are other
+appraisal variables introduced in psychological
+\cite{scherer:appraisal-processes} and computational literature
+\cite{gratch:domain-independent}. We believe most of these variables can be
+straightforwardly added to our appraisal mechanism later. All of the algorithms
+in this section use mental states of the robot (discussed in Section
+\ref{sec:mental-states}) which are formed based on the collaboration structure.
+These algorithms use the corresponding recognized goal of the most recent event
+at each turn.
+
+\subsection{Relevance}
+
+Relevance as an appraisal variable measures the significance of an event for the
+robot. An event can be evaluated to be relevant if it has a positive utility or
+it can causally impact a state with a positive utility
+\cite{marsella:ema-process-model}. Relevance is an important appraisal variable
+since the other appraisal variables are more meaningful only for relevant
+events.
+
+Algorithm \ref{alg:relevance} determines the relevance of the given event with
+respect to the current mental state. The relevance of the event depends on the
+significance of the event with respect to the current collaboration status.
+The significance of an event is determined based on the utility of the event as
+it is also presented in
+\cite{gratch:domain-independent,marsella:ema-process-model}. We believe although
+the utility of the event represents the significance of the event, the other
+collaborator's expressed emotion also plays a role by influencing the
+significance of the utility through a threshold value. As a result, evaluating
+the relevance of the events can cause a collaborative robot to respond
+effectively to the events which can positively impact the status of the shared
+goal, without dedicating all resources to every single event. The relevance
+process also benefits from the information that the collaboration structure
+contains, e.g., shared goal.
+
+\vspace*{-2mm}
+\begin{algorithm}
+	\caption{(Relevance)}
+	\label{alg:relevance}
+	\begin{algorithmic}[1]
+		\Function{IsEventRelevant}{Event $\varepsilon_t$}
+			\Statex
+			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+			\Statex
+			\State $\mathcal{U} \gets \Call{getEventUtility}{\mathit{g}_{t}}$ 
+			\State $\tau_{t} \gets \Call{getEmotionalThreshold}{\mathit{g}_{t}}$
+			\Statex
+			\If {$( \mathcal{U} \geq \tau_{t} )$}
+				\State \Return {{\fontsize{7}{8}\selectfont RELEVANT}}
+			\Else
+				\State \Return {{\fontsize{7}{8}\selectfont IRRELEVANT}}
+			\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\vspace*{-3mm}
+After perceiving an event, it is the belief about that event which represents
+the event in the robot's mental state. Also, \textit{recognizeGoal} returns
+the goal ($g_{t}$) to which the current event contributes, unless it is
+\textit{ambiguous}; $g_{t}$ represents the shared goal at time (turn) $t$ within
+the shared plan. We compute the utility ($0 \leq \mathcal{U} \leq 1$) of the
+event based on the values of the attributes associated with the existing beliefs
+in the mental state, as well as the attributes of the motive associated with the
+recognized goal. We use three of the belief attributes discussed in Section
+\ref{sec:belief} to compute the belief related part of the utility: 
+
+\vspace*{-2mm}
+\begin{itemize}[leftmargin=2pt]
+  \setlength\itemsep{0.2mm}
+  \item \textit{Strength}: The extent to which the pre and postconditions of a
+  goal and its predecessors and/or contributing goals are \textsc{satisfied} or
+  \textsc{unsatisfied} makes a belief about the goal stronger.
+  Respectively, an \textsc{unknown} pre and postcondition status of a goal and
+  its predecessors and/or contributing goals forms beliefs with lower strength.
+  \item \textit{Saliency}: Beliefs related to the goal at the top of the focus
+  stack are more salient than beliefs related to any other goal in the plan,
+  whether those goals are already \textsc{achieved} or \textsc{failed}, or they
+  will be pursued in the future.
+  \item \textit{Persistence}: The recurrence of a belief over the passage of
+  time (turns) increases the persistence of the belief. Beliefs occurring only
+  in one turn have the lowest value of persistence.
 \end{itemize}
 
-\noindent\textbf{(Collaboration: \textit{Monitoring \& Focus Shifting})}
-Based on these perceptions, the Robot uses the Collaboration mechanism, and
-forms new beliefs about the collaboration status. These new beliefs concern:
+\noindent We also use two of the motive attributes discussed in Section
+\ref{sec:motive} to compute the motive related part of the utility
+($\mathcal{U}$):
 
-\begin{itemize}
-  \item[$\bullet$] the \textit{unsatisfied} precondition of the Astronaut's
-  current \textit{task},
-  \item[$\bullet$] the \textit{blocked} status of the Astronaut's current
-  \textit{task},
-  \item[$\bullet$] and consequently the \textit{blocked} status of the
-  \textit{shared goal},
-  \item[$\bullet$] which causes the change in the Robot's \textit{focus of
-  attention} to the Astronaut's task.
+\vspace*{-1mm}
+\begin{itemize}[leftmargin=2pt]
+  \setlength\itemsep{1mm}
+  \item \textit{Urgency}: There are two factors impacting the urgency of
+  a motive: a) whether the goal directing the given motive is the predecessor of
+  another goal for which the other collaborator is responsible, and b) whether
+  achieving the goal directing the given motive can mitigate the other
+  collaborator's negative valenced emotion.
+  \item \textit{Importance}: A motive is important if failure of the directing
+  goal causes an impasse in the shared plan (i.e., no further goal is available
+  to achieve), or achievement of the directing goal removes an existing impasse.
 \end{itemize}
 
-\noindent \textbf{(Theory of Mind: \textit{Reverse Appraisal \& User
-Modeling})} The Robot uses reverse appraisal to understand the meaning of the
-Astronaut's frustration according to the collaborative task status (e.g.,
-precondition and shared goal status). The Robot updates the Astronaut's user
-model accordingly.\\
-
-The reverse appraisal process forms beliefs about the anticipated appraisals of
-the Astronaut with respect to the current task's status, based on the
-Astronaut's utterances and emotion in A1, and the output of the Collaboration
-mechanism. Some of these anticipated appraisal values indicate that the event is
-interpreted as \textit{relevant}, \textit{undesirable}, \textit{uncontrollable},
-\textit{urgent}, and \textit{unexpected} by the Astronaut. Furthermore, the user
-modeling process updates the Astronaut's user model based on the output of the
-reverse appraisal process and the Collaboration mechanism; this user modeling
-process forms beliefs that:
-
-\begin{itemize}
-  \item[$\bullet$] the Astronaut has \textit{low autonomy},
-  \item[$\bullet$] the Astronaut is a \textit{highly communicative}
-  collaborator.
-\end{itemize}
-
-\noindent \textbf{(Appraisal)} The Robot appraises the Astronaut's utterances
-and emotion.\\
-
-The Appraisal mechanism uses distinct processes to compute values for individual
-appraisal variables. Some of these processes use beliefs formed based on user
-modeling process for the appraisals, e.g., controllability. The output of these
-processes provides a vector of values describing the Robot's interpretation of
-the current event (A1). In this example, all the beliefs listed above including
-the negative-valenced emotion provide a vector of values that would be
-interpreted as worry. The Action component has the task of expressing this
-emotion, if required.\\
-
-\noindent \textbf{(Motivation: \textit{Motive \& Intention Formation})}
-The Robot forms new motives according to the result of:
-
-\begin{enumerate}[a)]
-  \item \textit{appraisal} with respect to the shared goal,
-  \item \textit{reverse appraisal} of the Astronaut's emotion,
-  \item and the \textit{user model} of the Astronaut.
-\end{enumerate}
-
-Then, the motive comparison process compares current available motives and
-sorts them based on their distance to the Astronaut's emotional state and
-the achievement of the shared goal. Here, the distance function depends on a)
-the Astronaut's emotional state (i.e., frustration) as an approximation of her
-mental state, and b) how taking an action based on the corresponding intention
-of a particular motive improves the possibility of the collaborators reaching a
-mutually accepted shared goal. The Robot chooses the first motive on the sorted
-list to form an intention to postpone asking questions about the alternative
-solution because of the Astronaut's negative emotion, the second motive to form
-an intention for acknowledging the Astronaut's perceived emotion, and the third
-motive to form another intention for resolving the current blocking in the
-collaboration. After this whole process, the Robot uses the Coping mechanism to
-take an action based on the current intention.\\
-
-\noindent \textbf{(Coping)} With respect to the current intentions and based on
-different beliefs, the Robot selects distinct coping strategies. Therefore,
-based on the Astronaut's perceived negative emotion, the Robot chooses the
-\textit{restraint} coping strategy (an emotion-focused strategy) which causes
-the Robot to postpone asking about an alternative solution. Then, because of the
-Astronaut's anticipated appraisals (reverse appraisal), e.g., undesirability of
-the event, the Robot chooses an \textit{active} coping strategy (a
-problem-focused strategy) to acknowledge the Astronaut's negative emotion, which
-is an active step to remove the Astronaut's stressor within the collaboration.
-Finally, based on the current mental state, e.g., the Astronaut's blocked task,
-and the Astronaut's user model, the Robot chooses a \textit{planning} coping
-strategy (another problem-focused strategy) to provide an alternative solution
-to the Astronaut. Notice that there are three coping strategies being used
-here.\\
-
-\noindent \fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{A2. Robot:}}} I see. This is
-frustrating. But, I can help you with the measurement tool and we can finish the
-task as originally planned. \end{varwidth}}\\
-
-The Astronaut's next utterance (A3) provides the Robot with a question about
-whether the Robot can fix the measurement tool.\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{A3. Astronaut:}}} Can you fix
-the measurement tool?\end{varwidth}}\\
-
-\noindent Using the same processes as for A2, the following beliefs hold:
-
-\begin{itemize}
-  \item[$\bullet$] the precondition associated with the Astronaut's current
-  \textit{task} is still \textit{unsatisfied},
-  \item[$\bullet$] the status of the Astronaut's current \textit{task} is still
-  \textit{blocked},
-  \item[$\bullet$] and similarly the status of the \textit{shared goal} is
-  still \textit{blocked},
-  \item[$\bullet$] however, the Astronaut's question changes the Robot's
-  \textit{focus of attention} to the measurement tool,
-  \item[$\bullet$] also, the Astronaut's \textit{emotion} has changed to
-  \textit{neutral}.
-  \item[$\bullet$] but, her user model \textit{stays the same}, i.e., having
-  \textit{low-autonomy} and being \textit{highly communicative}.
-\end{itemize}
-
-Notice that the Collaboration and Appraisal mechanisms in the next two steps
-operate to form required beliefs for the Motivation mechanism. The new motives
-will help the Robot to remove the current impasse by negotiating an alternative
-solution.\\
-
-\noindent\textbf{(Collaboration)} The change in the focus of attention to the
-measurement tool causes the Robot to check the availability of a recipe to fix
-or replace the malfunctioning measurement tool. The Robot finds a recipe to
-replace the measurement tool.\\
-
-\noindent\textbf{(Appraisal)} The Robot appraises the possibility of
-replacing the measurement tool with respect to: a) the status of the shared
-goal, and b) the Astronaut's user model. For instance, the Astronaut's
-\textit{low-autonomy} in her current task lowers the possibility of
-\textit{changeability} of the current state of the world for the Robot, and the
-Astronaut's \textit{highly communicative} behavior impacts the Robot's decision
-on whether the offer that the Robot is about to make is \textit{relevant} and
-\textit{desirable} for the Astronaut. Robot finds the replacement of the
-measurement tool \textit{relevant}, \textit{desirable}, and
-\textit{controllable}.\\
-
-\noindent\textbf{(Motivation: \textit{Motive \& Intention Formations})} The
-Robot forms new motives based on:
-
-\begin{itemize}
-  \item[$\bullet$] belief about a positive change in the Astronaut's emotion
-  (i.e., from frustration to neutral),
-  \item[$\bullet$] belief about the lack of time,
-  \item[$\bullet$] belief about result of the appraisal of the replacing the
-  measurement tool,
-  \item[$\bullet$] and belief about the availability of a recipe to replace the
-  measurement tool.
-\end{itemize}
-
-\noindent The Robot forms the corresponding intentions with respect to the new
-motives. Once again, the Robot uses the Coping mechanism to take actions
-based on the recent intentions.\\
-
-\noindent\textbf{(Coping)} With respect to the Robot's intention to alleviate
-the pressure of the shortage of time, the Robot chooses an active coping
-strategy to remove the current stressor (i.e., lack of time). Also, with respect
-to the Robot's intention to maintain the recent improvement in the Astronaut's
-emotional state, and the intention to fetch another measurement tool, the Robot
-chooses a planning strategy, to explain the next task to the Astronaut, and to
-negotiate and offer an alternative action.\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{A4. Robot:}}} The next task is
-fixing the panel and it requires you to prepare and attach the welding rod to
-your welding tool. To save our time, I will fetch another measurement tool while
-you are preparing your welding tool.\end{varwidth}}\\
-
-At this point, the Astronaut is content with the way the Robot outlined the
-shared goal and responds correspondingly (A5). The Robot perceives and
-interprets the Astronaut's response as an agreement on their new shared goal as
-discussed above.\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{A5. Astronaut:}}} That would be
-great!\end{varwidth}}
-
-\subsection{Agreeing on Shared Goal (Emotion Ignorance)}
-\label{sec:wt-exp2}
-
-This walkthrough begins with the same utterance as the previous one, and
-corresponds to the emotional ignorance example in Section \ref{sec:exp2}. In
-emotional ignorance examples, we assume the Robot always perceives the
-Astronaut as expressing neutral emotion.\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B1. Astronaut:}}} Oh no!
-Finishing the quality check of our installation with this measurement problem is
-so frustrating. I think we should stop now!\end{varwidth}}\\ \\
-
-\noindent\textbf{(Perception)} The Robot perceives only the non-emotional
-content of the Astronaut's utterances (B1).\\
-
-Similarly to the previous example, Perception forms beliefs about the task in
-the Astronaut's focus of attention. These beliefs include:
-
-\begin{itemize}
-  \item[$\bullet$] the Astronaut's proposal of \textit{stopping} the task,
-  \item[$\bullet$] which is a \textit{future} event,
-  \item[$\bullet$] and is \textit{caused by} the measurement tool problem.
-\end{itemize}
-
-\noindent Notice that beliefs about the Astronaut's emotion are formed
-differently in comparison with the previous example, and are based on the
-neutral emotion of the Astronaut, since the Robot ignores the Astronaut's actual
-emotion instance, i.e., frustration.\\
-
-\noindent\textbf{(Collaboration)} The Robot uses the Collaboration mechanism to
-form new beliefs about the collaboration status based on its perception. These
-new beliefs are the same as those generated by the Collaboration mechanism in
-the previous example.\\
-
-\noindent\textbf{(Theory of Mind: \textit{Reverse Appraisal \& User Modeling})}
-The Robot uses reverse appraisal to understand the meaning of the Astronaut's
-neutral emotion according to the collaborative task status (e.g., precondition
-and shared goal status). The Robot updates the Astronaut's user model
-respectively.\\
-
-In this example, since the Robot misses the actual expressed emotion by the
-Astronaut (i.e., frustration) and incorrectly perceives her as having neutral
-emotion, the corresponding reverse appraisal values lead to the wrong
-interpretation of the event. The Robot thinks the Astronaut interprets the
-event as \textit{desirable}, \textit{controllable}, \textit{non-urgent}, and
-\textit{expected} (all of which are incorrect). Furthermore, the user modeling
-process forms incorrect beliefs:
-
-\begin{itemize}
-  \item[$\bullet$] Astronaut has \textit{high autonomy},
-  \item[$\bullet$] Astronaut is a \textit{moderately communicative}
-  collaborator.
-\end{itemize}
-
-\noindent\textbf{(Appraisal)} The Appraisal mechanism operates similarly to what
-we discussed in Section \ref{sec:exp1}. The output of these processes provides a
-vector of values describing the Robot's interpretation of the current event
-(B1). The outcome will also be mapped to a particular emotion instance, but
-since the Robot misses the Astronaut's emotion, it maps the appraisals to a
-different emotion, i.e., hope, than the one elicited in previous example. The
-Robot generates hope because it believes the Astronaut's emotion is neutral and
-the current task is blocked. Therefore, the Robot wants to come up with an
-alternative solution immediately.\\
-
-\noindent\textbf{(Motivation: \textit{Motive \& Intention Formation})} Although
-the process of comparing and sorting available motives here is similar to the
-previous example, all of the new motives are different. The reason is that each
-of the three sources of motives forms a different motive due to the ignorance of
-the Astronaut's actual emotion. For instance, the motive generated with the
-influence of appraisal in the emotional awareness example urges the Robot to
-postpone asking questions about the alternative solutions while the motive with
-the same cause (i.e., appraisal) here urges the Robot to immediately try to fix
-the problem and come up with alternative solutions by asking questions. The
-Robot, similarly to the previous example, selects the most related motives and
-forms new intentions with respect to the current status of collaboration. After
-this whole process, the Robot uses the Coping mechanism to take actions based on
-the available intentions.\\
-
-\noindent\textbf{(Coping)} Based on the current mental state and with a similar
-process as in the previous example, the Robot decides to use a problem-focused
-coping strategy of seeking information to be able to choose between two
-available actions and reduce the current amount of uncertainty. Therefore, the
-Robot, without acknowledging the Astronaut's emotion, asks the Astronaut to
-choose between two alternative solutions (B2).\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B2. Robot:}}} I can help you
-with the measurement tool, or we can terminate this task.
-What do you want me to do?\end{varwidth}}\\
-
-As we mentioned earlier, the Robot's response does not make any progress in the
-collaboration status. Hence, the Astronaut repeats herself about the task status
-(B3).\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B3. Astronaut:}}} As I said the
-measurement tool does not work properly. We can not continue! \end{varwidth}}\\
-
-The Robot perceives the Astronaut's new utterance (B3) while, again, ignoring
-her frustration. The Robot goes through the same process as described above, and
-since the Astronaut has just repeated herself, her new utterances do not change
-the Robot's mental state. Having the same mental state causes the Robot to ask a
-similar question (B4).\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B4. Robot:}}} Okay. Do you want
-me to fix this problem or terminate the task?\end{varwidth}}\\
-
-This time, the Robot creates ambiguity for the Astronaut because part of
-the Robot's utterance (i.e., ``fix this problem'') does not make it clear
-whether the Robot can fix the measurement tool, or whether Robot has another
-potential solution. Hence, the ambiguity of Robot's question does not help the
-Astronaut's frustration and causes her to ask a clarification question (B5).\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B5. Astronaut:}}} Can you fix my
-measurement tool?\end{varwidth}}\\
-
-All the beliefs formed at this point are the same as those of turn A3 in Section
-\ref{sec:wt-exp1}, except the following ones:
-
-\begin{itemize}
-  \item[$\bullet$] the Astronaut's \textit{emotion} is still
-  believed to be \textit{neutral},
-  \item[$\bullet$] but, her user model \textit{has changed} to having
-  \textit{medium-autonomy} and being \textit{highly communicative}.
-\end{itemize}
-
-Notice that similar to the process we discussed in turn A4, the Collaboration
-and Appraisal mechanisms operate to form required beliefs for the Motivation
-mechanism.\\
-
-\noindent\textbf{(Motivation: \textit{Motive \& Intention Formations})} The
-Robot forms new motives similar to the turn A4 based on the same set of beliefs,
-except that in this example the Robot misses a belief about a positive change in
-the Astronaut's emotion (since the Robot always believes the Astronaut has
-neutral emotion).\\
-
-\noindent\textbf{(Coping)} Here, the Robot does not have an intention to
-maintain the recent improvement in the Astronaut's emotional state. However,
-since the Robot does have an intention to alleviate the pressure of the shortage
-of time, and an intention to fetch another measurement tool, the Robot chooses a
-planning strategy, to immediately respond to the Astronaut's question, and try
-to negotiate and offer an alternative action to the Astronaut (B6).\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B6. Robot:}}} I cannot fix your
-measurement tool, but I can fetch another one for you if you want?
-\end{varwidth}}\\
-
-The Astronaut's strong emotion, shortage of time, and the Robot's mismatching
-answer to the Astronaut's assumption causes the Astronaut to reject the Robot's
-proposal (B7).\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B7. Astronaut:}}} No, I don't
-want another measurement tool! We don't have time for that!\end{varwidth}}\\
-
-After perceiving the Astronaut's response, once again, the Coping mechanism
-makes the Robot negotiate with the Astronaut to protect the shared goal from
-failure.\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B8. Robot:}}} Okay. You want me
-to terminate this task. Terminating this task can influence the quality of
-installation of this solar panel which can cause the mission to fail. Or, do you
-want us to work on another task? This can help us to install the panel using
-your welding tool, but I do not know whether the quality of our installation
-will be acceptable.\end{varwidth}}\\
-
-The Astronaut terminates the collaboration due to the lack of time and failure
-in the Robot's collaborative behavior (B9).\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B9. Astronaut:}}} I told you we
-have this problem and we should terminate the mission! We cannot continue
-without the measurement tool!\end{varwidth}}\\
-
-In summary, this example shows that ignoring the Astronaut's emotion impacts the
-Robot's perception and corresponding beliefs. The output of the Collaboration
-mechanism remains unchanged in comparison with the emotional awareness example.
-Although the Collaboration mechanism provides the required structural details of
-collaboration between the Robot and the Astronaut, these structural details are
-not enough to save a collaboration from failure. As we continue, we can see that
-ignoring the actual emotion of the Astronaut causes misfunctioning of the
-processes in the Theory of Mind mechanism, i.e., reverse appraisal and user
-modeling. Comparing the result of these two processes with the results in the
-emotional awareness example shows the importance of correctly perceiving a
-collaborator's emotion. This problem continues even with the Appraisal mechanism
-which maps the Robot's interpretation of the environment to a wrong emotion.
-Consequently, all sources of the Motivation mechanism provide incorrect values
-which drastically influence the formation of the underlying motives of the
-required intentions. Finally, the Coping mechanism operates based on wrong newly
-formed intentions which leads to a totally different behavior of the Robot in
-comparison with the same turn in the emotional awareness example. The divergence
-of the Robot's collaborative behavior from its successful path continues
-throughout the Robot and the Astronaut's interaction which increases the
-required time for achieving the shared goal, and perpetuates the negative
-feeling of the Astronaut. Consequently, the same collaboration fails even though
-that the Robot uses the same computational mechanisms, as we showed above.
-
-\subsection{Task Delegation (Emotion Awareness vs. Emotion Ignorance)}
-\label{sec:wt-exp3}
-
-In this section, we present the last two walkthroughs which focus on task
-delegation with and without emotional awareness. To avoid redundant
-explanations, these walkthrough examples are limited to comparison of the key
-turns in each example emphasizing the crucial differences in the results of the
-underlying mechanisms. \\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{C1 \& D1. Astronaut:}}} I still
-have some problems with attaching the first panel! We do not have enough time. You
-should begin to install the second panel.\end{varwidth}}\\
-
-\noindent\textbf{(Perception)} Although the Astronaut's first utterance is the
-same for both examples (C1 \& D1), in the second example the Perception
-mechanism misses the Astronaut's expressed emotion, i.e., worry. The Perception
-mechanism forms beliefs in both examples similar to what we discussed in
-Sections \ref{sec:wt-exp1} and \ref{sec:wt-exp2}.\\
-
-\noindent\textbf{(Collaboration)}The Collaboration mechanism forms the same
-beliefs (e.g., about required resources and availability of a recipe) in both
-examples. In other words, ignorance of the Astronaut's emotion by the Robot does
-not impact beliefs formed based on the output of the Collaboration mechanism.\\
-
-\noindent\textbf{(Theory of Mind: \textit{Reverse Appraisal \& User Modeling})}
-Similar to before, in the emotion awareness case, the Robot uses reverse
-appraisal to understand the meaning of the Astronaut's emotion (i.e., worry)
-with respect to the collaborative task status, and finds the anticipated
-appraisals as \textit{relevant}, \textit{undesirable}, \textit{uncontrollable},
-\textit{urgent} and \textit{unexpected}. In the emotion ignorance case, the
-Robot finds most of the anticipated appraisals the same, except that ignoring
-the Astronaut's negative emotion causes an interpretation of the event as
-\textit{controllable} and \textit{expected}. As a result, the Robot updates the
-Astronaut's user model and forms beliefs that a) the Astronaut has \textit{low
-autonomy} in the emotion awareness example versus \textit{high autonomy} in the
-emotion ignorance example, and b) the Astronaut is a highly communicative
-collaborator in both examples.\\
-
-\noindent\textbf{(Appraisal)} The Robot's interpretation of the current event
-leads to the same appraisal values in both cases as \textit{relevant},
-\textit{unexpected}, \textit{undesirable}, \textit{urgent}, and
-\textit{controllable}.\\
-
-\noindent \textbf{(Motivation: \textit{Motive \& Intention Formation})}
-The Robot forms new motives in the same way as we discussed in Section
-\ref{sec:wt-exp1}. The motives in the emotion awareness case are
-formed to acknowledge the Astronaut's negative emotion, and postpone any
-question regarding required information (e.g., unsatisfied postcondition of the
-current task) because of the Astronaut's perceived negative emotion. However, in
-the emotion ignorance example one motive is formed based on the availability of
-a partial recipe for accepting the delegated task, and another motive is formed
-based on the unsatisfied precondition of the Robot's ongoing task. The Robot
-forms corresponding intentions with respect to these motives.\\
-
-\noindent\textbf{(Coping)} In the emotion awareness case, the Robot chooses
-similar coping strategies as discussed in Section \ref{sec:wt-exp1}, to a) 
-acknowledge the Astronaut's negative emotion, b) accept the delegated task,
-and c) postpone asking questions about the delegation process. Hence, the
-Robot provides a proper response (C2) without asking any questions about the
-delegated task.\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{C2. Robot:}}} Okay. Don't worry.
-I can handle that.\end{varwidth}}\\
-
-In contrast, in the emotion ignorance case, not only does the Robot not have
-an intention to acknowledge the Astronaut's emotion, it also selects an
-incorrect coping strategy to seek information about dropping its own current
-unachieved task (D2).\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{D2. Robot:}}} Okay. I can handle
-that. Is it okay if I leave the current task though? \end{varwidth}}\\
-
-After this point, in the emotion awareness case, the Robot, by choosing the
-restraint coping strategy, waits till the appropriate opportunity (i.e.,
-Astronaut's mitigated emotion) to ask required questions. Therefore, the Robot
-tries to mitigate the Astronaut's negative emotion which helps them to
-successfully achieve the goal of a task delegation. Notice that in utterance C4,
-since the Robot knows that the Astronaut is still worried, it only informs the
-Astronaut about some potential questions in the future. Consequently, the
-Robot's collaborative behavior also mitigates the Astronaut's negative
-emotion.\\
-
-\noindent\fbox{\begin{varwidth}{0.98\textwidth}
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{C3. Astronaut:}}} I will try
-to fix it ASAP.\\
-
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{C4. Robot:}}} I might need to
-ask some questions while I am installing the second panel.\\
-
-\textit{\textbf{\fontsize{9pt}{12pt}\selectfont{C5. Astronaut:}}} That's fine.
-Just let me know.\end{varwidth}}\\
-
-At the end, the Astronaut finds the Robot's response appropriate for the
-delegated task. Thus, the Robot's proper response mitigated the Astronaut's
-negative emotion.\\
-
-In the emotion ignorance case, the rest of the Robot's utterances from D4 to
-D10 (see Section \ref{sec:exp4}) show that the Robot wants to do planning in
-the most efficient manner possible by asking many questions about missing
-information according to the shared plan. However, the Robot's improper
-collaborative behavior, caused by choosing inappropriate coping strategies
-diverges the task delegation process from achieving the goal. We can see
-as time passes the content of the Astronaut's utterances becomes less
-informative for the Robot, e.g., D5 and D9. Consequently, the Robot needs more
-confirmations from the Astronaut, e.g., D4 and D8, to obtain required
-information for the execution of the delegated task. Finally, the Astronaut
-terminates the collaboration due to the lack of time and the Robot's failure to
-incorporate proper collaborative behavior (D11).
-
-\section{Related Work}
-\label{sec:related-work}
-
-The prominent collaboration theories are mostly based on plans and joint
-intentions
-\cite{cohen:teamwork,grosz:plans-discourse}, and they were derived from
-the BDI paradigm developed by Bratman \cite{bratman:intentions-plans} which is
-fundamentally reliant on folk psychology \cite{ravenscroft:folk}. The two
-theories, Joint Intentions \cite{cohen:teamwork} and SharedPlans
-\cite{grosz:plans-discourse}, have been extensively used to examine and describe
-teamwork and collaboration. The SharedPlans theory is a general theory of
-collaborative planning which accommodates multi-level action decomposition
-hierarchies, and allows the process of generating complete plans. The
-SharedPlans theory shows how a group of collaborators can incrementally form and
-execute a shared plan, and describes how a shared plan coordinates their
-activities towards achieving a shared goal. Furthermore, SharedPlans theory
-emphasizes that collaborative plans are an interleaving of collaborators' mutual
-beliefs and intentions about the actions in the plan
-\cite{grosz:planning-acting,grosz:collaboration,grosz:plans-discourse}. In
-contrast, the Joint Intentions theory as another formal theory of collaboration
-is based on the idea of individual and joint intentions to act as a team member.
-In this theory, a joint intention is a shared commitment to perform an action
-while in a group mental state. Joint Intentions theory describes how team
-members can jointly act together by sharing mental states about their actions
-while an intention is viewed as a commitment to perform an action
-\cite{cohen:teamwork}.
-
-There are many research focusing on different aspects of collaboration based on
-different collaboration theories, i.e., SharedPlans, Joint Intentions, and
-hybrid theories of collaboration, e.g., STEAM \cite{tambe:flexible-teamwork}.
-Some of these works present algorithms and computational models in a
-teamwork environment based on the underlying structure of the SharedPlans theory
-\cite{lochbaum:collaborative-planning,lochbaum:plan-models,yen:cast,yin:knowledge-based-sharedplans},
-and Joint Intentions theory
-\cite{breazeal:humanoid-robots,mutlu:coordination-robot}. The hybrid teamwork
-model, STEAM \cite{tambe:flexible-teamwork}, has also been successfully applied
-to a variety of domains
-\cite{kabil:coordination-mechanisms,kitano:robocup,marsella:robocup,scerri:robot-agent-person}.
-All of the works presented in this section lack a systematic integration of
-collaboration theories with some theories capable of describing underlying
-collaboration processes. Therefore, they either do not explain the structure and
-the underlying processes of collaboration, or their approach in either or both
-of these views is application oriented. The collaboration structure of Affective
-Motivational Collaboration Theory is based on the SharedPlans theory
-\cite{grosz:planning-acting,grosz:collaboration,grosz:plans-discourse}, and it
-focuses on the processes that generate, maintain and update this structure based
-on mental states. COLLAGEN \cite{rich:collaboration-manager,rich:discourse} 
-incorporates certain algorithms for discourse generation and interpretation, and
-is able to maintain a segmented interaction history, which facilitates the
-discourse between a human and a robot \cite{rickel:discourse-theory-dialogue}.
-We use its latest incarnation, i.e., Disco, for our implementation.
-
-Furthermore, there are some works focusing on the concepts of robot assistants
-\cite{clancey:agent-assistants-collaboration}, or teamwork and its challenges in
-cognitive and behavioral levels
-\cite{nikolaidis:collaboration-joint-action,scerri:prototype-distributed-teams}.
-Some researchers have an overall look at a collaboration concept at the
-architectural level
-\cite{esau:integrating-emotion-collaboration,garcia:collaboration-emotional-awareness,sofge:collaboration-humanoid-space}.
-There are other concepts such as joint actions and commitments
-\cite{grosz:intention-dynamics-collaboration}, dynamics of intentions during
-collaboration \cite{levesque:acting-together} providing more depth in the
-context of collaboration. Some of these works emphasize the applicability of
-emotions in their architectures, and some others emphasize the collaborative
-aspect of their robots. The applications of different prominent collaboration
-theories show the importance and the applicability of these theories in robots
-and collaborative systems. The following examples briefly review some of the
-applications of artificial emotions and appraisal theory of emotions in robots
-and autonomous agents.\\
-
-\textbf{Applications of Artificial Emotions} -- There are many research areas,
-including robotics and autonomous agents, that employ the structure and/or
-functions of emotions in their work with a variety of motivations behind
-modeling emotions \cite{wehrle:motivations-modeling-emotion}. Some of these
-works are inspired by specific psychological theories, some are freely using the
-concept of emotion without using the theoretical background in social sciences
-\cite{urban:pecs}, and some are using a combination of concepts from the
-psychological theories \cite{kiryazov:modeling-appraisal-pad}. We can also see
-the application of emotion theories in designing companion robots, robots
-capable of expressing emotions and social behaviors, as well as robots which can
-convey certain types of emotion products, e.g., empathy
-\cite{breazeal:expressive-behavior,paiva:emotion-modeling,shayganfar:methodology}.
-Robots also use emotions theories for some other purposes such as automatic
-affect recognition using different modalities \cite{zeng:affect-recognition},
-and behavior adaptation \cite{liu:affect-robot-behavior}.
-
-Furthermore, emotions have different intra/interpersonal functions. Motivation
-is one of the crucial functions of emotions, since it can initiate, direct and
-maintain goal-directed behaviors. The motivation mechanism in our work is
-inspired by Murray's theory as well as Bach's approach on D$\ddot{o}$rner's
-theory
-\cite{bach:micropsi-agent-architecture,bach:psi,bach:motivaitional-system-ai,bach:next-generation-micropsi}.
-It is focused on the role of emotion-driven motives in cognitive processes,
-e.g., intention formation, during collaboration.\\
-
-\textbf{Applications of Appraisal Theory} -- Appraisal theories of emotion were
-first formulated by Arnold \cite{arnold:emotion-personality} and Lazarus
-\cite{lazarus:emotion-adaptation} and then were actively developed in the early
-80s by Ellsworth and Scherer and their students
-\cite{roseman:appraisal-theory,sander:systems-approach-appraisal,scherer:nature-function-emotion,scherer:emotions-emergent,scherer:appraisal-processes}.
-Computational appraisal models have been applied to a variety of uses including
-contributions to psychology, robotics, AI, and HCI. For instance, Marsella and
-Gratch have used EMA \cite{marsella:ema-process-model} to generate specific
-predictions about how human subjects will appraise and cope with emotional
-situations and argue that empirical tests of these predictions have implications
-for psychological appraisal theory \cite{gratch:assessing-appraisal}. However,
-EMA does not focus on the dynamics of collaborative contexts. There are several
-examples in artificial intelligence and robotics of applying appraisal theory
-\cite{adam:bdi-emotional-companion,kim:model-hri-appraisal,marsella:ema-process-model}.
-In robotics, appraisal theory has been used to establish and maintain a better
-interaction between a robot and a human
-\cite{kim:model-hri-appraisal,sander:systems-approach-appraisal,vogiatzis:robot-museum}.
-Appraisal theory has also been used in robots' decision making
-\cite{castro:autonomous-robot-fear}, or in their cognitive systems
-\cite{hudlicka:emotinos-reasons,marinier:emotion-reinforcement}. In the virtual
-agents community, empathy and affective decision-making is a research topic that
-has received much attention in the last decade
-\cite{scott:modeling-empathy-agent,paiva:agent-care,pontier:women-robot-men,velasquez:emotions-motivations-agents}.
+\vspace*{-2mm}
+We compute the utility of an event based on these five attributes. The value of
+each attribute is between 0 and 1, and we consider the same weight for each
+attribute. These weights can be learned or modified when our framework is fully
+implemented. The value of the overall utility is computed using a simple
+weighted averaging function which results in an overall value between 0 and 1.
+
+The significance of an event in a collaborative environment is based not
+only on the utility of the event, but it is also influenced by the perceived
+emotion of the human collaborator. The human's emotion influences the decision
+about the utility of the event in the form of a threshold value $\tau_{t}$ (see
+Algorithm \ref{alg:relevance}). For instance, a positively expressed emotion of
+the human reduces the threshold value which consequently makes the robot find an
+event relevant with even a slightly positive utility. This threshold value
+($\tau_{t}$) is currently determined based on whether the valence of the
+human's perceived emotion is positive (e.g., happiness) or negative (e.g.,
+anger). Consequently, an event can be considered \textsc{irrelevant} even though
+the utility has a relatively positive value, because relevance is influenced by
+the human's perceived emotional state.
+
+\vspace*{-1mm}
+\subsection{Desirability}
+
+Desirability characterizes the value of an event to the robot in terms of
+whether the event facilitates or thwarts the collaboration goal. Desirability
+captures the valence of an event with respect to the robot's preferences
+\cite{gratch:domain-independent}. In a collaborative robot, preferences are
+biased towards those events facilitating progress in the collaboration.
+Desirability plays an important role in the overall architecture; it makes the
+processes involved in the other mechanisms (e.g., Motivation and Theory of
+Mind), and consequently the robot's mental state, congruent with the
+collaboration status which is a collaborative robot's desire. Therefore, it
+causes the robot to dismiss events causing inconsistencies in the robot's
+collaborative behavior. Moreover, desirability is also crucial from the
+collaboration's point of view.
+
+% A collaborative robot needs to know whether its own and the other collaborator's
+% actions, utterances, and emotional expressions are desirable in terms of their
+% consistence with the status of the current shared goal. In other words, the
+% collaboration mechanism uses the appraisal process of desirability to coordinate
+% what the self or the other does, says, and expresses during collaboration.
+% Reciprocally, the appraisal mechanism and in this case the desirability process
+% use the collaboration structure to obtain their required information.
+
+Algorithm \ref{alg:desirability} provides a process in which the desirability of
+an event is computed with regard to the status of the shared goal; i.e., it
+operates based on whether and how the event changes the status of the current
+shared goal. It distinguishes between the top level goal and the current goal
+because the top level goal's change of status attains a higher positive or
+negative value of desirability. For instance, failure of the top level goal
+(e.g., installing solar panel) is more undesirable than failure of a primitive
+goal (e.g., measuring the quality of the installed panel).
+
+An \textsc{ambiguous} goal is a goal associated with the current event
+($\varepsilon_t$) which is not recognized in the robot's plan; therefore it is
+\textsc{undesirable} for a collaborative robot. A top level goal' status must be
+\textsc{achieved} (i.e., \textsc{satisfied} postcondition) to consider the event
+\textsc{most-desirable}. When the goal's status is \textsc{failed} (i.e.,
+\textsc{unsatisfied} postcondition) or \textsc{blocked}, the associated event
+has the \textsc{most-undesirable} or \textsc{undesirable} values respectively.
+A goal is \textsc{blocked} if any of the required goals or goals recursively
+through the parent goal are not \textsc{achieved}. An \textsc{inapplicable} goal
+is also considered as \textsc{undesirable}. A goal is \textsc{inapplicable} if
+any of its predecessors are not \textsc{achieved}, and/or its preconditions are
+not \textsc{satisfied}. For \textsc{pending} and \textsc{inprogress} top level
+goals, the status of the current goal associated with the top level goal
+determines the status of the event $\varepsilon_t$. Only a non-primitive goal
+can have \textsc{inprogress} status, if it has been started but is not yet
+completed. A goal can be \textsc{pending} if it is live, or if it is a
+non-primitive goal that has not been started yet. \textsc{Achieved} current
+goals mark an event ($\varepsilon_t$) as \textsc{desirable}, while
+\textsc{failed} or \textsc{blocked} current goals render the event associated
+with them as \textsc{most-undesirable} and \textsc{undesirable} respectively.
+\textsc{Pending} or \textsc{inprogress} current goals mark their associated
+events as \textsc{neutral}.
+
+\vspace*{-1mm}
+\begin{algorithm}
+	\caption{(Desirability)}
+	\label{alg:desirability}
+	\begin{algorithmic}[1]
+		\Function{IsEventDesirable}{Event $\varepsilon_t$}
+			\Statex
+			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+			\Statex
+			\If {$(\mathit{g}_{t} =$ {\fontsize{7}{8}\selectfont AMBIGUOUS}$)$} 
+				\State \Return {\fontsize{7}{8}\selectfont UNDESIRABLE}
+			\EndIf
+			\Statex
+			\If {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)} =
+			{\fontsize{7}{8}\selectfont ACHIEVED})}} 
+			\State \Return {{\fontsize{7}{8}\selectfont MOST-DESIRABLE}} 
+			\ElsIf {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)}} =
+			{\fontsize{7}{8}\selectfont FAILED})} 
+			\State \Return {{\fontsize{7}{8}\selectfont MOST-UNDESIRABLE}}
+			\ElsIf {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)}} =
+			{\fontsize{7}{8}\selectfont BLOCKED}) \OR\\
+			\hspace{1mm}{\fontsize{8}{9}\selectfont
+			\hspace*{4mm}(\textit{topLevelGoalStatus($g_{t}$)}} =
+			{\fontsize{7}{8}\selectfont INAPPLICABLE})}
+			\State \Return {{\fontsize{7}{8}\selectfont UNDESIRABLE}} 
+			\ElsIf {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)}} =
+			{\fontsize{7}{8}\selectfont PENDING}) \OR\\
+			\hspace{1mm}{\fontsize{8}{9}\selectfont
+			\hspace*{4mm}(\textit{topLevelGoalStatus($g_{t}$)}} =
+			{\fontsize{7}{8}\selectfont INPROGRESS})}
+				\Statex
+				\If {{\fontsize{8}{9}\selectfont (\textit{currGoalStatus($g_{t}$)}} =
+				{\fontsize{7}{8}\selectfont ACHIEVED})}
+				\State \Return {{\fontsize{7}{8}\selectfont DESIRABLE}}
+				\ElsIf {(\textit{currGoalStatus($g_{t}$)} = {\fontsize{7}{8}\selectfont
+				FAILED})} 
+				\State \Return {{\fontsize{7}{8}\selectfont MOST-UNDESIRABLE}}
+				\ElsIf {(\textit{currGoalStatus($g_{t}$)} = {\fontsize{7}{8}\selectfont
+				BLOCKED}) \OR \\
+				\hspace{1mm}{\fontsize{8}{9}\selectfont
+				\hspace*{9mm}(\textit{topLevelGoalStatus($g_{t}$)}} =
+				{\fontsize{7}{8}\selectfont INAPPLICABLE})} 
+				\State \Return {{\fontsize{7}{8}\selectfont UNDESIRABLE}}
+				\ElsIf {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)}} =
+				{\fontsize{7}{8}\selectfont PENDING}) \OR \\ \hspace{1mm} 
+				\hspace*{8mm}(\textit{currGoalStatus($g_{t}$)} =
+				{\fontsize{7}{8}\selectfont INPROGRESS})} 
+				\State \Return {{\fontsize{7}{8}\selectfont NEUTRAL}}
+				\EndIf
+			\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\vspace*{-2mm}
+\subsection{Expectedness}
+
+Expectedness is the extent to which the truth value of a state could have been
+predicted from causal interpretation of an event
+\cite{marsella:ema-process-model}. In the collaboration context the expectedness
+of an event evaluates the congruency of the event with respect to the existing
+knowledge about the shared goal. Thus, expectedness underlies a collaborative
+robot's attention. Congruent beliefs in a robot's mental state will lead to more
+consistent and effective outcomes of the processes in the overall architecture.
+The collaboration mechanism uses expectedness to maintain the robot's attention
+and subsequently its mental state with respect to the shared goal. Reciprocally,
+the appraisal mechanism uses the underlying information of the collaboration
+structure to evaluate the expectedness of an event. Therefore, a collaborative
+robot uses expectedness to maintain its own mental state towards the shared
+goal. The robot will also be able to respond to unexpected but relevant events.
+
+\begin{algorithm}
+	\caption{(Expectedness)}
+	\label{alg:expectedness}
+	\begin{algorithmic}[1]
+		\Function{IsEventExpected}{Event $\varepsilon_t$}
+			\Statex
+			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+			\State $\mathit{g}_{top} \gets \textit{getTopLevelGoal}{(\mathit{g}_{t})}$
+			\Statex
+			\If {$(\textit{isLive}{(\mathit{g}_{t})})$}
+				\If {$(\neg \textit{isFocusShift}{(\mathit{g}_{t})}\hspace*{2mm}\OR$ \\
+				\hspace*{13mm}$\textit{isNeccessaryFocusShift}{(\mathit{g}_{t})})$}
+				\State \Return {\fontsize{7}{8}\selectfont MOST-EXPECTED}
+				\Else
+					\State \Return {\fontsize{7}{8}\selectfont EXPECTED}
+				\EndIf
+			\Else
+				\If {$(\textit{isPath}{(\mathit{g}_{t}, \mathit{g}_{top})})$}
+					\State \Return {\fontsize{7}{8}\selectfont UNEXPECTED}
+				\Else
+					\State \Return {\fontsize{7}{8}\selectfont MOST-UNEXPECTED}
+				\EndIf
+			\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+In Algorithm \ref{alg:expectedness} we provide the process of computing the
+expectedness based on the shared plan and status of the shared goal. The key
+point in this algorithm is the status of the current shared goal
+($\mathit{g}_{t}$) that is associated with the event $\varepsilon_t$ and its
+relationship with the top level goal ($\mathit{g}_{_{top}}$).
+
+The intuition captured here is that one expects the current goal to be finished
+before undertaking another activity, but the goals that are the next focus of
+attention are also to be expected \cite{rich:focused-unfocused-users}.
+Therefore, if the goal is live, the algorithm checks whether the goal has not
+changed, or the interpretation of the last event results in a necessary focus
+shift. Shifting the focus to a new goal is necessary when the former goal is
+achieved and a new goal is required. Consequently the new event is the
+\textsc{most-expected} one. However, even if the focus shift is not necessary,
+the new event can be considered as \textsc{expected}, since the corresponding
+goal is already live. For goals that have not yet been started (that is, are not
+live), the algorithm must determine how unexpected it would be to pursue one
+now; if the goal is at least in the plan, i.e., on the path to the top level
+goal, it is just \textsc{unexpected} while any others are
+\textsc{most-unexpected}.
+
+\subsection{Controllability}
+\label{sec:controllability}
+
+Controllability is the extent to which an event can be influenced, and it is
+associated with a robot's ability to cope with an appraised event
+\cite{gratch:domain-independent}. Thus, a robot can determine whether the
+outcome of an event can be altered by some actions under either of the
+collaborators' control. In other words, controllability is a measure of a
+robot's ability to maintain or change a particular state as a consequence of an
+event.
+
+\begin{algorithm}
+	\caption{(Controllability)}
+	\label{alg:controllability}
+	\begin{algorithmic}[1]
+		\Function{IsEventControllable}{Event $\varepsilon_t$}
+			\Statex
+			\State $\alpha \gets \Call{GetAgencyRatio}{\varepsilon_t}$ 
+			\State $\beta \gets \Call{GetAutonomyRatio}{\varepsilon_t}$
+			\Statex
+			\State $\lambda \gets \Call{GetSucPredecessorsRatio}{\varepsilon_t}$
+			\State $\mu \gets \Call{GetAvailableInput}{\varepsilon_t}$
+			\Statex
+			\State $\mathcal{U} \gets
+			\frac{\omega_{0}\cdot \alpha + \omega_{1}\cdot \beta + \omega_{2}\cdot
+			\lambda + \omega_{3}\cdot \mu}{\omega_{0} + \omega_{1} + \omega_{2} +
+			\omega_{3}}$
+			\Statex
+			\State $\tau_{t} \gets \Call{getEmotionalThreshold}{ }$
+			\Statex
+			\If {$(\mathcal{U} \geq \tau_t)$}
+				\State \Return {{\fontsize{7}{8}\selectfont CONTROLLABLE}}
+			\Else
+				\State \Return {{\fontsize{7}{8}\selectfont UNCONTROLLABLE}}
+			\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+Controllability is also important for the overall architecture. For instance,
+the robot can choose to ask or negotiate about a collaborative task which is
+not controllable, or the robot can interpret or predict the other's emotional
+state (e.g., anger if the task is blocked, i.e., uncontrollable for the other),
+or form a new motive to establish an alternative goal for the current
+uncontrollable event. In general, other mechanisms in the architecture use the
+appraisal process of controllability in their decision making processes;
+meanwhile controllability uses the information from the collaboration structure,
+e.g., successful predecessors of a goal.
+
+An important determinant of one's emotional response is the sense of control
+over the events occurring. This sense of subjective control is based on one's
+reasoning about self's power. For instance, the robustness of one's plan for
+executing actions can increase one's sense of power and subsequently the sense
+of control. In the collaboration context, we have translated the sense of control
+into a combination of four different factors including a) \textit{agency} and b)
+\textit{autonomy} of the robot, as well as the ratios of c) \textit{successful
+predecessors}, and d) the \textit{available inputs} of a given goal
+(i.e., $\mathit{g}_{t}$) in the shared plan.
+
+In Algorithm \ref{alg:controllability}, we compute the controllability of an
+event based on these four factors (lines 2 to 5). We use weighted averaging over
+these four factors to compute the utility of an event in terms of
+controllability of the event. The value of all these weights are set to 1.0 for
+the purpose of simplicity at this stage of the project. We will adjust these
+weights after further investigating the influence of these factors, and
+implementing other mechanisms in the overall architecture. After computing the
+value of the utility, we compare this value to an emotional threshold similar to
+what we discussed in Algorithm \ref{alg:relevance}. This comparison leads to our
+decision about the controllability of an event (lines 8 to 11 in Algorithm
+\ref{alg:controllability}).
+
+% \renewcommand\thealgorithm{4\alph{algorithm}}
+% \setcounter{algorithm}{0}
+% 
+% \begin{algorithm}
+% 	\caption{(Get Agency Ratio)}
+% 	\label{alg:agency}
+% 	\begin{algorithmic}[1]
+% 		\Function{GetAgencyRatio}{Event $\varepsilon_t$}
+% 			\Statex
+% 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+% 			\Statex
+% 			\State $\mathcal{M}_{t} \gets \textit{getActiveMotive}{(\mathit{g}_{t})}$
+% 			\Statex
+% 			\If {$(\mathcal{M}_{t} \neq \emptyset)$}
+% 				\If {$(\mathcal{M}_{t}\cdot type = $
+% 				{{\fontsize{8}{8}\selectfont INTERNAL}}$)$} \State \Return {1.0}
+% 				\Else
+% 					\State \Return {0.0}
+% 				\EndIf
+% 			\Else
+% 				\State \Return {0.0}
+% 			\EndIf
+% 		\EndFunction 
+% 	\end{algorithmic}
+% \end{algorithm}
+
+\textit{\textbf{Agency}} is the capacity of an individual to act independently
+in any given environment. In a collaborative environment collaborators are
+sometimes required to act independently of each other. Hence, they need to have
+some internal motives that are formed based on their own mental states rather
+than motives that are reinforced by the other collaborator. These internal
+motives will lead the collaborators to acquire new intentions towards new goals
+whenever it is required. We extract the motive associated with the current goal
+in the mental state. We consider a maximum agency value denoted as $\alpha$ in
+Algorithm \ref{alg:controllability} (i.e., $\alpha=1.0$) if the robot's mental
+state possesses an internal motive towards the recognized goal; otherwise we
+consider the minimum agency value (i.e., $\alpha=0.0$) for no motives or
+external motives only. Note that the process of forming new internal motives is
+beyond scope of this paper.
+
+% \renewcommand\thealgorithm{4\alph{algorithm}}
+% \setcounter{algorithm}{1}
+% 
+% \begin{algorithm}
+% 	\caption{(Get Autonomy Ratio)}
+% 	\label{alg:autonomy}
+% 	\begin{algorithmic}[1]
+% 		\Function{GetAutonomyRatio}{Event $\varepsilon_t$}
+% 			\Statex
+% 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+% 			\Statex
+% 			\State $\Phi_{\mathit{g}} \gets
+% 			\textit{extractContributingGoals}{(\mathit{g}_{t})}$
+% 			\Statex
+% 			\ForAll {$\phi_{\mathit{g}}^i \in \Phi_{\mathit{g}}$}
+% 				\If {$(\textit{getResponsible}{(\phi_{\mathit{g}}^i)} =$
+% 				{\fontsize{8}{8}\selectfont SELF})} 
+% 					\State $count_{self} \gets count_{self} + 1$
+% 				\EndIf
+% 			\EndFor
+% 			\Statex
+% 			\State \Return 
+% 			${count_{self} \mathbin{/} {{\Phi_{\mathit{g}}}.total()}}$
+% 		\EndFunction 
+% 	\end{algorithmic}
+% \end{algorithm}
+
+\textit{\textbf{Autonomy}} is the ability to make decisions without the
+influence of others. Autonomy implies acting on one's own and being responsible for that. In
+a collaborative environment, tasks are delegated to the collaborators based on
+their capabilities. Therefore, each collaborator is responsible for the
+delegated task and the corresponding goal. In Algorithm
+\ref{alg:controllability}, $\beta$ denotes the value of autonomy with regard to
+the event ($\varepsilon_t$). This value is the ratio of the number of the
+goals contributing to $\mathit{g}_{t}$ for which the robot is responsible over
+the total number of contributing goals to $\mathit{g}_{t}$. If the goal
+associated with the current event corresponds to a nonprimitive goal, the
+algorithm checks the responsible agent for each primitive goal contributing to
+the nonprimitive one and returns a value of which $(0 \leq \beta \leq 1)$.
+However, if the associated goal of the current event corresponds to a primitive
+goal the value of $\beta$ would be 0 or 1. In general, higher autonomy leads to
+a more positive value of controllability.
+
+% \renewcommand\thealgorithm{4\alph{algorithm}}
+% \setcounter{algorithm}{2}
+% 
+% \begin{algorithm}
+% 	\caption{(Get Successful Predecessors Ratio)}
+% 	\label{alg:predecessors}
+% 	\begin{algorithmic}[1]
+% 		\Function{GetSucPredecessorsRatio}{Event $\varepsilon_t$}
+% 			\Statex
+% 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+% 			\Statex
+% 			\State $\Theta{\mathit{g}} \gets
+% 			\textit{extractPredecessors}{(\mathit{g}_{t})}$
+% 			\Statex
+% 			\ForAll {$\theta_{\mathit{g}}^i \in \Theta_{\mathit{g}}$}
+% 				\If {$(\textit{isAchieved}{(\theta_{\mathit{g}}^i)})$}
+% 					\State $count_{achieved} \gets count_{achieved} + 1$
+% 				\EndIf
+% 			\EndFor
+% 			\Statex
+% 			\State \Return
+% 			${count_{achieved} \mathbin{/} {\Theta{\mathit{g}}.total()}}$
+% 		\EndFunction 
+% 	\end{algorithmic}
+% \end{algorithm}
+
+The structure of a shared plan accommodates the order of the required
+\textit{\textbf{predecessors}} of a goal. Predecessors of a goal, $g$, are other
+goals that the collaborators should achieve before trying to achieve goal $g$.
+We use the ratio of successfully achieved predecessors of the recognized goal
+($\mathit{g}_{t}$) associated with the current event over the total number of
+predecessors of the same goal. This ratio (denoted as $\lambda$ in Algorithm
+\ref{alg:controllability}) is the third factor used to compute the
+controllability of an event. If all of the predecessors of the given goal are
+already achieved, then $\lambda=1$ which is the maximum value for $\lambda$. On
+the contrary, failure of all of the predecessors will lead to $\lambda=0$.
+Therefore, a higher $\lambda$ value positively impacts the value of
+controllability for the current event.
+
+% \renewcommand\thealgorithm{4\alph{algorithm}}
+% \setcounter{algorithm}{3}
+% 
+% \begin{algorithm}
+% 	\caption{(Get Available Input Ratio)}
+% 	\label{alg:inputs}
+% 	\begin{algorithmic}[1]
+% 		\Function{GetAvailableInputRatio}{Event $\varepsilon_t$}
+% 			\Statex
+% 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+% 			\Statex
+% 			\State $\mathcal{X}_{\mathit{g}} \gets
+% 			\textit{extractInputs}{(\mathit{g}_{t})}$
+% 			\Statex
+% 			\ForAll {$\chi_{\mathit{g}}^i \in \mathcal{X}_{\mathit{g}}$}
+% 				\If {$(\textit{IsAvailable}{(\chi_{\mathit{g}}^i)})$}
+% 					\State $count_{available} \gets count_{available} + 1$
+% 				\EndIf
+% 			\EndFor
+% 			\Statex
+% 			\State \Return
+% 			${count_{available} \mathbin{/} \mathcal{X}_{\mathit{g}}.total()}$
+% 		\EndFunction 
+% 	\end{algorithmic}
+% \end{algorithm}
+
+Finally, \textit{\textbf{inputs}} of a task are the required elements that the
+collaborators use to achieve the specified goal of the task. These inputs are
+also part of the structure of a shared plan. We extract the required inputs of
+the associated goal with the current event, and check whether all the required
+inputs are available for the goal $\mathit{g}_{t}$. The outcome will be the
+ratio of the available required inputs over the total required inputs of the
+goal associated with the current event. This value (denoted as $\mu$ in
+Algorithm \ref{alg:controllability}) will be bound to 0 and 1. Similar to the
+other factors in the controllability process, the closer the value of $\mu$ gets
+to 1, the more positive impact it has on the overall controllability value of
+the event.
+
+In summary, the output of these four appraisal processes serves as critical
+input for the other mechanisms of the Affective Motivational Collaboration
+Framework, shown in Figure \ref{fig:cpm}. By providing adequate interpretation
+of events in the collaborative environment, the appraisal mechanism enables the
+robot to carry out proper collaborative behaviors.
+
+\vspace{-2mm}
+\section{Evaluation}
+\label{sec:user-study}
+
+\begin{figure*}
+  \centering
+  \vspace*{-5mm}
+  \includegraphics[width=16cm,height=5.25cm]{figure/taskModel-croped.pdf}
+  \vspace*{-3mm}
+  \caption{Collaboration Task Model for the Evaluation.}
+  \label{fig:taskModel}
+  \vspace*{-4mm}
+\end{figure*}
+
+We developed our user study to test our hypothesis that humans will provide
+similar answers as our algorithms to questions related to different factors used
+to compute four appraisal variables. We conducted a between subject user study
+using an online crowdsourcing website --
+CrowdFlower\footnote{http://www.crowdflower.com}. We had one group of
+subjects for each questionnaire corresponding to an appraisal variable.
+There were 12 questions (including 2 test questions) in the controllability and
+expectedness questionnaires, 14 questions (including 2 test questions) in
+the desirability questionnaire, and 22 questions (including 3 test questions) in
+the relevance questionnaire. Each group originally had 40 subjects. To increase
+the quality of our subjects' answers, we limited the visibility of our
+questionnaires to a few English speaking countries, i.e., United States,
+Britain, and Australia. We also limited our subject pools to those that have
+acquired the highest confidence level on the crowdsourcing website. Our
+questionnaires included 2 or 3 test questions (depending on the length) to check
+the sanity of the answers. We eliminated subjects providing wrong answers to our
+sanity questions. We also eliminated subjects with an answering time less than 2
+minutes. The final number of accepted subjects in each group is provided in
+Table \ref{tbl:statistics}.
+
+\begin{table}[htbp]
+\centering
+\vspace*{-5mm}
+\caption{Evaluation Results}
+\begin{tabular}{|c|c|c|c|c|} \hline
+{\fontsize{7.5}{8}\selectfont appraisal variables} &
+{\fontsize{7.5}{8}\selectfont \# of subjects} & {\fontsize{8}{8}\selectfont
+mean} & {\fontsize{7.5}{8}\selectfont stdev} &
+{\fontsize{7.5}{8}\selectfont\textit{p}-value}\\ \hline 
+{\fontsize{7.5}{8}\selectfont Relevance} & {\fontsize{7.5}{8}\selectfont 29} &
+{\fontsize{7.5}{8}\selectfont 0.713} & {\fontsize{7.5}{8}\selectfont 0.107} &
+{\fontsize{7.5}{8}\selectfont <0.001}\\ \hline {\fontsize{7.5}{8}\selectfont
+Desirability} & {\fontsize{7.5}{8}\selectfont 35} &
+{\fontsize{7.5}{8}\selectfont 0.778} & {\fontsize{7.5}{8}\selectfont 0.150} &
+{\fontsize{7.5}{8}\selectfont <0.001}\\
+\hline 
+{\fontsize{7.5}{8}\selectfont Expectedness} & {\fontsize{7.5}{8}\selectfont 33}
+& {\fontsize{7.5}{8}\selectfont 0.785} & {\fontsize{7.5}{8}\selectfont 0.120} &
+{\fontsize{7.5}{8}\selectfont <0.001}\\
+\hline 
+{\fontsize{7.5}{8}\selectfont Controllability} & {\fontsize{7.5}{8}\selectfont
+33} & {\fontsize{7.5}{8}\selectfont 0.743} & {\fontsize{7.5}{8}\selectfont
+0.158} & {\fontsize{7.5}{8}\selectfont <0.001}\\
+\hline
+\end{tabular}
+\vspace*{-2mm}
+\label{tbl:statistics}
+\end{table}
+
+To minimize the background knowledge necessary for our test subjects, we used a
+simple domestic example of preparing a peanut butter and jelly sandwich, and a
+hard boiled egg sandwich for a hiking trip. We provided clear textual and
+graphical instructions for all four questionnaires. The instructions presented
+a sequence of hypothetical collaborative tasks to be carried out by the test
+subject and an imaginary friend, Mary, in order to accomplish their goal of
+preparing two sandwiches. Figure \ref{fig:taskModel} shows the corresponding
+task model for these instructions. Test questions introduced specific situations
+related to the shared plan; these situations included, among others, blocked
+tasks, and failure or achievement of a shared goal provided in the instruction.
+Each question provided three possible answers (which were counterbalanced in
+the questionnaire). One option provided a distinct alternative; another option
+was used to provide a dichotomy with the first alternative, and a third option
+was used to check whether the subjects perceived the other two options as equal.
+We also provided a brief description as well as a simple example for each
+appraisal variable, e.g., \textit{relevance}, at the end of the corresponding
+instructions. Using this approach, we prepared four different online
+questionnaires for the appraisal variables: \textit{relevance, desirability,
+expectedness} and \textit{controllability}. Note that the collaboration
+structure and the instructions were the same for all four questionnaires.
+
+Each question was designed based on different factors that we use in our
+algorithms (see Section \ref{sec:appraisal-process}). Here, we present three
+example questions from the expectedness, controllability, and desirability
+questionnaires, and describe how each question relates to a specific factor
+within the corresponding algorithm. The input for our algorithms was the task
+model depicted in Figure \ref{fig:taskModel}.
+
+\begin{figure}[tbh]
+  \vspace{-1mm}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figure/question-sample-croped.pdf}
+  \caption{{\fontsize{9}{9}\selectfont Example Expectedness Question.}}
+  \label{fig:qs1}
+  \vspace{-2mm}
+\end{figure}
+
+Figure \ref{fig:qs1} shows the example question from the expectedness
+questionnaire. In this example, with respect to Algorithm
+\ref{alg:expectedness} (line 6), option A is more expected because the task
+related to this option provides the next available task in the focus stack (see
+the task model in Figure \ref{fig:taskModel}). Although the task in option B is
+part of the existing task model, it is considered as unexpected by our
+algorithm, since it is not live in the plan. We provided option C to determine
+whether the human subjects will similarly differentiate between these two
+options. This question was presented to the human subjects to determine whether
+their decision for the expectedness of this event is similar to the output of
+the expectedness algorithm. For this question, the human decision was 97\%
+similar to the algorithm's output. Average results for the expectedness
+questionnaire are presented in Table \ref{tbl:statistics}.
+
+\begin{figure}[tbh]
+  \vspace{-1mm}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figure/question-sample2-croped.pdf}
+  \caption{{\fontsize{9}{9}\selectfont Example Controllability Question.}}
+  \label{fig:qs2}
+  \vspace{-2mm}
+\end{figure}
+
+Figure \ref{fig:qs2} shows an example question from the controllability
+questionnaire. The algorithm's output is option B, and is determined by
+Algorithm \ref{alg:controllability} (line 3), similarly to the expectedness
+example above. In this example, option B is more controllable than option A,
+because the self over total ratio of the responsibility of the predecessors of
+the given task (see \textit{Autonomy} in Section \ref{sec:controllability}) is
+higher than the ratio in option A; i.e., self is responsible to spread peanut
+butter on one slice of bread and strawberry jam on another slice of bread. In
+this question, the humans decision was 90\% in agreement with the algorithm's
+output.
+
+\begin{figure}[tbh]
+  \vspace{-1mm}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figure/question-sample3-croped.pdf}
+  \caption{{\fontsize{9}{9}\selectfont Example Desirability Question.}}
+  \label{fig:qs3}
+  \vspace{-2mm}
+\end{figure}
+
+Figure \ref{fig:qs3} shows an example question from the desirability
+questionnaire. The output based on the Algorithm \ref{alg:desirability}
+(line 14) is option C, since in both option A and option B, the focus goal
+has been achieved successfully. Therefore, in this example, both options A and B
+are desirable. The humans decision was 77\% in agreement with the algorithm's
+output in this question.
+
+We conducted the user study to compare the results with the implemented
+algorithms discussed in Section \ref{sec:appraisal-process}. As we mentioned,
+each question had 3 answers. Therefore, a totally random distribution would
+result in 33\% agreement with our algorithms results. However, the average
+ratio indicating similarity between human subjects decisions and the output of
+our algorithms is significantly higher than 33\%. The total number of subjects'
+answers similar to a) the \textit{relevance} algorithm (n=29) averaged 71.3\%
+(s=10.7\%), b) the \textit{desirability} algorithm (n=35) averaged 77.8\%
+(s=15.0\%), c) the \textit{expectedness} algorithm (n=33) averaged 78.5\%
+(s=12.0\%), and d) the \textit{controllability} algorithm (n=33) averaged 74.3\%
+(s=15.8\%). It is worth noting that the human subjects agreed 100\% on some
+questions, while one some other questions there was a much lower level of
+agreement.
+
+The results indicate that our algorithms provide appraisal variable outputs
+sufficiently similar to the decisions of human's appraisal. Our hypothesis in
+our evaluation was that our algorithms would correctly predict the judgements of
+humans on doing these tasks. Our results indicate that people largely performed
+as our hypothesis predicted. The \textit{p}-values obtained based on a
+one-tailed z-test (see Table \ref{tbl:statistics}) show the probability of human
+subjects' data being generated from a random set. The very small
+\textit{p}-values indicate that the data set is not random; in fact, the high
+percentage of similarity shows that the four appraisal algorithms predicted the
+human judgments.
 
 \section{Conclusion and Future Work}
 
