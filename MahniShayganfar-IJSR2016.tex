@@ -63,6 +63,8 @@ grestore
 \usepackage{mathtools}
 \usepackage{amssymb}
 
+\usepackage{caption}
+
 %
 % \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
@@ -1014,7 +1016,7 @@ shifts the focus of attention during the interaction.
 
 \begin{figure}[tbh]
   \centering
-  \includegraphics[width=0.8\textwidth]{figure/collaborationStructure-croped.pdf}
+  \includegraphics[width=\textwidth]{figure/collaborationStructure-croped.pdf}
   \caption{{\fontsize{9}{9}\selectfont Collaboration structure (shared plan).}}
   \label{fig:cs}
 \end{figure}
@@ -1709,54 +1711,47 @@ robot to carry out proper collaborative behaviors.
 \section{Goal Management}
 \label{sec:goal-management}
 
-In this work, we focus on a small part of a larger framework based on our
-\textit{Affective Motivational Collaboration Theory}
-\cite{shayganfar:amct-symbiotic}. We introduce our goal management process based
-on a cost function including the influence of affective appraisal and reverse
-appraisal processes. Goal management is a crucial part of our investigation of
-the reciprocal influence of appraisal on a collaboration structure (see Fig.
-\ref{fig:actionSelection}).
+In this section, we introduce our goal management process based on a cost
+function including the influence of affective appraisal and reverse appraisal
+processes. Goal management is a crucial part of our investigation of the
+reciprocal influence of appraisal on a collaboration structure (see Fig.
+\ref{fig:goalManagement}).
 
 \begin{figure}[tbh]
   \centering
   \includegraphics[width=0.8\textwidth]{figure/ActionSelection-croped.pdf}
   \caption{{\fontsize{9}{9}\selectfont Reciprocal influence of Collaboration
   and Appraisal (mechanisms in our framework).}}
-  \label{fig:actionSelection}
+  \label{fig:goalManagement}
   \vspace*{-2mm}
 \end{figure}
 
 Appraisals are separable antecedents of emotion with which the robot
-evaluates the environment. Our appraisal variables included: a)
-\textit{relevance} to measure the significance of an event for the robot, b)
-\textit{desirability} to characterize the value of an event to the robot in
-terms of whether the event facilitates or thwarts the collaboration goal, c)
-\textit{expectedness} and d) \textit{controllability} (these last two appraisal
-variables are beyond the scope of this paper). The outcome of each appraisal
-process is a specific value for the corresponding appraisal variable. The vector
-containing these appraisal variables can be mapped to a particular emotion
-instance at each point in time. However, it is not the actual emotion instance
-that is important for us. In fact, it is a) the functions of emotions in a
-social setting, i.e., goal management, and b) the meaning of the collaborator's
-perceived emotion in collaboration context.
+evaluates the environment. The outcome of each appraisal process is a specific
+value for the corresponding appraisal variable (see Section
+\ref{sec:appraisal}). The vector containing these appraisal variables can be
+mapped to a particular emotion instance at each point in time. However, it is
+not the actual emotion instance that is important for us. In fact, it is a) the
+functions of emotions in a social setting, i.e., goal management, and b) the
+meaning of the collaborator's perceived emotion in collaboration context.
 
 A collaboration structure provides a hierarchy and constraints of the shared
-goals in the form of a shared plan (Fig. \ref{fig:taskModel}) which contains
-both the robot and the human collaborator's goals. The robot pursues the goals
-for which the robot is responsible in the shared plan. However, there can be
-several live goals available for the robot to pursue at each point in time
-during collaboration. A goal is \textit{live} if all of its
+goals in the form of a shared plan (see Fig. \ref{fig:cs-goalManagement})
+which contains both the robot and the human collaborator's goals. The robot
+pursues the goals for which the robot is responsible in the shared plan.
+However, there can be several live goals available for the robot to pursue at
+each point in time during collaboration. A goal is \textit{live} if all of its
 \textit{predecessors} are achieved and all of its \textit{preconditions} are
 satisfied. Therefore, a collaborative robot requires a mechanism to choose
 between a set of live goals. We believe appraisal processes are crucial to
 choose between the available live goals, since the appraisals are the immediate
 outcome of the robot's assessment of the collaboration environment.
 
-For instance, Fig. \ref{fig:taskModel} shows a non-primitive ``Prepare Panels''
-goal decomposed into three primitive goals. Therefore, if ``Prepare Panels'' is
-live, its primitive goals can be pursued by the responsible agent. In our
-example, the astronaut is responsible for the ``Check Connector'' goal; the
-robot is responsible for the remaining two primitive goals. According to the
+For instance, Fig. \ref{fig:cs-goalManagement} shows a non-primitive ``Prepare
+Panels'' goal decomposed into three primitive goals. Therefore, if ``Prepare
+Panels'' is live, its primitive goals can be pursued by the responsible agent.
+In our example, the astronaut is responsible for the ``Check Connector'' goal;
+the robot is responsible for the remaining two primitive goals. According to the
 collaboration mechanism in our overall framework, ``Check Connector'' is in
 focus, with the astronaut pursuing this goal. Suddenly, however the astronaut
 tells the robot that she can not find the connector and she is \textit{worried}
@@ -1765,19 +1760,18 @@ explored below as we discuss details of our cost function.
 
 \begin{figure}[tbh]
   \centering
-  \vspace*{-1mm}
-  \includegraphics[width=0.8\textwidth]{figure/collaborationStructure-croped.pdf}
+  \includegraphics[width=\textwidth]{figure/collaborationStructure-croped.pdf}
   \caption{{\fontsize{9}{9}\selectfont Astronaut-robot collaboration structure
   (shared plan).}}
-  \label{fig:taskModel}
-  \vspace*{-3mm}
+  \label{fig:cs-goalManagement}
 \end{figure}
 
 Equation \ref{eqn:cost} shows the function to calculate the cost of each
 live goal. The base in the equation calculates the cost of pursuing any given
 goal. The three functions used to calculate the cost are:
 \textit{proximity} $P(g)$, \textit{difficulty} $D(g)$, and \textit{specificity}
-$S(g)$ (see equations \ref{eqn:proximity} to \ref{eqn:specificity}).
+$S(g)$ as three attributes of a given goal (see equations \ref{eqn:proximity} to
+\ref{eqn:specificity}).
 
 \begin{equation}
 {\fontsize{6}{9}\selectfont Cost(g) =
@@ -1786,6 +1780,7 @@ $S(g)$ (see equations \ref{eqn:proximity} to \ref{eqn:specificity}).
 \end{equation}
 
 \noindent For simplicity, we assume equal values for the weights: $\omega_i$=1.
+Further studies are required to obtain more appropriate values of these weights.
 
 \begin{equation}
 \Gamma=-C[(R_r+1)D_r + \alpha(R_h+1)D_h]
@@ -1848,42 +1843,33 @@ The \textit{specificity} of a goal is the function of \textit{depth} (distance
 from the root) and \textit{degree} (number of children in the graph) of a given
 goal $g$. The first non-primitive goal (root) is the least specific goal, and
 the primitives (leaves) are the most specific goals. As calculated based on Fig.
-\ref{fig:taskModel}, the values of $S(g)$ for the three primitives under the
-``Prepare Panels'' are 2.
+\ref{fig:cs-goalManagement}, the values of $S(g)$ for the three primitives under
+the ``Prepare Panels'' are 2.
 
 \begin{equation}
 S(g) = \frac{depth(g)}{degree(g)+1}
 \label{eqn:specificity}
 \end{equation}
 
-\vspace*{-1mm}
-The tuples below the goals in Fig. \ref{fig:taskModel} indicate the cost value
-of each goal. The first number in each tuple is the normalized cost value
+The tuples below the goals in Fig. \ref{fig:cs-goalManagement} indicate the cost
+value of each goal. The first number in each tuple is the normalized cost value
 without the influence of the affective part of the cost function, i.e., the
 exponent is equal to 1 in Equation \ref{eqn:cost}. The second number of each
 tuple indicates the normalized value of the cost including the influence of
 affective appraisal and the astronaut's perceived emotion.
 
 Based on our cost function, the cost of completing the primitive goal ``Check
-Connector'' is 0.82 (see Fig. \ref{fig:taskModel}). As shown, when affect is
-not considered the cost is 0.26; the negative emotion of the astronaut (worry)
-significantly increases the cost of the current goal, and also impacts the other
-two primitive live goals under the same parent. Therefore, instead of insisting
-on pursuing the same blocked goal which has caused the astronaut's negative
-emotion, the robot can mitigate the astronaut's emotions by adapting to her
-worry. The robot shifts the focus of attention to ``Check Impedance'' to
-maintain progress and prevent failure of the collaboration. The details about
-the robot's behavior is beyond the scope of this paper.
+Connector'' is 0.82 (see Fig. \ref{fig:cs-goalManagement}). As shown, when
+affect is not considered the cost is 0.26; the negative emotion of the astronaut
+(worry) significantly increases the cost of the current goal, and also impacts
+the other two primitive live goals under the same parent. Therefore, instead of
+insisting on pursuing the same blocked goal which has caused the astronaut's
+negative emotion, the robot can mitigate the astronaut's emotions by adapting to
+her worry. The robot shifts the focus of attention to ``Check Impedance'' to
+maintain progress and prevent failure of the collaboration.
 
 \section{Evaluation}
 \label{sec:user-study}
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=16cm,height=5.25cm]{figure/taskModel-croped.pdf}
-  \caption{Collaboration Task Model for the Evaluation.}
-  \label{fig:taskModel}
-\end{figure*}
 
 We developed our user study to test our hypothesis that humans will provide
 similar answers as our algorithms to questions related to different factors used
@@ -1905,9 +1891,37 @@ sanity questions. We also eliminated subjects with an answering time less than 2
 minutes. The final number of accepted subjects in each group is provided in
 Table \ref{tbl:statistics}.
 
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=12cm,height=4.25cm]{figure/taskModel-croped.pdf}
+  \caption{Collaboration Task Model for the Evaluation.}
+  \label{fig:taskModel}
+\end{figure*}
+
+To minimize the background knowledge necessary for our test subjects, we used a
+simple domestic example of preparing a peanut butter and jelly sandwich, and a
+hard boiled egg sandwich for a hiking trip. We provided clear textual and
+graphical instructions for all four questionnaires. The instructions presented
+a sequence of hypothetical collaborative tasks to be carried out by the test
+subject and an imaginary friend, Mary, in order to accomplish their goal of
+preparing two sandwiches. Figure \ref{fig:taskModel} shows the corresponding
+task model for these instructions. Test questions introduced specific situations
+related to the shared plan; these situations included, among others, blocked
+tasks, and failure or achievement of a shared goal provided in the instruction.
+Each question provided three possible answers (which were counterbalanced in
+the questionnaire). One option provided a distinct alternative; another option
+was used to provide a dichotomy with the first alternative, and a third option
+was used to check whether the subjects perceived the other two options as equal.
+We also provided a brief description as well as a simple example for each
+appraisal variable, e.g., \textit{relevance}, at the end of the corresponding
+instructions. Using this approach, we prepared four different online
+questionnaires for the appraisal variables: \textit{relevance, desirability,
+expectedness} and \textit{controllability}. Note that the collaboration
+structure and the instructions were the same for all four questionnaires.
+
 \begin{table}[htbp]
 \centering
-\vspace*{-5mm}
+\centering
 \caption{Evaluation Results}
 \begin{tabular}{|c|c|c|c|c|} \hline
 {\fontsize{7.5}{8}\selectfont appraisal variables} &
@@ -1930,30 +1944,8 @@ Desirability} & {\fontsize{7.5}{8}\selectfont 35} &
 0.158} & {\fontsize{7.5}{8}\selectfont <0.001}\\
 \hline
 \end{tabular}
-\vspace*{-2mm}
 \label{tbl:statistics}
 \end{table}
-
-To minimize the background knowledge necessary for our test subjects, we used a
-simple domestic example of preparing a peanut butter and jelly sandwich, and a
-hard boiled egg sandwich for a hiking trip. We provided clear textual and
-graphical instructions for all four questionnaires. The instructions presented
-a sequence of hypothetical collaborative tasks to be carried out by the test
-subject and an imaginary friend, Mary, in order to accomplish their goal of
-preparing two sandwiches. Figure \ref{fig:taskModel} shows the corresponding
-task model for these instructions. Test questions introduced specific situations
-related to the shared plan; these situations included, among others, blocked
-tasks, and failure or achievement of a shared goal provided in the instruction.
-Each question provided three possible answers (which were counterbalanced in
-the questionnaire). One option provided a distinct alternative; another option
-was used to provide a dichotomy with the first alternative, and a third option
-was used to check whether the subjects perceived the other two options as equal.
-We also provided a brief description as well as a simple example for each
-appraisal variable, e.g., \textit{relevance}, at the end of the corresponding
-instructions. Using this approach, we prepared four different online
-questionnaires for the appraisal variables: \textit{relevance, desirability,
-expectedness} and \textit{controllability}. Note that the collaboration
-structure and the instructions were the same for all four questionnaires.
 
 Each question was designed based on different factors that we use in our
 algorithms (see Section \ref{sec:appraisal-process}). Here, we present three
