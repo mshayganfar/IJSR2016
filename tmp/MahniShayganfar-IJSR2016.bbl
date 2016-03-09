@@ -179,12 +179,6 @@ H.~J. Levesque, P.~R. Cohen, and J.~H.~T. Nunes.
 \newblock On acting together.
 \newblock In {\em AAAI}, pages 94--99. AAAI Press / The MIT Press, 1990.
 
-\bibitem{Litman:discourse-commonsense}
-D.~J. Litman and J.~F. Allen.
-\newblock Discourse processing and commonsense plans.
-\newblock In P.~R. Cohen, J.~Morgan, and M.~E. Pollack, editors, {\em
-  Intentions in Communication}, pages 365--388. MIT Press, Cambridge, MA, 1990.
-
 \bibitem{liu:affect-robot-behavior}
 C.~Liu and N.~Sarkar.
 \newblock Online affect detection and robot behavior adaptation for
@@ -226,12 +220,6 @@ S.~W. McQuiggan and J.~C. Lester.
 \newblock Modeling and evaluating empathy in embodied companion agents.
 \newblock {\em International Journal of Human-Computer Studies},
   65(4):348--360, 2007.
-
-\bibitem{montreuil:planning-robot-activity}
-V.~Montreuil, A.~Clodic, M.~Ransan, and R.~Alami.
-\newblock Planning human centered robot activities.
-\newblock In {\em Proceedings of the {IEEE} International Conference on
-  Systems, Man and Cybernetics}, pages 2618--2623, 2007.
 
 \bibitem{mutlu:coordination-robot}
 B.~Mutlu, A.~Terrell, and C.-M. Huang.
@@ -348,13 +336,6 @@ M.~Shayganfar, C.~Rich, and C.~L. Sidner.
 \newblock An overview of affective motivational collaboration theory.
 \newblock In {\em Proceedings of AAAI Workshop on Symbiotic Cognitive Systems,
   Phoenix, Arizona}, 2016.
-
-\bibitem{sidner:enagagement-robot}
-C.~L. Sidner and M.~Dzikovska.
-\newblock A first experiment in engagement for human-robot interaction in
-  hosting activities.
-\newblock In {\em Advances in Natural Multimodal Dialogue Systems}, volume~30
-  of {\em Cognitive Technologies}, pages 55--76. Springer Netherlands, 2005.
 
 \bibitem{sofge:collaboration-humanoid-space}
 D.~Sofge, M.~D. Bugajska, J.~G. Trafton, D.~Perzanowski, S.~Thomas, M.~Skubic,

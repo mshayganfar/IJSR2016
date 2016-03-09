@@ -166,25 +166,18 @@ the important concepts underlying collaboration; such as the presence of a
 reason for collaborators' commitment, and the necessity of communicating about
 mental states in order to maintain progress over the course of a collaboration.
 The most prominent collaboration theories are based on plans and intentions
-\cite{cohen:teamwork} \cite{grosz:plans-discourse}
-\cite{Litman:discourse-commonsense}, and are derived from Bratman's BDI
-architecture \cite{bratman:intentions-plans}. Two theories, Joint Intentions
-\cite{cohen:teamwork} and SharedPlans
-\cite{grosz:planning-acting,grosz:collaboration,grosz:plans-discourse}, have
-been used to support teamwork and collaboration between humans and robots or
-virtual agents \cite{breazeal:humanoid-robots}
-\cite{montreuil:planning-robot-activity} \cite{sidner:enagagement-robot}
-\cite{yen:cast}. However, these theories explain only the structure of a
-collaboration. For instance, in SharedPlans theory collaborators build a shared
-plan containing a collection of beliefs and intentions about the actions in the
-plan. Collaborators communicate these beliefs and intentions via utterances
-about actions that contribute to the shared plan. This communication leads to
-the incremental construction of a shared plan, and ultimately successful
-completion of the collaboration. In contrast, in Joint Intentions theory, the
-notion of joint intention is viewed as a persistent commitment of the team
-members to a shared goal. In this theory, once an agent enters into a joint
-commitment with other agents, it should communicate its private beliefs to other
-team members.
+\cite{cohen:teamwork} \cite{grosz:plans-discourse}, and they support teamwork
+and collaboration between humans and robots or virtual agents. However, these
+theories explain only the structure of a collaboration. For instance, in
+SharedPlans theory collaborators build a shared plan containing a collection of
+beliefs and intentions about the actions in the plan. Collaborators communicate
+these beliefs and intentions via utterances about actions that contribute to the
+shared plan. This communication leads to the incremental construction of a
+shared plan, and ultimately successful completion of the collaboration. In
+contrast, in Joint Intentions theory, the notion of joint intention is viewed as
+a persistent commitment of the team members to a shared goal. In this theory,
+once an agent enters into a joint commitment with other agents, it should
+communicate its private beliefs to other team members.
 
 Although existing collaboration theories explain the important elements of a
 collaboration structure, the underlying processes required to dynamically
@@ -198,9 +191,9 @@ inherently involve social interactions since all collaborations occur between
 social agents, and it should essentially constitute a means of modifying the
 content of social interaction as the collaboration unfolds. The underlying
 processes of emotions possess these two properties, and social functions of
-emotions explain some aspects of the underlying processes in collaboration. This
-paper makes the case for a process model of emotions and demonstrates how it
-furthers collaboration between humans and robots.
+emotions explain some aspects of the underlying processes in collaboration.
+This work is implemented as part of a larger effort to build robots capable of
+generating and recognizing emotions in order to be better collaborators.
 
 Humans are emotional and social beings; emotions are involved in many different
 social contexts including collaboration. Although there are purely personal
@@ -224,10 +217,10 @@ response to the relational meaning \cite{planalp:communicating-emotion}. The
 interpretation of these relational meanings are handled by the appraisal of
 events. Appraisal processes give us a way to view emotion as social
 \cite{hooft:sharing-emotions}. Meaning is created by an individual's social
-relationships and experiences in the social world, and individuals communicate
-these meanings through utterances. Consequently, the meaning of these utterances
-and the emotional communication change the dynamic of social interactions. A
-successful and effective emotional communication necessitates ongoing reciprocal
+experiences in the social world, and individuals communicate these meanings
+through utterances. Consequently, the meaning of these utterances and the
+emotional communication change the dynamic of social interactions. A successful
+and effective emotional communication necessitates ongoing reciprocal
 adjustments between interactants that can happen by interpreting each other's
 behaviors \cite{parkinson:emotion-social-interaction}. This adjustment procedure
 requires a baseline and an assessment procedure. While the components of the
@@ -236,42 +229,51 @@ emotion-related processes provide the assessment procedure.
 
 Since collaboration is a type of social context, the social functions of
 emotions are required for an agent to perform adequately in such an environment.
-In this paper, we present two pairs of hypothetical interaction scenarios. Each
-pair contrasts an emotionally-aware with an emotionally ignorant robot
-interacting with a human in the same situation. These scenarios highlight the
-necessity of giving robots the capacity to understand and regulate emotions, as
-well as to provide emotion-driven responses. We then briefly introduce
+In this paper, first, we present two pairs of hypothetical interaction
+scenarios. Each pair contrasts an emotionally-aware with an emotionally
+ignorant\footnote{In our implementation, we always consider neutral emotion for
+the emotionally ignorant cases. Therefore, any human's negative or positive
+perceived emotion will be ignored by the robot and persumed as neutral emotion.}
+robot interacting with a human in the same situation. These scenarios highlight
+the necessity of giving robots the capacity to understand and regulate emotions,
+as well as to provide emotion-driven responses. We then briefly introduce
 Affective Motivational Collaboration Theory which explains the underlying
 processes of emotions and collaboration. The emotion-aware examples show how the
 mechanisms of this theory are involved in agreeing on a shared goal with a robot
-(Sections \ref{sec:exp1} and \ref{sec:wt-exp1}), and delegating a new task to
-the robot (Sections \ref{sec:exp3} and \ref{sec:wt-exp3}). The emotion ignorance
-examples are the same, except that the robot ignores the human's verbally or
-nonverbally expressed emotions. The same four examples in Sections
-\ref{sec:exp1} to \ref{sec:exp4} are revisited in more detail in our
-computational walkthroughs in Section \ref{sec:wtce}. In this section, we show
-how the mechanisms of Affective Motivational Collaboration Theory operate to
-produce the robot behaviors in Section \ref{sec:example-scenario}.
+(Section \ref{sec:exp1}), and delegating a new task to the robot (Section
+\ref{sec:exp3}). The emotion ignorance examples are the same, except that the
+robot always perceives human's negative or positive emotions as neutral, and
+ignores the human's verbally or nonverbally expressed emotions. As we discussed
+above, there are certain types of emotion-regulated mechanisms with which a
+collaborative robot can modify and maintain a collaboration structure (e.g.,
+shared plan). We explain these mechanisms and their corresponding operations in
+Affective Motivational Collaboration Theory (see Section
+\ref{sec:computational-framework}).
 
-As we discussed above, there are certain types of emotion-regulated mechanisms
-with which a collaborative robot can modify and maintain a collaboration
-structure (e.g., shared plan). We explain these mechanisms and their
-corresponding operations in Affective Motivational Collaboration Theory. In
-this paper, we briefly describe some parts of this theory that are required to
-discuss our examples. We have also implemented all the rules associated with
-each mechanism using JESS (JAVA Expert System Shell), in order to generate the
-same type of collaborative behaviors as appear in our examples. In the future,
-we are going to use these rules and the processes involved in each mechanism to
-develop collaborative behaviors in an interactive robot.
+There are several appraisal models (e.g., EMA \cite{marsella:ema-process-model})
+contributing in different applications such as social sciences, virtual agents,
+and robotics. However, none of these models have focused on the appraisal
+processes during collaboration. We believe appraisal plays a key role in
+collaboration due to its regulatory and evaluative nature. Also, collaboration
+induces some changes to underlying appraisal processes due to its unique nature.
+For instance, although the appraisal models mostly use utility to compute the
+relevance of an event, we have found new cognitive components involved in
+determining utility because of the influence of the collaboration. These
+components, such as the recurrence of a belief by the human collaborator or the
+influence of the human collaborator's perceived emotion on the robot's decisions
+emphasize the fact that collaboration requires different procedures in appraisal
+processes. In this paper, we provide the relevance, desirability, expectedness,
+and controllability appraisals of an event in the collaboration context.
+Finally, we provide the results from an online user study that we have conducted
+to evaluate our appraisal algorithms.
 
 \section{Related Work}
 \label{sec:related-work}
 
 The prominent collaboration theories are mostly based on plans and joint
-intentions
-\cite{cohen:teamwork,grosz:plans-discourse}, and they were derived from
-the BDI paradigm developed by Bratman \cite{bratman:intentions-plans} which is
-fundamentally reliant on folk psychology \cite{ravenscroft:folk}. The two
+intentions \cite{cohen:teamwork,grosz:plans-discourse}, and they were derived
+from the BDI paradigm developed by Bratman \cite{bratman:intentions-plans} which
+is fundamentally reliant on folk psychology \cite{ravenscroft:folk}. The two
 theories, Joint Intentions \cite{cohen:teamwork} and SharedPlans
 \cite{grosz:plans-discourse}, have been extensively used to examine and describe
 teamwork and collaboration. The SharedPlans theory is a general theory of
@@ -1030,7 +1032,7 @@ shifts the focus of attention during the interaction.
 Here, we briefly describe the methods which retrieve information about the
 collaboration structure, and are used in our algorithms to compute the values of
 appraisal variables. In these methods, $\varepsilon_t$ is the event
-corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}. 
+corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}.
 
 \begin{itemize}[leftmargin=2pt]
   \setlength\itemsep{0.2mm}
@@ -1712,166 +1714,6 @@ input for the other mechanisms of the Affective Motivational Collaboration
 Framework, shown in Figure \ref{fig:cpm}. By providing adequate interpretation
 of events in the collaborative environment, the appraisal mechanism enables the
 robot to carry out proper collaborative behaviors.
-
-\section{Goal Management}
-\label{sec:goal-management}
-
-In this section, we introduce our goal management process based on a cost
-function including the influence of affective appraisal and reverse appraisal
-processes. Goal management is a crucial part of our investigation of the
-reciprocal influence of appraisal on a collaboration structure (see Fig.
-\ref{fig:goalManagement}).
-
-\begin{figure}[tbh]
-  \centering
-  \includegraphics[width=0.8\textwidth]{figure/ActionSelection-croped.pdf}
-  \caption{{\fontsize{9}{9}\selectfont Reciprocal influence of Collaboration
-  and Appraisal (mechanisms in our framework).}}
-  \label{fig:goalManagement}
-  \vspace*{-2mm}
-\end{figure}
-
-Appraisals are separable antecedents of emotion with which the robot
-evaluates the environment. The outcome of each appraisal process is a specific
-value for the corresponding appraisal variable (see Section
-\ref{sec:appraisal}). The vector containing these appraisal variables can be
-mapped to a particular emotion instance at each point in time. However, it is
-not the actual emotion instance that is important for us. In fact, it is a) the
-functions of emotions in a social setting, i.e., goal management, and b) the
-meaning of the collaborator's perceived emotion in collaboration context.
-
-A collaboration structure provides a hierarchy and constraints of the shared
-goals in the form of a shared plan (see Fig. \ref{fig:cs-goalManagement})
-which contains both the robot and the human collaborator's goals. The robot
-pursues the goals for which the robot is responsible in the shared plan.
-However, there can be several live goals available for the robot to pursue at
-each point in time during collaboration. A goal is \textit{live} if all of its
-\textit{predecessors} are achieved and all of its \textit{preconditions} are
-satisfied. Therefore, a collaborative robot requires a mechanism to choose
-between a set of live goals. We believe appraisal processes are crucial to
-choose between the available live goals, since the appraisals are the immediate
-outcome of the robot's assessment of the collaboration environment.
-
-For instance, Fig. \ref{fig:cs-goalManagement} shows a non-primitive ``Prepare
-Panels'' goal decomposed into three primitive goals. Therefore, if ``Prepare
-Panels'' is live, its primitive goals can be pursued by the responsible agent.
-In our example, the astronaut is responsible for the ``Check Connector'' goal;
-the robot is responsible for the remaining two primitive goals. According to the
-collaboration mechanism in our overall framework, ``Check Connector'' is in
-focus, with the astronaut pursuing this goal. Suddenly, however the astronaut
-tells the robot that she can not find the connector and she is \textit{worried}
-about failure of this goal. The robot's response to this situation will be
-explored below as we discuss details of our cost function.
-
-\begin{figure}[tbh]
-  \centering
-  \includegraphics[width=\textwidth]{figure/collaborationStructure-croped.pdf}
-  \caption{{\fontsize{9}{9}\selectfont Astronaut-robot collaboration structure
-  (shared plan).}}
-  \label{fig:cs-goalManagement}
-\end{figure}
-
-Equation \ref{eqn:cost} shows the function to calculate the cost of each
-live goal. The base in the equation calculates the cost of pursuing any given
-goal. The three functions used to calculate the cost are:
-\textit{proximity} $P(g)$, \textit{difficulty} $D(g)$, and \textit{specificity}
-$S(g)$ as three attributes of a given goal (see equations \ref{eqn:proximity} to
-\ref{eqn:specificity}).
-
-\begin{equation}
-{\fontsize{6}{9}\selectfont Cost(g) =
-\big(\omega_0.P(g)+\omega_1.D(g)+\omega_2.\frac{1}{S(g)+1}\big)}^{\Gamma}
-\label{eqn:cost}
-\end{equation}
-
-\noindent For simplicity, we assume equal values for the weights: $\omega_i$=1.
-Further studies are required to obtain more appropriate values of these weights.
-
-\begin{equation}
-\Gamma=-C[(R_r+1)D_r + \alpha(R_h+1)D_h]
-\label{eqn:power}
-\end{equation}
-
-The exponent part of our cost function (Equation \ref{eqn:power}) captures a)
-the influence of the human's perceived emotional instance, and b) the influence
-of self appraisal of the given goal. $R_h\in[0,1]$ and $D_h\in[-1,1]$ are the
-relevance and desirability values respectively, which are based on the
-\textit{reverse} appraisal of the human's perceived emotion. For instance, if
-the astronaut is \textit{worried}, $D_h$ is negative, e.g., -0.8 (depending on
-how undesirable the event is according to reverse appraisal), and $R_h$ will be
-1 for the active goal and its value descends to 0 for other live goals depending
-on their distance to the active goal in the shared plan (e.g., 0.1).
-
-$R_r\in[0,1]$ and $D_r\in[-1,1]$ are relevance and desirability values, provided
-by the \textit{self} appraisal functions for all of the live goals. For
-instance, for the active goal for which the astronaut was \textit{worried},
-$D_r$ can be positive, e.g., 0.8 (depending on the self's desirability appraisal
-function); $R_r$ can be 1, since the active goal is relevant for the robot.
-These values will change for the other live goals depending on how
-relevant they are with respect to the collaboration status (e.g., 0.9 and 0.8).
-Finally, $C\in[1,\infty)$ is a constant (e.g., 2) used to control the influence
-of affect on cost value. It is negative since undesirability (negative values)
-should increase the cost. $\alpha\in[1,\infty)$ is another constant (e.g., 3)
-used to control the importance of reverse appraisal relative to self appraisal.
-
-The \textit{proximity} of a goal indicates how far the goal is from the current
-active goal in the shared plan. It is calculated by the distance function
-(Equation \ref{eqn:proximity}) which returns the number of edges between the
-current active goal $g_{_{act}}$, and the given goal $g$ in the shared plan. In
-our example, $P(g)$ is 2 for both ``Check Impedance'' and ``Connect Adaptor''
-goals.
-
-\begin{equation}
-P(g) = max\big\{1, distance(g_{_{act}},g)\big\}
-\label{eqn:proximity}
-\end{equation}
-
-The \textit{difficulty} of a goal is a function of three parameters (Equation
-\ref{eqn:difficulty}) which consider the difficulty based on a) topology of the
-shared plan tree (domain independent), and b) the amount of effort required to
-pursue a given goal (domain dependent). The $\sum pred_e(g)$ is the sum of
-efforts that all the \textit{predecessors} of a given goal $g$ require. The
-$\sum desc_e(g)$ is the sum of efforts that all the \textit{descendants} of a
-given goal $g$ require. The effort values represent the amount of effort for the
-goals with respect to the domain. In our example, we assume the values of all
-the goal efforts are 1 for simplicity. The $H(g)$ is the height of the given
-goal $g$. The heights of all primitives under ``Prepare Panel'' goal are 0 in
-our example.
-
-\begin{equation}
-D(g) = \Big(H(g)+1\Big)\times\left[\sum\limits_{m=0}^{M} pred_e(g) +
-\sum\limits_{n=0}^{N} desc_e(g)\right]
-\label{eqn:difficulty}
-\end{equation}
-
-The \textit{specificity} of a goal is the function of \textit{depth} (distance
-from the root) and \textit{degree} (number of children in the graph) of a given
-goal $g$. The first non-primitive goal (root) is the least specific goal, and
-the primitives (leaves) are the most specific goals. As calculated based on Fig.
-\ref{fig:cs-goalManagement}, the values of $S(g)$ for the three primitives under
-the ``Prepare Panels'' are 2.
-
-\begin{equation}
-S(g) = \frac{depth(g)}{degree(g)+1}
-\label{eqn:specificity}
-\end{equation}
-
-The tuples below the goals in Fig. \ref{fig:cs-goalManagement} indicate the cost
-value of each goal. The first number in each tuple is the normalized cost value
-without the influence of the affective part of the cost function, i.e., the
-exponent is equal to 1 in Equation \ref{eqn:cost}. The second number of each
-tuple indicates the normalized value of the cost including the influence of
-affective appraisal and the astronaut's perceived emotion.
-
-Based on our cost function, the cost of completing the primitive goal ``Check
-Connector'' is 0.82 (see Fig. \ref{fig:cs-goalManagement}). As shown, when
-affect is not considered the cost is 0.26; the negative emotion of the astronaut
-(worry) significantly increases the cost of the current goal, and also impacts
-the other two primitive live goals under the same parent. Therefore, instead of
-insisting on pursuing the same blocked goal which has caused the astronaut's
-negative emotion, the robot can mitigate the astronaut's emotions by adapting to
-her worry. The robot shifts the focus of attention to ``Check Impedance'' to
-maintain progress and prevent failure of the collaboration.
 
 \section{Evaluation}
 \label{sec:user-study}
