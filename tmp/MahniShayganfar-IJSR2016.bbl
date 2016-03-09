@@ -343,6 +343,12 @@ M.~Shayganfar, C.~Rich, and C.~L. Sidner.
 \newblock A design methodology for expressing emotion on robot faces.
 \newblock In {\em IROS}, pages 4577--4583. IEEE, 2012.
 
+\bibitem{shayganfar:theory-overview}
+M.~Shayganfar, C.~Rich, and C.~L. Sidner.
+\newblock An overview of affective motivational collaboration theory.
+\newblock In {\em Proceedings of AAAI Workshop on Symbiotic Cognitive Systems,
+  Phoenix, Arizona}, 2016.
+
 \bibitem{sidner:enagagement-robot}
 C.~L. Sidner and M.~Dzikovska.
 \newblock A first experiment in engagement for human-robot interaction in

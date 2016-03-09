@@ -722,19 +722,19 @@ Astronaut terminates the collaboration task because of the lack of time (D11).
 \label{sec:computational-framework}
 
 In this section, we briefly describe Affective Motivational Collaboration
-Theory and the five underlying emotion-regulated mechanisms in this theory. Each
-mechanism constitutes one or more processes which are involved in generating
-collaborative behaviors for the Robot. We also explain different types of mental
-states in our computational framework. Notice in Fig. \ref{fig:theory} there are
-two components, Perception and Action, which are not part of Affective
-Motivational Collaboration Theory. These components only provide required input
-and output to our framework which can differ based on the capabilities of a
-particular sociable robot.
+Theory \cite{shayganfar:theory-overview} and the five underlying
+emotion-regulated mechanisms in this theory. Each mechanism constitutes one or
+more processes which are involved in generating collaborative behaviors for the
+Robot. We also explain different types of mental states in our computational
+framework. Notice in Fig. \ref{fig:cpm} there are two components, Perception and
+Action, which are not part of Affective Motivational Collaboration Theory. These
+components only provide required input and output to our framework which can
+differ based on the capabilities of a particular sociable robot.
 
 \subsection{Affective Motivational Collaboration Theory}
 \label{sec:AMCT}
 
-\textit{Affective Motivational Collaboration Theory} (see Fig. \ref{fig:theory})
+\textit{Affective Motivational Collaboration Theory} (see Fig. \ref{fig:cpm})
 is about the interpretation and prediction of the observable behaviors in a
 dyadic collaborative interaction. The collaboration structure of
 Affective Motivational Collaboration Theory is based on the SharedPlans theory
@@ -748,6 +748,14 @@ well as their own internal states and operational goals. The processes involved
 in collaboration are important because they explain how the collaboration
 structure is formed and dynamically evolved based on the collaborators'
 interaction.
+
+\begin{figure}[h!]
+  \includegraphics[scale=0.78]{figure/theory-general-croped.pdf}
+  \caption{Computational framework based on \textit{Affective Motivational
+  Collaboration Theory} (arrows indicate primary influences between
+  mechanisms).}
+  \label{fig:cpm}
+\end{figure}
 
 Affective Motivational Collaboration Theory focuses on the processes regulated
 by emotional states. It aims to explain both rapid emotional reactions to events
@@ -768,14 +776,6 @@ goals, motives and emotion instances. Each of these mental states possess
 multiple attributes impacting the relation between cognition and behavior or
 perception.
 
-\begin{figure}[h!]
-  \includegraphics[scale=0.78]{figure/theory-general-croped.pdf}
-  \caption{Computational framework based on \textit{Affective Motivational
-  Collaboration Theory} (arrows indicate primary influences between
-  mechanisms).}
-  \label{fig:cpm}
-\end{figure}
-
 In summary, Affective Motivational Collaboration Theory consists of five
 mechanisms all of which store and retrieve data in the Mental States. We will
 describe each mechanism and their influences on each other briefly below.
@@ -783,7 +783,7 @@ describe each mechanism and their influences on each other briefly below.
 \subsection{Collaboration Mechanism}
 \label{sec:collaboration-mech}
 
-The \textit{Collaboration} mechanism (see Fig.~\ref{fig:theory}) constructs
+The \textit{Collaboration} mechanism (see Fig.~\ref{fig:cpm}) constructs
 a hierarchy of tasks and also manages and maintains the constraints and other
 required details of the collaboration specified by the plan. These constraints
 on task states and on the ordering of tasks include the inputs and outputs of
@@ -815,15 +815,14 @@ collaboration. Appraising the environment and the current event helps the Robot
 to update the collaboration plan in response to changes in the environment and
 avoid further critical failures during collaboration. Appraisal also helps the
 Robot to have a better understanding of the human's actions by making inferences
-based on appraisal variables (see Section \ref{sec:wtce} for some examples)
-\cite{marsella:ema-process-model} \cite{scherer:appraisal-processes}.
-Furthermore, in order to collaborate successfully, a collaborator cannot simply
-use the plan and reach to the shared goal; there should be an adaptation
-mechanism not only for updating the plan but also the underlying mental state.
-The output of Appraisal can directly and indirectly impact other mechanisms. For
-instance, the Motivation mechanism uses this data to generate, compare and
-monitor motives based on the current internal appraisal of the Robot as well as
-the appraisal of the environment.
+based on appraisal variables \cite{marsella:ema-process-model}
+\cite{scherer:appraisal-processes}. Furthermore, in order to collaborate
+successfully, a collaborator cannot simply use the plan and reach to the shared
+goal; there should be an adaptation mechanism not only for updating the plan but
+also the underlying mental state. The output of Appraisal can directly and
+indirectly impact other mechanisms. For instance, the Motivation mechanism uses
+this data to generate, compare and monitor motives based on the current internal
+appraisal of the Robot as well as the appraisal of the environment.
 
 The Coping mechanism is responsible for adopting the appropriate behavior
 (action) with respect to interpretation of the ongoing internal and external
@@ -851,7 +850,7 @@ are generated with respect to the current mental state. Only one of these
 competing motives is most likely to become a new intention. Therefore, a
 comparison process decides which motive is more likely to be consistent with the
 current state based on the values of the motive attributes (e.g., motive
-insistence and motive urgency). Finally, the new motive will be used to form a
+importance and motive urgency). Finally, the new motive will be used to form a
 new intention. As a result, the Robot can take an action based on the new
 intention to sustain the collaboration progress. Furthermore, the Motivation
 mechanism can serve the Theory of Mind mechanism by helping the Robot to infer
@@ -884,12 +883,12 @@ of the human will update the Robot's mental state.
 
 Perception is outside of our theory and is responsible for producing the sensory
 information used by the mechanisms in our framework; it is only a source of data
-to the computational framework (see Fig.\,\ref{fig:theory}). Thus, our
+to the computational framework (see Fig.\,\ref{fig:cpm}). Thus, our
 computational framework starts with high-level semantic representation of events
 (including utterances). The output of the Perception component provides a
 unified perception representation across all of the mechanisms.
 
-The Action component in Fig.\,\ref{fig:theory}, which is also outside of our
+The Action component in Fig.\,\ref{fig:cpm}, which is also outside of our
 theory, functions whenever the Robot needs to show a proper behavior according
 to the result of the internal processes of the collaboration procedure; it is
 only a sink of data in our computational framework. The only input to the Action
@@ -902,7 +901,7 @@ expressions.
 \subsection{Mental States \& Emotion Instances}
 \label{sec:mental-states}
 
-The Mental States shown in Fig.\,\ref{fig:theory} comprise the knowledge base
+The Mental States shown in Fig.\,\ref{fig:cpm} comprise the knowledge base
 required for all the mechanisms in the overall framework.
 
 \subsubsection{Beliefs}
@@ -1002,12 +1001,12 @@ appraisal, reverse appraisal, motive generation and intention formation
 processes. For instance, overly easy goals do not motivate; neither are humans
 motivated to attempt what they believe are impossible goals.
 
-\subsubsection{Emotions}
+\subsubsection{Emotion Instances}
 
 \textit{Emotions} in Mental States are emotion instances that are elicited by
 the Appraisal mechanism. These emotion instances include the Robot's own
 emotions as well as the anticipated emotions of the human which are created with
-the help of the processes in the Theory of Mind mechanism.
+the help of the processes in the Theory of Mind mechanism, e.g., worry.
 
 \section{Collaboration}
 
