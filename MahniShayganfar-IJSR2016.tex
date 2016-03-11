@@ -1035,30 +1035,38 @@ appraisal variables. In these methods, $\varepsilon_t$ is the event
 corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}.
 
 \begin{itemize}[leftmargin=2pt]
-  \setlength\itemsep{0.2mm}
   \item \textit{recognizeGoal($\varepsilon_t$)} returns the unique goal to which
   the given event (action, utterance, or emotional expression) directly
-  contributes, or \textit{ambiguous} if this method does not recognize a goal in
-  the plan.
+  contributes; it is only one goal since the robot can only do one primitive
+  action at a time in our collaboration model, i.e, in the goal tree, a given
+  primitive action can only directly contribute to one parent goal. The method
+  returns \textit{ambiguous} if it does not recognize a goal in the
+  plan\footnote{Ambiguity introduces some extra complexities which are beyond
+  scope of this paper.}.
   
-  \item \textit{topLevelGoalStatus($g_t$)} returns the status of the top level
-  goal whether it is \textsc{achieved, failed, blocked, inapplicable, pending,}
-  or \textsc{in progress}.
-  In our example, ``Install Solar Panels'' is the top level goal.
+  \item \textit{getGoalStatus($g_t$)} returns whether $g_t$'s status is
+  \textsc{achieved, failed, blocked, inapplicable, pending,} or \textsc{in
+  progress}. In our example, ``Check Connector'' is the current (focused) goal
+  and it is \textsc{pending}, and the ``Prepare Panels'' and ``Install Solar
+  Panels'' are \textsc{in progress}. The focused goal is the goal that the robot
+  currently pursues.
+  
+  \item \textit{getTopLevelGoal($g_t$)} returns $g_t$'s top level goal.
   
   \item \textit{currGoalStatus($g_t$)} returns the current goal status whether
   it is \textsc{achieved, failed, blocked, inapplicable, pending,} or \textsc{in
   progress}. In our example, ``Prepare Measurement Tool'' is the current
   (focused) goal.
-  
+
   \item \textit{precondStatus($g_t$)} returns the status of the precondition for
   the given goal whether it is \textsc{satisfied, unsatisfied} or
   \textsc{unknown}. For instance, the precondition for fixing a panel is whether
   the panel is appropriately located on its frame.
   
   \item \textit{isLive($g_t$)} returns \textit{true} if all the predecessors of
-  the given goal are \textsc{achieved} and all the preconditions of the goal are
-  \textsc{satisfied}; otherwise returns \textit{false}.
+  $g_t$ are \textsc{achieved} and all the preconditions are \textsc{satisfied},
+  i.e., \textsc{pending} or \textsc{in progress} goals; otherwise returns
+  \textit{false}.
   
   \item \textit{isFocusShift($g_t$)} returns \textit{true} if the given
   goal is not the previous focus (top of the stack); otherwise returns
@@ -1072,42 +1080,35 @@ corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}.
   between $g_1$ and $g_2$ in a plan tree structure; otherwise returns
   \textit{false}.
   
-  \item \textit{doesContribute($g_t$)} returns whether the given goal
-  contributes to another goal in the higher level of the plan hierarchy. For
-  instance, an abstract (nonprimitive) goal of ``Bring Panels'' contributes to
-  the higher level goal of ``Install Solar Panels''.
+%   \item \textit{doesContribute($g_t$)} returns whether the given goal
+%   contributes to another goal in the higher level of the plan hierarchy. For
+%   instance, an abstract (nonprimitive) goal of ``Bring Panels'' contributes to
+%   the higher level goal of ``Install Solar Panels''.
   
-  \item \textit{extractContributingGoals($g_t$)} returns all the contributing
-  goals of the given goal. For instance, ``Prepare Measurement Tool'' and
-  ``Measure Quality'' are two goals contributing to the ``Check Panels''
-  nonprimitive goal.
+  \item \textit{getContributingGoals($g_t$)} returns $g_t$'s children.
   
-  \item \textit{extractPredecessors($g_t$)} returns the predecessors of the
-  given goal. For instance, the ``Fix Panels'' goal is the predecessor of
-  another goal called ``Check Panels''.
+  \item \textit{getPredecessors($g_t$)} returns $g_t$'s predecessors.
   
-  \item \textit{extractInputs($g_t$)} returns all the required inputs for
-  the given goal. For example, the goal ``Fix Panels'' requires inputs such as
-  the \textit{welding tool} and the \textit{panel}.
+  \item \textit{getInputs($g_t$)} returns all required inputs for $g_t$. For
+  example, the goal ``Fix Panels'' requires inputs such as \textit{welding tool}
+  and \textit{panel}.
   
   \item \textit{isAvailable($g_t$)} returns whether the given input is
-  available. For instance, if the \textit{welding tool} is required for the goal
-  ``Fix Panels'', is it available now?
+  available. For instance, whether the \textit{welding tool} is available for the
+  goal ``Fix Panels''.
   
-  \item \textit{isAchieved($g_t$)} returns whether the given goal is achieved,
-  i.e., whether all the postconditions of the given goal are \textsc{satisfied}.
+%   \item \textit{isAchieved($g_t$)} returns whether the given goal is achieved,
+%   i.e., whether all the postconditions of the given goal are \textsc{satisfied}.
   
-  \item \textit{isFocused($g_t$)} returns whether the focus is on given
-  goal now. In this example, the focus is on the goal ``Prepare Measurement
-  Tool''. The focused goal is the goal that the robot is currently pursuing.
+  \item \textit{isFocused($g_t$)} returns whether the focus is on $g_t$.
   
-  \item \textit{getResponsible($g_t$)} returns responsible agents of the given
-  goal. In a dyadic collaboration, both of the agents can be partly responsible
-  for a nonprimitive goal, while each is responsible for one or more primitive
-  goals. For instance, both the robot and the astronaut are responsible for the
-  nonprimitive goal of ``Install Solar Panels'', whereas it is only the
-  astronaut who is responsible for the primitive goal of ``Prepare Measurement
-  Tool''.
+  \item \textit{getResponsible($g_t$)} returns responsible agent(s) for $g_t$.
+  In a dyadic collaboration, both of the agents (joint) can be partly responsible
+  for a nonprimitive goal, while each (self or other) is responsible for one or
+  more primitive goals. For instance, both the robot and the astronaut are
+  responsible for the nonprimitive goal of ``Install Solar Panels'', whereas it
+  is only the astronaut who is responsible for the primitive goal of ``Prepare
+  Measurement Tool''.
 \end{itemize}
 
 \section{Appraisal Processes}
