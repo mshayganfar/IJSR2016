@@ -93,6 +93,9 @@ grestore
 
 \renewcommand{\labelitemi}{$\bullet$}
 
+\algnewcommand\AND{\textbf{{\fontsize{10}{10}\selectfont AND}}}
+\algnewcommand\OR{\textbf{{\fontsize{10}{10}\selectfont or}}}
+
 \title{Toward Improving Human-Robot Collaboration with Emotional Awareness}%\thanks{Grants or
 % other notes about the article that should go on the front page should be
 %placed here. General acknowledgments should be placed at the end of the article.}
@@ -141,10 +144,12 @@ interaction between humans and robots or virtual agents. We build primarily on
 the \textit{cognitive appraisal} theory of emotions and the \textit{SharedPlans}
 theory of collaboration to investigate the structure, fundamental processes and
 functions of emotions in a collaboration. We have developed new algorithms for
-appraisal processes as part of a new overall computational model. we have also
-developed a goal management algorithm based on a cost function that we use to
-choose the goal in the shared plan during collaboration. We have evaluated our
-implemented appraisal algorithms by conducting an online user study.
+appraisal processes as part of a new overall computational model. We have
+evaluated our implemented appraisal algorithms by conducting an online user
+study.
+
+% we have also developed a goal management algorithm based on a cost function that
+% we use to choose the goal in the shared plan during collaboration.
 
 \keywords{Human-Robot Collaboration \and Emotional Awareness \and Affective
 Motivational Collaboration Theory}
@@ -256,6 +261,23 @@ and robotics. However, none of these models have focused on the appraisal
 processes during collaboration. We believe appraisal plays a key role in
 collaboration due to its regulatory and evaluative nature. Also, collaboration
 induces some changes to underlying appraisal processes due to its unique nature.
+A cognitive appraisal theory of collaboration is a contribution beyond existing
+generic appraisal theories because collaboration involves several key properties
+in structural and functional levels. Most collaborative situations involve
+participants with different beliefs and capabilities; usually collaborators only
+have partial knowledge of the process of accomplishing the collaborative
+activities; collaborative plans are more than the sum of individual plans;
+collaborators are required to maintain mutual (as well as private) beliefs about
+their shared goal; they need to be able to communicate with others
+effectively; they need to commit to the group activities; collaborators need
+to commit to the success of others; they need to reconcile between commitments
+to the existing collaboration and other activities; and they need to interpret
+others’ actions and utterances in the collaboration context. For instance,
+support, commitment, and responsiveness are prerequisites of collaborative
+interaction that induce changes to required underlying processes. One of these
+processes is appraisal which has a key evaluative role during collaboration.
+We believe appraisal processes must consider factors related to the
+collaborative environment, rather than considering only the robot's plan.
 For instance, although the appraisal models mostly use utility to compute the
 relevance of an event, we have found new cognitive components involved in
 determining utility because of the influence of the collaboration. These
@@ -1035,6 +1057,7 @@ appraisal variables. In these methods, $\varepsilon_t$ is the event
 corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}.
 
 \begin{itemize}[leftmargin=2pt]
+  \setlength\itemsep{1mm}
   \item \textit{recognizeGoal($\varepsilon_t$)} returns the unique goal to which
   the given event (action, utterance, or emotional expression) directly
   contributes; it is only one goal since the robot can only do one primitive
@@ -1344,46 +1367,44 @@ collaboration's point of view.
 		\Function{IsEventDesirable}{Event $\varepsilon_t$}
 			\Statex
 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
+			\State $\mathit{g}_{top} \gets \textit{getTopLevelGoal}{(\mathit{g}_{t})}$
 			\Statex
-			\If {$(\mathit{g}_{t} =$ {\fontsize{7}{8}\selectfont AMBIGUOUS}$)$} 
-				\State \Return {\fontsize{7}{8}\selectfont UNDESIRABLE}
+			\If {$(\mathit{g}_{t} =$ {\fontsize{8}{9}\selectfont AMBIGUOUS}$)$} 
+				\State \Return {\fontsize{8}{9}\selectfont UNDESIRABLE}
 			\EndIf
 			\Statex
-			\If {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)} =
-			{\fontsize{7}{8}\selectfont ACHIEVED})}} 
-			\State \Return {{\fontsize{7}{8}\selectfont MOST-DESIRABLE}} 
-			\ElsIf {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)}} =
-			{\fontsize{7}{8}\selectfont FAILED})} 
-			\State \Return {{\fontsize{7}{8}\selectfont MOST-UNDESIRABLE}}
-			\ElsIf {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)}} =
-			{\fontsize{7}{8}\selectfont BLOCKED}) \OR\\
-			\hspace{1mm}{\fontsize{8}{9}\selectfont
-			\hspace*{4mm}(\textit{topLevelGoalStatus($g_{t}$)}} =
-			{\fontsize{7}{8}\selectfont INAPPLICABLE})}
-			\State \Return {{\fontsize{7}{8}\selectfont UNDESIRABLE}} 
-			\ElsIf {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)}} =
-			{\fontsize{7}{8}\selectfont PENDING}) \OR\\
-			\hspace{1mm}{\fontsize{8}{9}\selectfont
-			\hspace*{4mm}(\textit{topLevelGoalStatus($g_{t}$)}} =
-			{\fontsize{7}{8}\selectfont INPROGRESS})}
+			\If {(\textit{getGoalStatus($g_{top}$)} =
+			{\fontsize{8}{9}\selectfont ACHIEVED})}
+			\State \Return {{\fontsize{8}{9}\selectfont MOST-DESIRABLE}} 
+			\ElsIf {(\textit{getGoalStatus($g_{top}$)} =
+			{\fontsize{8}{9}\selectfont FAILED})} 
+			\State \Return {{\fontsize{8}{9}\selectfont MOST-UNDESIRABLE}}
+			\ElsIf {(\textit{getGoalStatus($g_{top}$)} =
+			{\fontsize{8}{9}\selectfont BLOCKED}) \OR\\
+			\hspace*{5mm}(\textit{getGoalStatus($g_{top}$)} =
+			{\fontsize{8}{9}\selectfont INAPPLICABLE})}
+			\State \Return {{\fontsize{8}{9}\selectfont UNDESIRABLE}} 
+			\ElsIf {(\textit{getGoalStatus($g_{top}$)} =
+			{\fontsize{8}{9}\selectfont PENDING}) \OR\\
+			\hspace*{5mm}(\textit{getGoalStatus($g_{top}$)} =
+			{\fontsize{8}{9}\selectfont INPROGRESS})}
 				\Statex
-				\If {{\fontsize{8}{9}\selectfont (\textit{currGoalStatus($g_{t}$)}} =
-				{\fontsize{7}{8}\selectfont ACHIEVED})}
-				\State \Return {{\fontsize{7}{8}\selectfont DESIRABLE}}
-				\ElsIf {(\textit{currGoalStatus($g_{t}$)} = {\fontsize{7}{8}\selectfont
+				\If {(\textit{getGoalStatus($g_{t}$)} =
+				{\fontsize{8}{9}\selectfont ACHIEVED})}
+				\State \Return {{\fontsize{8}{9}\selectfont DESIRABLE}}
+				\ElsIf {(\textit{getGoalStatus($g_{t}$)} = {\fontsize{8}{9}\selectfont
 				FAILED})} 
-				\State \Return {{\fontsize{7}{8}\selectfont MOST-UNDESIRABLE}}
-				\ElsIf {(\textit{currGoalStatus($g_{t}$)} = {\fontsize{7}{8}\selectfont
+				\State \Return {{\fontsize{8}{9}\selectfont MOST-UNDESIRABLE}}
+				\ElsIf {(\textit{getGoalStatus($g_{t}$)} = {\fontsize{8}{9}\selectfont
 				BLOCKED}) \OR \\
-				\hspace{1mm}{\fontsize{8}{9}\selectfont
-				\hspace*{9mm}(\textit{topLevelGoalStatus($g_{t}$)}} =
-				{\fontsize{7}{8}\selectfont INAPPLICABLE})} 
-				\State \Return {{\fontsize{7}{8}\selectfont UNDESIRABLE}}
-				\ElsIf {{\fontsize{8}{9}\selectfont(\textit{topLevelGoalStatus($g_{t}$)}} =
-				{\fontsize{7}{8}\selectfont PENDING}) \OR \\ \hspace{1mm} 
-				\hspace*{8mm}(\textit{currGoalStatus($g_{t}$)} =
-				{\fontsize{7}{8}\selectfont INPROGRESS})} 
-				\State \Return {{\fontsize{7}{8}\selectfont NEUTRAL}}
+				\hspace*{10mm}(\textit{getGoalStatus($g_{t}$)} =
+				{\fontsize{8}{9}\selectfont INAPPLICABLE})} 
+				\State \Return {{\fontsize{8}{9}\selectfont UNDESIRABLE}}
+				\ElsIf {(\textit{getGoalStatus($g_{t}$)} =
+				{\fontsize{8}{9}\selectfont PENDING}) \OR \\ \hspace{1mm} 
+				\hspace*{8mm}(\textit{getGoalStatus($g_{t}$)} =
+				{\fontsize{8}{9}\selectfont INPROGRESS})} 
+				\State \Return {{\fontsize{8}{9}\selectfont NEUTRAL}}
 				\EndIf
 			\EndIf
 		\EndFunction
@@ -1433,27 +1454,7 @@ collaborative robot's attention. The collaboration mechanism uses expectedness
 to maintain the robot's attention and subsequently its mental state with respect
 to the shared goal. Reciprocally, the appraisal mechanism uses the underlying
 information of the collaboration structure to evaluate the expectedness of an
-event.
-
-In Algorithm \ref{alg:expectedness} we provide the process of computing the
-expectedness based on the shared plan and status of the shared goal. The key
-point in this algorithm is the status of the current shared goal
-($\mathit{g}_{t}$), which is associated with the event $\varepsilon_t$ and its
-relationship with the top level goal ($\mathit{g}_{_{top}}$).
-
-The intuition captured here is that one expects the current goal to be finished
-before undertaking another activity, but the goals that can be the next focus of
-attention are also to be expected. Therefore, if the goal is live, the algorithm
-checks whether the goal has not changed, or whether the interpretation of the
-last event results in a necessary focus shift. Shifting the focus to a new goal
-is necessary when the former goal is achieved and a new goal is required.
-Consequently the new event is the \textsc{most-expected} one. However, even if
-the focus shift is not necessary, the new event can be considered as
-\textsc{expected}, since the corresponding goal is already live. For goals that
-have not yet been started (that is, are not live), the algorithm must determine
-how unexpected it would be to pursue one now; if the goal is at least in the
-plan, i.e., on the path to the top level goal, it is just \textsc{unexpected}
-while any others are \textsc{most-unexpected}.
+event \cite{shayganfar:appraisal-short}.
 
 \begin{algorithm}[t]
 	\caption{(Expectedness)}
@@ -1481,6 +1482,26 @@ while any others are \textsc{most-unexpected}.
 		\EndFunction
 	\end{algorithmic}
 \end{algorithm}
+
+In Algorithm \ref{alg:expectedness} we provide the process of computing the
+expectedness based on the shared plan and status of the shared goal. The key
+point in this algorithm is the status of the current shared goal
+($\mathit{g}_{t}$), which is associated with the event $\varepsilon_t$ and its
+relationship with the top level goal ($\mathit{g}_{_{top}}$).
+
+The intuition captured here is that one expects the current goal to be finished
+before undertaking another activity, but the goals that can be the next focus of
+attention are also to be expected. Therefore, if the goal is live, the algorithm
+checks whether the goal has not changed, or whether the interpretation of the
+last event results in a necessary focus shift. Shifting the focus to a new goal
+is necessary when the former goal is achieved and a new goal is required.
+Consequently the new event is the \textsc{most-expected} one. However, even if
+the focus shift is not necessary, the new event can be considered as
+\textsc{expected}, since the corresponding goal is already live. For goals that
+have not yet been started (that is, are not live), the algorithm must determine
+how unexpected it would be to pursue one now; if the goal is at least in the
+plan, i.e., on the path to the top level goal, it is just \textsc{unexpected}
+while any others are \textsc{most-unexpected}.
 
 \subsection{Controllability}
 \label{sec:controllability}
