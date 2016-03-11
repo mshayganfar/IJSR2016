@@ -452,23 +452,25 @@ acknowledgement of the Astronaut's emotion. Notice the absence of these
 utterances as the consequence of ignoring the Astronaut's emotions in the
 corresponding turn (B2) in the next example. In Section
 \ref{sec:computational-framework}, we will show the computational mechanisms
-that are involved in this process.
+that are involved in this process. In Section \ref{sec:appraisal}, we will see
+how perceiving human collaborator's emotion (here, frustration as a negative
+emotion) can influence computing the relevance of the event.
 
 Continuing in turn A3, the Astronaut's utterance shows a change of underlying
 belief from termination of the collaboration to planning of fixing the
 measurement tool. Notice that the proper acknowledgement of the Astronaut's
 emotion helps to change her emotion from frustration to neutral. Now that the
 Astronaut is no longer expressing a negative emotion (i.e., frustration), and is
-instead planning to fix the issue, the Robot can provide an alternative task as
-a potential solution (A4). This example illustrates an advantage of emotional
+instead planning to fix the problem, the Robot can provide an alternative task
+as a potential solution (A4). This example illustrates an advantage of emotional
 awareness: although the Robot, according to the shared plan, could have provided
 the same alternative task as a solution to the Astronaut immediately, it delayed
 instead, providing the potential alternative after first dealing with the
 Astronaut's negative emotional state. Finally, since agreeing on a shared goal
 is a collaborative negotiation process, emotion awareness plays a crucial role
 in providing a fair offer. As a result, the Astronaut's response in the last
-turn (A5) shows acceptance and contentment with the Robot's potential solution
-to continue collaboration and agreement on the shared goal.
+turn (A5) shows acceptance and contentment with the Robot's behavior as well as
+potential solution to continue collaboration and agreement on the shared goal.
 
 \subsection{Agreeing on Shared Goal (Emotion Ignorance)}
 \label{sec:exp2}
@@ -478,14 +480,14 @@ goal as in the previous section, except that it diverges from reaching an
 agreement. It begins with the same utterance (B1) as the previous example (A1).
 
 \begin{description}
-  \item \textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B1. Astronaut:}}} Oh no!
-  Finishing the quality check of our installation with this measurement problem
-  is so frustrating. I think we should stop now!\\
+  \item \textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B1. Astronaut:}}} Oh
+  no! Finishing the quality check of the connector with this measurement
+  problem is so frustrating. I think we should stop now!\\
 
   \item \fbox{\begin{varwidth}{0.96\textwidth}
   \textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B2. Robot:}}} I can help you
-  with the measurement tool, or we can terminate this task.
-  \underline{What do you want me to do?}\end{varwidth}}\\
+  with the connector, or we can terminate this task. \underline{What do you want
+  me to do?}\end{varwidth}}\\
   
   \item \textit{\textbf{\fontsize{9pt}{12pt}\selectfont{B3. Astronaut:}}} As I
   said the measurement tool does not work properly. We can not continue!\\
@@ -521,9 +523,11 @@ awareness a collaborative robot will try to maintain the status of the shared
 goal and protect it from failure without considering its collaborator's negative
 emotion. In this example, the emotionally ignorant Robot does not acknowledge
 the Astronaut's frustration (compare B2 with A2 above), since it does not
-perceive that emotion. Then, while negotiating the shared goal, the Robot fails
-to offer a potential solution with respect to the Astronaut's emotional state.
-As a result, it causes the failure of the negotiation process during
+perceive that emotion as a negative one. This ignorance of negative or positive
+emotions influences the robot's behavior by misinterpreting the perceived
+emotions as a neutral one. Then, while negotiating the shared goal, the Robot
+fails to offer a potential solution with respect to the Astronaut's emotional
+state. As a result, it causes the failure of the negotiation process during
 collaboration.
 
 The Robot in this example does not perceive the Astronaut's emotion, and

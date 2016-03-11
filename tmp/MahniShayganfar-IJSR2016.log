@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  10 MAR 2016 16:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  11 MAR 2016 14:13
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -944,122 +944,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 436--440
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 481--484
+Underfull \hbox (badness 10000) in paragraph at lines 483--486
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--489
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 490--492
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--495
+Underfull \hbox (badness 10000) in paragraph at lines 495--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 496--498
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--501
+Underfull \hbox (badness 10000) in paragraph at lines 501--503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
+Underfull \hbox (badness 10000) in paragraph at lines 504--506
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 513--514
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 580--583
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 511--512
-
- []
-
-[7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 576--579
+Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 588--590
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 587--589
+Underfull \hbox (badness 10000) in paragraph at lines 591--593
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 635--638
+Underfull \hbox (badness 10000) in paragraph at lines 639--642
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--643
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 644--646
+Underfull \hbox (badness 10000) in paragraph at lines 648--650
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 647--650
+Underfull \hbox (badness 10000) in paragraph at lines 651--654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--653
+Underfull \hbox (badness 10000) in paragraph at lines 655--657
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 654--657
+Underfull \hbox (badness 10000) in paragraph at lines 658--661
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--660
+Underfull \hbox (badness 10000) in paragraph at lines 662--664
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--665
+Underfull \hbox (badness 10000) in paragraph at lines 669--669
 []\OT1/ptm/b/it/9 D8. Robot: \OT1/ptm/m/n/10 Thanks. I will. $[]$
  []
 
 
-Underfull \hbox (badness 4634) detected at line 665
+Underfull \hbox (badness 4634) detected at line 669
 []\OT1/ptm/b/it/9 D8. Robot: \OT1/ptm/m/n/10 Thanks. I will. $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--666
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--669
+Underfull \hbox (badness 10000) in paragraph at lines 671--673
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--673
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
 
  []
 
@@ -1068,7 +1068,7 @@ File: figure/theory-general-croped.pdf Graphic file (type pdf)
 
 <use figure/theory-general-croped.pdf>
 Package pdftex.def Info: figure/theory-general-croped.pdf used on input line 75
-1.
+5.
 (pdftex.def)             Requested size: 335.87346pt x 229.39609pt.
  [12 <./figure/theory-general-croped.pdf>] [13] [14] [15] [16]
 <figure/collaborationStructure-croped.pdf, id=74, 356.33125pt x 174.6525pt>
@@ -1076,10 +1076,10 @@ File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
 
 <use figure/collaborationStructure-croped.pdf>
 Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
- line 1023.
+ line 1027.
 (pdftex.def)             Requested size: 338.0pt x 165.67375pt.
  [17]
-Overfull \hbox (4.79668pt too wide) in paragraph at lines 1040--1044
+Overfull \hbox (4.79668pt too wide) in paragraph at lines 1044--1048
 [][]\OT1/ptm/m/it/10 topLevelGoalStatus($\OML/cmm/m/it/10 g[]$\OT1/ptm/m/it/10 
 ) \OT1/ptm/m/n/10 re-turns the sta-tus of the top level goal whether it is \OT1
 /ptm/m/sc/10 achieved,
@@ -1087,10 +1087,10 @@ Overfull \hbox (4.79668pt too wide) in paragraph at lines 1040--1044
 
 
 LaTeX Warning: Citation `rich:focused-unfocused-users' on page 18 undefined on 
-input line 1065.
+input line 1069.
 
 
-Overfull \hbox (13.47617pt too wide) in paragraph at lines 1063--1066
+Overfull \hbox (13.47617pt too wide) in paragraph at lines 1067--1070
 [][]\OT1/ptm/m/it/10 isNecessaryFocusShift($\OML/cmm/m/it/10 g[]$\OT1/ptm/m/it/
 10 ) \OT1/ptm/m/n/10 re-turns \OT1/ptm/m/it/10 true \OT1/ptm/m/n/10 if the sta-
 tus of the pre-vi-ous fo-cus was \OT1/ptm/m/sc/10 achieved\OT1/ptm/m/n/10 ;
@@ -1098,25 +1098,25 @@ tus of the pre-vi-ous fo-cus was \OT1/ptm/m/sc/10 achieved\OT1/ptm/m/n/10 ;
 
 [18 <./figure/collaborationStructure-croped.pdf>] [19] [20]
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 1245.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 1249.
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 1245
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 1249
 .
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1245.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1249.
 
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 1245.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 1249.
 
 [21]
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont BLOCKED}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1357 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
+l.1361 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1127,7 +1127,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont PENDING}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1363 ...\fontsize{7}{8}\selectfont INPROGRESS})}
+l.1367 ...\fontsize{7}{8}\selectfont INPROGRESS})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1138,7 +1138,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont BLOCKED}) \OR 
                                                   \\ \hspace {1mm}{\fontsize...
-l.1375 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
+l.1379 ...ontsize{7}{8}\selectfont INAPPLICABLE})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1149,7 +1149,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ize {7}{8}\selectfont PENDING}) \OR 
                                                   \\ \hspace {1mm} \hspace *...
-l.1380 ...\fontsize{7}{8}\selectfont INPROGRESS})}
+l.1384 ...\fontsize{7}{8}\selectfont INPROGRESS})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1161,7 +1161,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...(\mathit {g}_{t})}\hspace *{2mm}\OR 
                                                   $ \\ \hspace *{13mm}$\text...
-l.1464 ...ccessaryFocusShift}{(\mathit{g}_{t})})$}
+l.1468 ...ccessaryFocusShift}{(\mathit{g}_{t})})$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1171,14 +1171,14 @@ and I'll forget about whatever was undefined.
 
 [24]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 1544.
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 1548.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1544.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1548.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1544.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1548.
  [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1698--1707
+Underfull \hbox (badness 10000) in paragraph at lines 1702--1711
 
  []
 
@@ -1186,10 +1186,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1698--1707
 File: figure/taskModel-croped.pdf Graphic file (type pdf)
 
 <use figure/taskModel-croped.pdf>
-Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 1736.
+Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 1740.
 (pdftex.def)             Requested size: 341.42912pt x 120.92482pt.
 
-Overfull \hbox (3.42912pt too wide) in paragraph at lines 1736--1737
+Overfull \hbox (3.42912pt too wide) in paragraph at lines 1740--1741
  [][][] 
  []
 
@@ -1199,7 +1199,7 @@ File: figure/question-sample-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample-croped.pdf>
 Package pdftex.def Info: figure/question-sample-croped.pdf used on input line 1
-801.
+805.
 (pdftex.def)             Requested size: 270.40103pt x 85.06175pt.
  [28]
 <figure/question-sample2-croped.pdf, id=164, 308.15125pt x 105.39375pt>
@@ -1207,7 +1207,7 @@ File: figure/question-sample2-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample2-croped.pdf>
 Package pdftex.def Info: figure/question-sample2-croped.pdf used on input line 
-1831.
+1835.
 (pdftex.def)             Requested size: 270.40103pt x 92.48946pt.
 
 <figure/question-sample3-croped.pdf, id=165, 303.1325pt x 119.44624pt>
@@ -1215,7 +1215,7 @@ File: figure/question-sample3-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample3-croped.pdf>
 Package pdftex.def Info: figure/question-sample3-croped.pdf used on input line 
-1851.
+1855.
 (pdftex.def)             Requested size: 270.40103pt x 106.55103pt.
 
 <figure/question-sample4-croped.pdf, id=166, 303.1325pt x 97.36375pt>
@@ -1223,7 +1223,7 @@ File: figure/question-sample4-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample4-croped.pdf>
 Package pdftex.def Info: figure/question-sample4-croped.pdf used on input line 
-1867.
+1871.
 (pdftex.def)             Requested size: 270.40103pt x 86.85252pt.
  [29 <./figure/question-sample-croped.pdf> <./figure/question-sample2-croped.pd
 f
@@ -1285,7 +1285,7 @@ s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type
 /urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb
 i8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MahniShayganfar-IJSR2016.pdf (34 pages, 431098 bytes).
+Output written on MahniShayganfar-IJSR2016.pdf (34 pages, 431306 bytes).
 PDF statistics:
  319 PDF objects out of 1000 (max. 8388607)
  212 compressed objects within 3 object streams
