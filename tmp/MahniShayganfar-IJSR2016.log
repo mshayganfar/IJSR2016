@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.24)  13 MAR 2016 01:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.24)  13 MAR 2016 03:08
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -913,57 +913,47 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
  [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 339--356
+Underfull \hbox (badness 10000) in paragraph at lines 345--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--381
+Underfull \hbox (badness 10000) in paragraph at lines 379--387
 
  []
 
 [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 441.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 447.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 441.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 447.
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--444
+Underfull \hbox (badness 10000) in paragraph at lines 447--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--459
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 451--453
+Underfull \hbox (badness 10000) in paragraph at lines 460--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--458
+Underfull \hbox (badness 10000) in paragraph at lines 509--512
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--506
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 510--511
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 512--514
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--517
+Underfull \hbox (badness 10000) in paragraph at lines 516--517
 
  []
 
@@ -972,7 +962,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 518--520
 
  []
 
-
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 521--523
 
  []
@@ -983,87 +973,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 524--526
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--534
+Underfull \hbox (badness 10000) in paragraph at lines 527--529
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--532
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 600--603
+Underfull \hbox (badness 10000) in paragraph at lines 606--609
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--610
+Underfull \hbox (badness 10000) in paragraph at lines 614--616
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 611--613
+Underfull \hbox (badness 10000) in paragraph at lines 617--619
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 661--664
+Underfull \hbox (badness 10000) in paragraph at lines 667--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 668--669
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--672
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--676
+Underfull \hbox (badness 10000) in paragraph at lines 679--682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 677--679
+Underfull \hbox (badness 10000) in paragraph at lines 683--685
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--683
+Underfull \hbox (badness 10000) in paragraph at lines 686--689
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 684--686
+Underfull \hbox (badness 10000) in paragraph at lines 690--692
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--691
+Underfull \hbox (badness 10000) in paragraph at lines 697--697
 []\OT1/ptm/b/it/9 D8. Robot: \OT1/ptm/m/n/10 Thanks. I will. $[]$
  []
 
 
-Underfull \hbox (badness 4634) detected at line 691
+Underfull \hbox (badness 4634) detected at line 697
 []\OT1/ptm/b/it/9 D8. Robot: \OT1/ptm/m/n/10 Thanks. I will. $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--692
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 693--695
+Underfull \hbox (badness 10000) in paragraph at lines 699--701
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 698--699
+Underfull \hbox (badness 10000) in paragraph at lines 704--705
 
  []
 
@@ -1071,74 +1071,78 @@ Underfull \hbox (badness 10000) in paragraph at lines 698--699
 File: figure/theory-general-croped.pdf Graphic file (type pdf)
 
 <use figure/theory-general-croped.pdf>
-Package pdftex.def Info: figure/theory-general-croped.pdf used on input line 78
-4.
+Package pdftex.def Info: figure/theory-general-croped.pdf used on input line 79
+0.
 (pdftex.def)             Requested size: 335.87346pt x 229.39609pt.
- [11] [12 <./figure/theory-general-croped.pdf>] [13] [14] [15] [16]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11] [12 <./figure/theory-general-croped.pdf>] [13] [14] [15] [16]
 <figure/ActionSelection-croped.pdf, id=74, 200.75pt x 71.26625pt>
 File: figure/ActionSelection-croped.pdf Graphic file (type pdf)
 
 <use figure/ActionSelection-croped.pdf>
 Package pdftex.def Info: figure/ActionSelection-croped.pdf used on input line 1
-052.
+059.
 (pdftex.def)             Requested size: 270.40103pt x 96.00624pt.
- [17 <./figure/ActionSelection-croped.pdf>]
-<figure/collaborationStructure-croped.pdf, id=90, 356.33125pt x 174.6525pt>
+
+<figure/collaborationStructure-croped.pdf, id=75, 356.33125pt x 174.6525pt>
 File: figure/collaborationStructure-croped.pdf Graphic file (type pdf)
 
 <use figure/collaborationStructure-croped.pdf>
 Package pdftex.def Info: figure/collaborationStructure-croped.pdf used on input
- line 1071.
+ line 1078.
 (pdftex.def)             Requested size: 338.0pt x 165.67375pt.
- [18 <./figure/collaborationStructure-croped.pdf>]
-Overfull \hbox (13.47617pt too wide) in paragraph at lines 1115--1118
+ [17 <./figure/ActionSelection-croped.pdf>]
+Overfull \hbox (13.47617pt too wide) in paragraph at lines 1122--1125
 [][]\OT1/ptm/m/it/10 isNecessaryFocusShift($\OML/cmm/m/it/10 g[]$\OT1/ptm/m/it/
 10 ) \OT1/ptm/m/n/10 re-turns \OT1/ptm/m/it/10 true \OT1/ptm/m/n/10 if the sta-
 tus of the pre-vi-ous fo-cus was \OT1/ptm/m/sc/10 achieved\OT1/ptm/m/n/10 ;
  []
 
-[19] [20]
+[18 <./figure/collaborationStructure-croped.pdf>] [19] [20]
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 1291.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 1298.
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 1291
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 1298
 .
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1291.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1298.
 
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 1291.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 1298.
 
-[21] [22] [23] [24] [25]
+[21] [22] [23] [24]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 1586.
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 1593.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1740--1749
+ [25]
+Underfull \hbox (badness 10000) in paragraph at lines 1747--1756
 
  []
 
-[26] [27] <figure/taskModel-croped.pdf, id=153, 553.06625pt x 182.6825pt>
+[26] <figure/taskModel-croped.pdf, id=150, 553.06625pt x 182.6825pt>
 File: figure/taskModel-croped.pdf Graphic file (type pdf)
 
 <use figure/taskModel-croped.pdf>
-Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 1816.
+Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 1823.
 (pdftex.def)             Requested size: 341.42912pt x 120.92482pt.
 
-Overfull \hbox (3.42912pt too wide) in paragraph at lines 1816--1817
+Overfull \hbox (3.42912pt too wide) in paragraph at lines 1823--1824
  [][][] 
  []
 
-<figure/question-sample-croped.pdf, id=154, 303.1325pt x 95.35625pt>
+[27] <figure/question-sample-croped.pdf, id=154, 303.1325pt x 95.35625pt>
 File: figure/question-sample-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample-croped.pdf>
 Package pdftex.def Info: figure/question-sample-croped.pdf used on input line 1
-824.
+831.
 (pdftex.def)             Requested size: 270.40103pt x 85.06175pt.
  [28 <./figure/taskModel-croped.pdf> <./figure/question-sample-croped.pdf
 
@@ -1149,7 +1153,7 @@ File: figure/question-sample2-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample2-croped.pdf>
 Package pdftex.def Info: figure/question-sample2-croped.pdf used on input line 
-1874.
+1881.
 (pdftex.def)             Requested size: 270.40103pt x 92.48946pt.
 
 <figure/question-sample3-croped.pdf, id=193, 303.1325pt x 119.44624pt>
@@ -1157,29 +1161,28 @@ File: figure/question-sample3-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample3-croped.pdf>
 Package pdftex.def Info: figure/question-sample3-croped.pdf used on input line 
-1894.
+1901.
 (pdftex.def)             Requested size: 270.40103pt x 106.55103pt.
- [29 <./figure/question-sample2-croped.pdf>] <figure/question-sample4-croped.pd
-f, id=214, 303.1325pt x 97.36375pt>
+ [29 <./figure/question-sample2-croped.pdf> <./figure/question-sample3-croped.p
+df
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/question-sample3-croped.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>] <figure/question-sample4-croped.pdf, id=230, 303.1325pt x 97.36375pt>
 File: figure/question-sample4-croped.pdf Graphic file (type pdf)
 
 <use figure/question-sample4-croped.pdf>
 Package pdftex.def Info: figure/question-sample4-croped.pdf used on input line 
-1926.
+1933.
 (pdftex.def)             Requested size: 270.40103pt x 86.85252pt.
- [30 <./figure/question-sample3-croped.pdf> <./figure/question-sample4-croped.p
-df
-
-pdfTeX warning: /usr/bin/pdflatex (file ./figure/question-sample4-croped.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->] <figure/setting.JPG, id=251, 1138.0116pt x 837.3684pt>
+ [30 <./figure/question-sample4-croped.pdf>] <figure/setting.JPG, id=251, 1138.
+0116pt x 837.3684pt>
 File: figure/setting.JPG Graphic file (type jpg)
 
 <use figure/setting.JPG>
-Package pdftex.def Info: figure/setting.JPG used on input line 1960.
+Package pdftex.def Info: figure/setting.JPG used on input line 1967.
 (pdftex.def)             Requested size: 236.59897pt x 174.0893pt.
- [31 <./figure/setting.JPG>]
-(./MahniShayganfar-IJSR2016.bbl
+ (./MahniShayganfar-IJSR2016.bbl
 ! Misplaced alignment tab character &.
 l.12 \newblock Cassell &
                          Co., 1960.
@@ -1190,10 +1193,11 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
+[31 <./figure/setting.JPG>]
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ™ in font ptmri7t!
-[32] [33]
+ [32] [33]
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ™ in font ptmri7t!
@@ -1203,10 +1207,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20525 strings out of 493304
- 397927 string characters out of 6139870
- 735726 words of memory out of 5000000
- 23555 multiletter control sequences out of 15000+600000
+ 20526 strings out of 493304
+ 397955 string characters out of 6139870
+ 736726 words of memory out of 5000000
+ 23556 multiletter control sequences out of 15000+600000
  37818 words of font info for 82 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,9n,59p,10429b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1228,7 +1232,7 @@ ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MahniShayganfar-IJSR2016.pdf (34 pages, 6493130 bytes).
+Output written on MahniShayganfar-IJSR2016.pdf (34 pages, 6493416 bytes).
 PDF statistics:
  329 PDF objects out of 1000 (max. 8388607)
  217 compressed objects within 3 object streams
