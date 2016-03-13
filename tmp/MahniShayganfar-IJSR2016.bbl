@@ -339,11 +339,24 @@ M.~Shayganfar, C.~Rich, and C.~L. Sidner.
 \newblock A design methodology for expressing emotion on robot faces.
 \newblock In {\em IROS}, pages 4577--4583. IEEE, 2012.
 
+\bibitem{shayganfar:relevance-controllability}
+M.~Shayganfar, C.~Rich, and C.~L. Sidner.
+\newblock Appraisal algorithms for relevance and controllability in human-robot
+  collaboration.
+\newblock In {\em (Under Review)}, 2016.
+
 \bibitem{shayganfar:appraisal-short}
 M.~Shayganfar, C.~Rich, and C.~L. Sidner.
 \newblock Expectedness in human-robot collaboration.
 \newblock In {\em Proceedings of International Conference on Autonomous Agents
   and Multiagent Systems -- AAMAS (Extended Abstract)}, 2016.
+
+\bibitem{shayganfar:goal-management}
+M.~Shayganfar, C.~Rich, and C.~L. Sidner.
+\newblock Impact of affective appraisal on collaborative goal management: My
+  robot shares my worries.
+\newblock In {\em Proceedings of 11th ACM-IEEE International Conference on
+  Human-Robot Interaction (LBR)}, 2016.
 
 \bibitem{shayganfar:theory-overview}
 M.~Shayganfar, C.~Rich, and C.~L. Sidner.

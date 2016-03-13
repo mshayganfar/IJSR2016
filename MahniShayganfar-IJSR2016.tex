@@ -640,7 +640,7 @@ of worry is to resolve the object of worry.
 % asking detailed questions about the delegated task, declares the possibility of
 % asking some follow-up questions later (C4). 
 
-For this reason, the robot also postpones asking questions until it is necessary
+For this reason, the Robot also postpones asking questions until it is necessary
 (C4). Thus, the Robot not only prevents overwhelming the Astronaut with many
 questions, but its utterance implicitly reveals its knowledge of the tasks'
 requirements to the Astronaut. As a result, the Robot's approach to acceptance
@@ -869,16 +869,16 @@ The \textit{Motivation} mechanism operates whenever the Robot a) requires a new
 motive to overcome an internal impasse in an ongoing task, or b) wants to
 provide an external motive to the human when the human faces a problem in a
 task. In both cases, the Motivation mechanism uses the Appraisal mechanism to
-compute attributes of the competing motives. The purpose of Motivation mechanism
-in Affective Motivational Collaboration Theory is to generate new emotion-driven
-goal-directed motives considered as ``potential'' intentions. These motives are
-generated based on what the Robot believes about the environment including the
-Robot and the other collaborator and the corresponding appraisals. The Robot
-uses these motives to reach to a private or shared goal according to new
-conditions caused by changes in the environment. The Motivation mechanism
-consists of an arrangement of three distinct processes. First, several motives
-are generated with respect to the current mental state. Only one of these
-competing motives is most likely to become a new intention. Therefore, a
+compute attributes of the competing motives. The purpose of the Motivation
+mechanism in Affective Motivational Collaboration Theory is to generate new
+emotion-driven goal-directed motives considered as ``potential'' intentions.
+These motives are generated based on what the Robot believes about the
+environment including the Robot and the other collaborator and the corresponding
+appraisals. The Robot uses these motives to reach to a private or shared goal
+according to new conditions caused by changes in the environment. The Motivation
+mechanism consists of an arrangement of three distinct processes. First, several
+motives are generated with respect to the current mental state. Only one of
+these competing motives is most likely to become a new intention. Therefore, a
 comparison process decides which motive is more likely to be consistent with the
 current state based on the values of the motive attributes (e.g., motive
 importance and motive urgency). Finally, the new motive will be used to form a
@@ -995,14 +995,13 @@ provides solution for this concern.
 
 \textit{Motives} are mental constructs which can initiate, direct and maintain
 goal-directed behaviors. They are created by the emotion-regulated Motivation
-mechanism. They are created by the emotion-regulated Motivation mechanism.
-Motives can cause the formation of a new intention for the robot according to:
-a) its own emotional states, b) its own private goal, c) the collaboration
-(shared) goal, and d) other's anticipated beliefs. Motives possess a set of
-attributes. The Motivation mechanism compares motives based on the quality of
-these attributes and chooses the one which is the most related to the current
-state of the collaboration. We use two motive attributes in Appraisal
-mechanisms. The \textit{importance} of a motive is determined by the
+mechanism. Motives can cause the formation of a new intention for the robot
+according to: a) its own emotional states, b) its own private goal, c) the
+collaboration (shared) goal, and d) other's anticipated beliefs. Motives possess
+a set of attributes. The Motivation mechanism compares motives based on the
+quality of these attributes and chooses the one which is the most related to the
+current state of the collaboration. We also use two motive attributes in
+Appraisal mechanisms. The \textit{importance} of a motive is determined by the
 corresponding beliefs about the effects of achieving or not achieving the
 associated goal. The \textit{urgency} of a motive defines how much time the self
 has to acknowledge and address that motive before it is too late. These
@@ -1039,10 +1038,26 @@ the Appraisal mechanism. These emotion instances include the Robot's own
 emotions as well as the anticipated emotions of the human which are created with
 the help of the processes in the Theory of Mind mechanism, e.g., worry.
 
-\section{Collaboration}
+\section{Appraisal in Collaboration}
 
+In this section, we focus on a small part of a larger framework based on our
+Affective Motivational Collaboration Theory. We describe the methods which
+retrieve information about the collaboration structure, and are used to compute
+the values of appraisal variables. Then, we introduce our algorithms implemneted
+to compute the value of four appraisal variables depicted in Fig.
+\ref{fig:ActionSelection}.
+
+\begin{figure}[tbh]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figure/ActionSelection-croped.pdf}
+  \caption{{\fontsize{9}{9}\selectfont Using Collaboration structure in
+  Appraisal (mechanisms in our framework).}}
+  \label{fig:ActionSelection}
+\end{figure}
+
+\subsection{Collaboration}
 The Collaboration mechanism constructs a hierarchy of goals associated with
-tasks in the form of a hierarchical task network (see Figure \ref{fig:cs}), and
+tasks in the form of a hierarchical task network (see Fig. \ref{fig:cs}), and
 also manages and maintains the constraints and other required details of the
 collaboration including the inputs and outputs of individual tasks, the
 \textit{preconditions} (specifying whether it is appropriate to perform a task),
@@ -1053,7 +1068,7 @@ shifts the focus of attention during the interaction.
 
 \begin{figure}[tbh]
   \centering
-  \includegraphics[width=\textwidth]{figure/collaborationStructure-croped.pdf}
+  \includegraphics[width=1\textwidth]{figure/collaborationStructure-croped.pdf}
   \caption{{\fontsize{9}{9}\selectfont Collaboration structure (shared plan).}}
   \label{fig:cs}
 \end{figure}
@@ -1082,11 +1097,6 @@ corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}.
   currently pursues.
   
   \item \textit{getTopLevelGoal($g_t$)} returns $g_t$'s top level goal.
-  
-  \item \textit{currGoalStatus($g_t$)} returns the current goal status whether
-  it is \textsc{achieved, failed, blocked, inapplicable, pending,} or \textsc{in
-  progress}. In our example, ``Prepare Measurement Tool'' is the current
-  (focused) goal.
 
   \item \textit{precondStatus($g_t$)} returns the status of the precondition for
   the given goal whether it is \textsc{satisfied, unsatisfied} or
@@ -1133,32 +1143,34 @@ corresponding to time \textit{t}, and $g_t$ is a given goal at time \textit{t}.
   \item \textit{isFocused($g_t$)} returns whether the focus is on $g_t$.
   
   \item \textit{getResponsible($g_t$)} returns responsible agent(s) for $g_t$.
-  In a dyadic collaboration, both of the agents (joint) can be partly responsible
-  for a nonprimitive goal, while each (self or other) is responsible for one or
-  more primitive goals. For instance, both the robot and the astronaut are
-  responsible for the nonprimitive goal of ``Install Solar Panels'', whereas it
-  is only the astronaut who is responsible for the primitive goal of ``Prepare
-  Measurement Tool''.
+  In a dyadic collaboration, both of the agents (jointly) can be partly
+  responsible for a nonprimitive goal, while each (self or other) is responsible
+  for one or more primitive goals. For instance, both the Robot and the
+  Astronaut are responsible for the nonprimitive goal of ``Install Solar
+  Panels'', whereas it is only the Robot who is responsible for the
+  primitive goal of ``Prepare Measurement Tool''.
 \end{itemize}
 
-\section{Appraisal Processes}
+\subsection{Appraisal Processes}
 \label{sec:appraisal}
 
 We consider four appraisal variables to be the most important appraisal
 variables in a collaboration context, i.e., \textit{Relevance} (since other
 appraisals are only computed for relevant events), \textit{Desirability}
-(Algorithm \ref{alg:desirability}), \textit{Expectedness} (Algorithm
-\ref{alg:expectedness}), and \textit{Controllability} (since it is associated
-with the agent's coping ability). There are other appraisal variables introduced
-in psychological \cite{scherer:appraisal-processes} and computational literature
-\cite{gratch:domain-independent}. We believe most of these variables can be
-straightforwardly added to our appraisal mechanism later. All of the algorithms
-in this section use mental states of the robot (discussed in Section
+(since it discriminates facilitating and inhibitory events towards the
+collaboration progress), \textit{Expectedness} (since it underlies a
+collaborative robot's attention), and \textit{Controllability} (since it is
+associated with the agent's coping ability)
+\cite{shayganfar:relevance-controllability}. There are other appraisal variables
+introduced in psychological \cite{scherer:appraisal-processes} and computational
+literature \cite{gratch:domain-independent}. We believe most of these variables
+can be straightforwardly added to our appraisal mechanism later. All of the
+algorithms in this section use mental states of the robot (discussed in Section
 \ref{sec:mental-states}) which are formed based on the collaboration structure.
 These algorithms use the corresponding recognized goal of the most recent event
 at each turn.
 
-\subsection{Relevance}
+\subsubsection{Relevance}
 
 Relevance is an important appraisal variable since the other appraisal variables
 are meaningful only for relevant events. Relevance as an appraisal variable
@@ -1186,12 +1198,11 @@ resources to every event.
 
 After perceiving an event, the belief about that event represents the event in
 the robot's mental state. \textit{recognizeGoal} returns the goal to which the
-current event contributes, unless it is \textit{ambiguous}\footnote{Ambiguity
-introduces some extra complexities which are beyond scope of this paper.};
-$g_{t}$ represents the shared goal at time (turn) $t$ within the shared plan. We
-compute the utility ($-1 \leq \mathcal{U} \leq 1$) of the event using the values
-of the attributes associated with the existing beliefs, and the attributes of
-the motive associated with the recognized goal (see details below). We use three
+current event contributes, unless it is \textit{ambiguous}; $g_{t}$ represents
+the shared goal at time (turn) $t$ within the shared plan. We compute the
+utility ($-1 \leq \mathcal{U} \leq 1$) of the event using the values of the
+attributes associated with the existing beliefs, and the attributes of the
+motive associated with the recognized goal (see details below). We use three
 belief attributes (see Section \ref{sec:mental-states}) to compute the
 belief-related part of the utility:
 
@@ -1216,33 +1227,33 @@ belief-related part of the utility:
 \end{algorithm}
 
 \begin{itemize}[leftmargin=2pt]
-  \setlength\itemsep{0.2mm}
+  \setlength\itemsep{1mm}
   \item \textit{Strength}: The extent to which the preconditions ($\alpha$),
   postconditions ($\beta$), predecessors ($\lambda$), and contributing goals
   ($\mu$) of a goal are known (\textsc{satisfied} or \textsc{unsatisfied}) makes
   beliefs about the goal stronger. An \textsc{unknown} pre and postcondition
   status of a goal and its predecessors and contributing goals forms weaker
   beliefs. For instance, if one knows all predecessors of a pursued goal (e.g.,
-  ``Press Bread Slices'') are \textsc{satisfied} (i.e., ``Spread Peanut Butter''
-  and ``Spread Strawberry Jam''), failure of the pursued goal will elicit one's
-  negative emotion (due to the strong beliefs related to the goal); whereas not
-  knowing the status of the goal-related factors (e.g., whether Mary could find
-  the knife to cut the sandwich in half) causes one to form weaker beliefs about
-  the goal.
+  ``Check Panels'') are \textsc{satisfied} (i.e., ``Fix Panels'' and ``Prepare
+  Panels''), failure of the pursued goal will elicit one's negative emotion (due
+  to the strong beliefs related to the goal); whereas not knowing the status of
+  the goal-related factors (e.g., whether the Astronaut could find the tool to
+  fix a panel) causes one to form weaker beliefs about the goal.
   \item \textit{Saliency (S)}: Beliefs related to the focused goal are more
   salient than beliefs related to any other goal in the plan; according to
-  Figure \ref{fig:taskModel}, if one is making a boiled egg sandwich, beliefs
-  related to all of the other \textit{live} (\textsc{pending} or \textsc{in
-  progress}) goals (e.g. ``Pack Sandwich'') will be less salient than beliefs
-  related to the focused goal, i.e., ``Add Pickles''. Beliefs' saliency
-  decreases according to their corresponding \textit{live} goal's distance from
-  the focused goal in the shared plan. \textit{Non-live} goals will not be
-  salient.
+  Fig. \ref{fig:cs}, if one of the collaborators is preparing a solar panel,
+  beliefs related to all of the other \textit{live} (\textsc{pending} or
+  \textsc{in progress}) goals (e.g. ``Connect Adaptor'') will be less salient
+  than beliefs related to the focused goal, i.e., ``Check Connector''. Beliefs'
+  saliency decreases according to their corresponding \textit{live} goal's
+  distance from the focused goal in the shared plan. \textit{Non-live} goals
+  will not be salient.
   \item \textit{Persistence (P)}: The recurrence of a belief over time (turns)
   increases the persistence of the belief. Beliefs occurring only once have the
-  lowest value of persistence. For instance, if Mary keeps saying that she can
-  not find the knife to cut the sandwich in half, one could pursue a new goal
-  outside of the shared plan to acknowledge Mary's concern.
+  lowest value of persistence. For instance, if the Astronaut keeps saying that
+  she can not find the measurement tool to check the connector, Robot could  
+  pursue a new goal outside of the shared plan to acknowledge Astronaut's
+  concern.
 \end{itemize}
 
 \noindent We also use two motive attributes discussed in Section
@@ -1250,22 +1261,22 @@ belief-related part of the utility:
 ($\mathcal{U}$):
 
 \begin{itemize}[leftmargin=2pt]
-  \setlength\itemsep{0.05mm}
+  \setlength\itemsep{1mm}
   \item \textit{Urgency ($\gamma$)}: There are two factors impacting the urgency
   of a motive: a) whether the goal directing the given motive is the predecessor of
   another goal for which the other collaborator is responsible, and b) whether
   achieving the goal directing the given motive can mitigate the other
-  collaborator's negative valenced emotion. For instance, if one has a private
-  goal to prepare for making the second sandwich (e.g. get the eggs) while Mary
-  is waiting to get the first sandwich and cut it in half, pressing bread slices
-  and passing them to Mary will be more urgent than one's private goal.
+  collaborator's negative valenced emotion. For instance, if the Robot has a
+  private goal to fetch another panel while the Astronaut is waiting for the
+  Robot to connect the adaptor, connecting the adaptor will be more urgent than
+  Robot's private goal.
   \item \textit{Importance ($\eta$)}: A motive is important if failure of the
   directing goal causes an impasse in the shared plan (i.e., no further goal is
   available to achieve), or achievement of the directing goal removes an
-  existing impasse. For example, if one cannot find white bread on which to
-  spread peanut butter (an impasse to make the peanut butter sandwich), and Mary
-  offers to use wheat bread instead (external motive), the new motive becomes
-  important to remove the impasse in the shared plan.
+  existing impasse. For example, if the Robot cannot find the adaptor (an
+  impasse to connect the adaptor), and the Astronaut provides another adaptor
+  (external motive), the new motive becomes important to remove the impasse in
+  the shared plan.
 \end{itemize}
 
 We provide the utility function ($\mathcal{U}$) in Equation \ref{eqn:utility}.
@@ -1344,7 +1355,7 @@ a slightly positive utility. Similarly, an event can be considered
 \textsc{irrelevant} even though the utility has a relatively positive value,
 because of perceiving the human's negative emotion.
 
-\subsection{Desirability}
+\subsubsection{Desirability}
 
 Desirability characterizes the value of an event to the robot in terms of
 whether the event facilitates or thwarts the collaboration goal. Desirability
@@ -1375,10 +1386,6 @@ collaboration's point of view.
 			\Statex
 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
 			\State $\mathit{g}_{top} \gets \textit{getTopLevelGoal}{(\mathit{g}_{t})}$
-			\Statex
-			\If {$(\mathit{g}_{t} =$ {\fontsize{8}{9}\selectfont AMBIGUOUS}$)$} 
-				\State \Return {\fontsize{8}{9}\selectfont UNDESIRABLE}
-			\EndIf
 			\Statex
 			\If {(\textit{getGoalStatus($g_{top}$)} =
 			{\fontsize{8}{9}\selectfont ACHIEVED})}
@@ -1427,31 +1434,33 @@ negative value of desirability. For instance, failure of the top level goal
 (e.g., installing solar panel) is more undesirable than failure of a primitive
 goal (e.g., measuring the quality of the installed panel).
 
-An \textsc{ambiguous} goal is a goal associated with the current event
-($\varepsilon_t$) which is not recognized in the robot's plan; therefore it is
-\textsc{undesirable} for a collaborative robot. A top level goal' status must be
-\textsc{achieved} (i.e., \textsc{satisfied} postcondition) to consider the event
-\textsc{most-desirable}. When the goal's status is \textsc{failed} (i.e.,
-\textsc{unsatisfied} postcondition) or \textsc{blocked}, the associated event
-has the \textsc{most-undesirable} or \textsc{undesirable} values respectively.
-A goal is \textsc{blocked} if any of the required goals or goals recursively
-through the parent goal are not \textsc{achieved}. An \textsc{inapplicable} goal
-is also considered as \textsc{undesirable}. A goal is \textsc{inapplicable} if
-any of its predecessors are not \textsc{achieved}, and/or its preconditions are
-not \textsc{satisfied}. For \textsc{pending} and \textsc{inprogress} top level
-goals, the status of the current goal associated with the top level goal
-determines the status of the event $\varepsilon_t$. Only a non-primitive goal
-can have \textsc{inprogress} status, if it has been started but is not yet
-completed. A goal can be \textsc{pending} if it is live, or if it is a
-non-primitive goal that has not been started yet. \textsc{Achieved} current
-goals mark an event ($\varepsilon_t$) as \textsc{desirable}, while
-\textsc{failed} or \textsc{blocked} current goals render the event associated
-with them as \textsc{most-undesirable} and \textsc{undesirable} respectively.
+% An \textsc{ambiguous} goal is a goal associated with the current event
+% ($\varepsilon_t$) which is not recognized in the robot's plan; therefore it is
+% \textsc{undesirable} for a collaborative robot. 
+
+A top level goal' status must be \textsc{achieved} (i.e., \textsc{satisfied}
+postcondition) to consider the event \textsc{most-desirable}. When the goal's
+status is \textsc{failed} (i.e., \textsc{unsatisfied} postcondition) or
+\textsc{blocked}, the associated event has the \textsc{most-undesirable} or
+\textsc{undesirable} values respectively. A goal is \textsc{blocked} if any of
+the required goals or goals recursively through the parent goal are not
+\textsc{achieved}. An \textsc{inapplicable} goal is also considered as
+\textsc{undesirable}. A goal is \textsc{inapplicable} if any of its predecessors
+are not \textsc{achieved}, and/or its preconditions are not \textsc{satisfied}.
+For \textsc{pending} and \textsc{inprogress} top level goals, the status of the
+current goal associated with the top level goal determines the status of the
+event $\varepsilon_t$. Only a non-primitive goal can have \textsc{inprogress}
+status, if it has been started but is not yet completed. A goal can be
+\textsc{pending} if it is live, or if it is a non-primitive goal that has not
+been started yet. \textsc{Achieved} current goals mark an event
+($\varepsilon_t$) as \textsc{desirable}, while \textsc{failed} or
+\textsc{blocked} current goals render the event associated with them as
+\textsc{most-undesirable} and \textsc{undesirable} respectively.
 \textsc{Pending} or \textsc{inprogress} current goals mark their associated
 events as \textsc{neutral}.
 
 \vspace*{-2mm}
-\subsection{Expectedness}
+\subsubsection{Expectedness}
 
 Expectedness is the extent to which the truth value of a state could have been
 predicted from causal interpretation of an event. In the collaboration context
@@ -1510,7 +1519,7 @@ how unexpected it would be to pursue one now; if the goal is at least in the
 plan, i.e., on the path to the top level goal, it is just \textsc{unexpected}
 while any others are \textsc{most-unexpected}.
 
-\subsection{Controllability}
+\subsubsection{Controllability}
 \label{sec:controllability}
 
 Controllability is the extent to which an event can be influenced; it is
@@ -1740,7 +1749,7 @@ overall controllability value of the event.\\
 
 In summary, the output of these four appraisal processes serves as critical
 input for the other mechanisms of the Affective Motivational Collaboration
-Framework, shown in Figure \ref{fig:cpm}. By providing adequate interpretation
+Framework, shown in Fig. \ref{fig:cpm}. By providing adequate interpretation
 of events in the collaborative environment, the appraisal mechanism enables the
 robot to carry out proper collaborative behaviors.
 
@@ -1764,34 +1773,6 @@ wrong answers to our sanity questions, and subjects with answering times less
 than 2 minutes. The final number of accepted subjects in each group is provided
 in Table \ref{tbl:statistics}.
 
-\begin{figure*}[t]
-  \centering
-  \includegraphics[width=12cm,height=4.25cm]{figure/taskModel-croped.pdf}
-  \caption{Collaboration Task Model for the Evaluation.}
-  \label{fig:taskModel}
-\end{figure*}
-
-To minimize the background knowledge necessary for our test subjects, we used a
-simple domestic example of preparing a peanut butter and jelly sandwich, and a
-hard boiled egg sandwich for a hiking trip. We provided textual and graphical
-instructions for both questionnaires; Figure \ref{fig:taskModel} shows the
-corresponding task model. The instructions presented a sequence of hypothetical
-collaborative tasks to be carried out by the test subject and an imaginary
-friend, Mary, in order to accomplish their goal of preparing two sandwiches. We
-also provided a simple definition and an example of each appraisal variable. The
-collaboration structure and the instructions were the same for both
-questionnaires. The questions introduced specific situations related to the
-shared plan, which included blocked tasks and failure or achievement of a shared
-goal. Each question provided three answers which were counterbalanced in the
-questionnaire. We provided an option like C in all questions, because we did not
-want to force subjects to choose between two options when they did not have a
-good reason. There were two questions designed based on each factor that we use
-in our algorithms (see Section \ref{sec:appraisal}). The questions were
-randomly placed in the questionnaire. Figure \ref{fig:qs1} shows an example
-question from the relevance questionnaire which was designed to test whether
-human subjects perceive saliency as a factor in relevance. The input for our
-algorithms was the task model depicted in Figure \ref{fig:taskModel}.
-
 \vspace*{-6mm}
 \begin{table}[htbp]
 \centering
@@ -1807,6 +1788,44 @@ Controllability & 33 & 0.743 & 0.158 & $<$0.001\\ \hline
 \label{tbl:statistics}
 \end{table}
 \vspace*{-4mm}
+
+To minimize the background knowledge necessary for our test subjects, we used a
+simple domestic example of preparing a peanut butter and jelly sandwich, and a
+hard boiled egg sandwich for a hiking trip. We provided textual and graphical
+instructions for both questionnaires; Fig. \ref{fig:taskModel} shows the
+corresponding task model. The instructions presented a sequence of hypothetical
+collaborative tasks to be carried out by the test subject and an imaginary
+friend, Mary, in order to accomplish their goal of preparing two sandwiches. We
+also provided a simple definition and an example of each appraisal variable. The
+collaboration structure and the instructions were the same for both
+questionnaires. The questions introduced specific situations related to the
+shared plan, which included blocked tasks and failure or achievement of a shared
+goal. Each question provided three answers which were counterbalanced in the
+questionnaire. We provided an option like C in all questions (see Fig.
+\ref{fig:qs1}), because we did not want to force subjects to choose between two
+options when they did not have a good reason. There were two questions designed
+based on each factor that we use in our algorithms (see Section
+\ref{sec:appraisal}). The questions were randomly placed in the questionnaire.
+Fig. \ref{fig:qs1} shows an example question from the relevance questionnaire
+which was designed to test whether human subjects perceive saliency as a factor
+in relevance. The input for our algorithms was the task model depicted in Fig.
+\ref{fig:taskModel}.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=12cm,height=4.25cm]{figure/taskModel-croped.pdf}
+  \caption{Collaboration Task Model for the Evaluation.}
+  \label{fig:taskModel}
+\end{figure*}
+
+\begin{figure}[tbh]
+  \vspace{-1mm}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figure/question-sample-croped.pdf}
+  \caption{{\fontsize{9}{9}\selectfont Example Expectedness Question.}}
+  \label{fig:qs1}
+  \vspace{-2mm}
+\end{figure}
 
 Average results and standard deviation of the fractions of subjects' answers
 agreeing with our algorithms output for both questionnaires are presented in
@@ -1828,27 +1847,18 @@ subjects' answers being generated from a random set. The very small
 percentage of similarity confirms our hypothesis and shows that the algorithms
 can help us to model appraisal in a collaboration.
 
-\begin{figure}[t]
-  \vspace{-1mm}
-  \centering
-  \includegraphics[width=0.8\textwidth]{figure/question-sample-croped.pdf}
-  \caption{{\fontsize{9}{9}\selectfont Example Expectedness Question.}}
-  \label{fig:qs1}
-  \vspace{-2mm}
-\end{figure}
-
 Each question was designed based on different factors that we use in our
-algorithms (see Section \ref{sec:appraisal}). Here, we present three
-example questions from the expectedness, controllability, and desirability
+algorithms (see Section \ref{sec:appraisal}). Here, we present four example
+questions from the expectedness, controllability, desirability, and relevance
 questionnaires, and describe how each question relates to a specific factor
 within the corresponding algorithm. The input for our algorithms was the task
-model depicted in Figure \ref{fig:taskModel}.
+model depicted in Fig. \ref{fig:taskModel}.
 
-Figure \ref{fig:qs1} shows the example question from the expectedness
+Fig. \ref{fig:qs1} shows the example question from the expectedness
 questionnaire. In this example, with respect to Algorithm
 \ref{alg:expectedness} (line 6), option A is more expected because the task
 related to this option provides the next available task in the focus stack (see
-the task model in Figure \ref{fig:taskModel}). Although the task in option B is
+the task model in Fig. \ref{fig:taskModel}). Although the task in option B is
 part of the existing task model, it is considered as unexpected by our
 algorithm, since it is not live in the plan. We provided option C to determine
 whether the human subjects will similarly differentiate between these two
@@ -1858,7 +1868,7 @@ the expectedness algorithm. For this question, the human decision was 97\%
 similar to the algorithm's output. Average results for the expectedness
 questionnaire are presented in Table \ref{tbl:statistics}.
 
-\begin{figure}[tbh]
+\begin{figure}[t]
   \vspace{-1mm}
   \centering
   \includegraphics[width=0.8\textwidth]{figure/question-sample2-croped.pdf}
@@ -1867,7 +1877,7 @@ questionnaire are presented in Table \ref{tbl:statistics}.
   \vspace{-2mm}
 \end{figure}
 
-Figure \ref{fig:qs2} shows an example question from the controllability
+Fig. \ref{fig:qs2} shows an example question from the controllability
 questionnaire. The algorithm's output is option B, and is determined by
 Algorithm \ref{alg:controllability} (line 3), similarly to the expectedness
 example above. In this example, option B is more controllable than option A,
@@ -1878,7 +1888,7 @@ butter on one slice of bread and strawberry jam on another slice of bread. In
 this question, the humans decision was 90\% in agreement with the algorithm's
 output.
 
-\begin{figure}[t]
+\begin{figure}[tbh]
   \vspace{-1mm}
   \centering
   \includegraphics[width=0.8\textwidth]{figure/question-sample3-croped.pdf}
@@ -1887,28 +1897,19 @@ output.
   \vspace{-2mm}
 \end{figure}
 
-Figure \ref{fig:qs3} shows an example question from the desirability
+Fig. \ref{fig:qs3} shows an example question from the desirability
 questionnaire. The output based on the Algorithm \ref{alg:desirability}
 (line 14) is option C, since in both option A and option B, the focus goal
 has been achieved successfully. Therefore, in this example, both options A and B
-are desirable. The humans decision was 77\% in agreement with the algorithm's
+are desirable. The humans' decision was 77\% in agreement with the algorithm's
 output in this question.
 
-\begin{figure}[tbh]
-  \vspace{-1mm}
-  \centering
-  \includegraphics[width=0.8\textwidth]{figure/question-sample4-croped.pdf}
-  \caption{{\fontsize{9}{9}\selectfont Example Relevance Question.}}
-  \label{fig:qs4}
-  \vspace{-2mm}
-\end{figure}
-
-In the example shown in Figure \ref{fig:qs4}, with respect to Algorithm
+In the example shown in Fig. \ref{fig:qs4}, with respect to Algorithm
 \ref{alg:relevance}, option A is relevant because of Mary's perceived negative
 emotion (see Equation \ref{eqn:utility}). Although option B is relevant (since
 it achieves the next goal in the shared plan), 83\% of subjects consider it as
 less relevant than option A; we believe this is due to the effect of Mary's
-perceived negative emotion which also generates higher utility value in our
+perceived negative emotion which also generates a higher utility value in our
 relevance algorithm. Another question also tested belief saliency. However, the
 options provided only related to the shared plan (i.e., no human emotions in the
 options). In this case 87\% of subjects chose the option that accomplished the
@@ -1919,18 +1920,26 @@ is noteworthy that in both the absence and the presence of emotions the human
 subjects chose the more salient option with respect to our definition of
 saliency, which was not referenced or provided in the questionnaire.
 
+\begin{figure}[tbh]
+  \vspace{-1mm}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figure/question-sample4-croped.pdf}
+  \caption{{\fontsize{9}{9}\selectfont Example Relevance Question.}}
+  \label{fig:qs4}
+  \vspace{-2mm}
+\end{figure}
+
 Furthermore, as we mentioned earlier, there were two questions related to each
 factor in our algorithms. Because each question was asking about a specific
 factor, we were able to perform a sensitivity analysis, similar to the saliency
-example presented above. We observed similar results for other factors of both
-relevance (e.g., persistence) and controllability (e.g., autonomy), but do not
-present them here due to space constraints.
+example presented above. We observed similar results for other factors for all
+four variables.
 
 \section{Conclusion and Future Work}
 
 There is a correspondence between what a collaboration needs and the social
 functions of emotions. In this paper, we presented a theory explaining the
-processes underlying in collaboration using social emotions. We provided four
+processes underlying collaboration using social emotions. We provided four
 hypothetical examples in two pairs, each dealing with an important collaborative
 behavior. The first pair was about agreeing on a shared goal; the second pair
 was about delegation of a new task. Each pair of examples contrasted a
@@ -1942,8 +1951,18 @@ emotional awareness to attain successful collaborative behavior.
 We then introduced the main components of Affective Motivational Collaboration
 Theory, our computational framework which integrates emotion-regulated
 mechanisms, such as appraisal and coping, with collaboration processes, such as
-planning, in a single unified framework. This framework will let us to explain
+planning, in a single unified framework. This framework will let us explain
 the collaborative processes in computational detail.
+
+\begin{figure}[tbh]
+  \vspace{-1mm}
+  \centering
+  \includegraphics[width=0.7\textwidth]{figure/setting.JPG}
+  \caption{{\fontsize{9}{9}\selectfont Setting of the robot in a mock kitchen
+  environment.}}
+  \label{fig:setting}
+  \vspace{-2mm}
+\end{figure}
 
 As shown in this paper, there are factors involved in appraisal processes
 that are not accounted for in existing appraisal models. These factors,
@@ -1957,9 +1976,10 @@ them to appraise their environment based on the shared plan structure, as well
 as other information that is induced by the collaboration process, such as the
 recurrence of a belief by the other collaborator and the human collaborator's
 perceived emotion. In our next step, we want to test our appraisal algorithms
-and their reciprocal influence on goal management during collaboration. This
-study will be conducted between a KUKA youbot and human subjects on a different
-task model.
+and their reciprocal influence on goal management
+\cite{shayganfar:goal-management} during collaboration. This study will be
+conducted between a KUKA youbot (see Fig. \ref{fig:setting}) and human subjects
+on a different task model.
 
 % We have started to implement the rules associated with these computational
 % walkthroughs using JESS (Java Expert System Shell) which is a rule engine for
