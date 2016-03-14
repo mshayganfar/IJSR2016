@@ -152,7 +152,7 @@ study.
 % we use to choose the goal in the shared plan during collaboration.
 
 \keywords{Human-Robot Collaboration \and Emotional Awareness \and Cognitive
-Appraisals \and Affective Motivational Collaboration Theory}
+Appraisals \and Affective Motivational Collaboration Theory/Framework}
 % \PACS{PACS code1 \and PACS code2 \and more}
 % \subclass{MSC code1 \and MSC code2 \and more}
 \end{abstract}
@@ -329,6 +329,10 @@ and Joint Intentions theory
 model, STEAM \cite{tambe:flexible-teamwork}, has also been successfully applied
 to a variety of domains
 \cite{kabil:coordination-mechanisms,kitano:robocup,marsella:robocup,scerri:robot-agent-person}.
+There are some other works that they do not necessarily rely on a specific
+collaboration theory, but they emphesize on the role of emotions in human-robot
+collaboration
+\cite{adams:mixed-initiative,hayes:challenges-collaboration,nakajima:social-intelligence-collaborative,novikova:expressive-robot-collaboration}.
 All of the works presented in this section lack a systematic integration of
 collaboration theories with some theories capable of describing underlying
 collaboration processes. Therefore, they either do not explain the structure and
@@ -337,7 +341,7 @@ of these views is application oriented. The collaboration structure of Affective
 Motivational Collaboration Theory is based on the SharedPlans theory
 \cite{grosz:planning-acting,grosz:collaboration,grosz:plans-discourse}, and it
 focuses on the processes that generate, maintain and update this structure based
-on mental states. COLLAGEN \cite{rich:collaboration-manager,rich:discourse} 
+on mental states. COLLAGEN \cite{rich:collaboration-manager,rich:discourse}
 incorporates certain algorithms for discourse generation and interpretation, and
 is able to maintain a segmented interaction history, which facilitates the
 discourse between a human and a robot \cite{rickel:discourse-theory-dialogue}.
@@ -825,8 +829,120 @@ multiple attributes impacting the relation between cognition and behavior or
 perception.
 
 In summary, Affective Motivational Collaboration Theory consists of five
-mechanisms all of which store and retrieve data in the Mental States. We will
-describe each mechanism and their influences on each other briefly below.
+mechanisms\footnote{Appraisal and Coping are considered as two distinct
+mechanisms depicted in one box in Fig. \ref{fig:cpm}} all of which store and
+retrieve data in the Mental States. We will describe all these mental states,
+each mechanism and their influences on each other briefly below.
+
+\subsection{Mental States \& Emotion Instances}
+\label{sec:mental-states}
+
+The Mental States shown in Fig.\,\ref{fig:cpm} comprise the knowledge base
+required for all the mechanisms in the overall framework.
+
+\subsubsection{Beliefs}
+\label{sec:beliefs}
+\vspace*{-2mm}
+\textit{Beliefs} are a crucial part of the Mental States. We have two different
+perspectives on categorization of beliefs. In one perspective, we categorize
+beliefs based on whether or not they are shared between the collaborators. The
+SharedPlans \cite{grosz:plans-discourse} theory is the foundation of this
+categorization in which for any given proposition the Robot may have: a) private
+beliefs (the Robot believes the human does not know these), b) the inferred
+beliefs of the human (the Robot believes the human collaborator has these
+beliefs), and c) mutual beliefs (the Robot believes both the Robot and the human
+have these same beliefs and both of them believe that). From another
+perspective, we categorize beliefs based on who or what they are about. In this
+categorization, beliefs can be about the Robot, the human, or the environment.
+Beliefs about the environment can be about internal events, such as outcomes of
+a new appraisal or a new motive, or external events such as the human's offer,
+question or request, and general beliefs about the environment in which the
+Robot is situated. Beliefs can be created and updated by different processes.
+They also affect how these processes function as time passes.
+
+Beliefs have attributes and they impact different processes of the framework
+such as the evaluation of an external event by the Appraisal mechanism, and
+updates to the collaboration plan. We use three belief attributes in the
+Appraisal mechanism. Belief \textit{strength} is about how strongly the self
+holds salient beliefs about an object, an entity, or an anticipated behavior.
+The \textit{saliency} of a belief is a cognitive attribute that pertains to how
+easily the self becomes aware of a belief. The \textit{persistence} of a belief
+refers to how resistant the belief is to changes.
+
+\vspace*{-3mm}
+\subsubsection{Intentions}
+\label{sec:intentions}
+\vspace*{-3mm}
+\textit{Intentions} are mental constructs directed at future actions. They play
+an essential role in: a) taking actions according to the collaboration plan, b)
+coordination of actions with the human collaborator, c) formation of beliefs
+about the Robot and anticipated beliefs about the human, and d) behavior
+selection in the Coping mechanism. First, taking actions means that the Robot
+will intend to take an action for primitive tasks that have gained the focus of
+attention, possess active motives, and have satisfied preconditions for which
+required temporal predecessors have been successfully achieved. Second,
+intentions are involved in action coordinations in which the human's behavior
+guides the Robot to infer an anticipated behavior of the human. Third,
+intentions play a role in belief formation, mainly as a result of the permanence
+and commitment inherent to intentions in subsequent processes, e.g., appraisal
+of the human's reaction to the current action and self-regulation. Lastly,
+intentions are involved in selecting intention-related strategies, e.g.,
+planning, seeking instrumental support and procrastination, which is an
+essential category of the strategies in the Coping mechanism
+\cite{marsella:ema-process-model}. Intentions possess a set of attributes, e.g.
+\textit{involvement, certainty, ambivalence} which moderate the consistency
+between intention and behavior. The issue of consistency between the intentions
+(in collaboration) and the behaviors (as a result of the Coping mechanism in the
+appraisal cycle) is important because neither of these two mechanisms alone
+provides solution for this concern.
+
+\subsubsection{Motives}
+\label{sec:motives}
+\vspace*{-3mm}
+\textit{Motives} are mental constructs which can initiate, direct and maintain
+goal-directed behaviors. They are created by the emotion-regulated Motivation
+mechanism. Motives can cause the formation of a new intention for the robot
+according to: a) its own emotional states, b) its own private goal, c) the
+collaboration (shared) goal, and d) other's anticipated beliefs. Motives possess
+a set of attributes. The Motivation mechanism compares motives based on the
+quality of these attributes and chooses the one which is the most related to the
+current state of the collaboration. We also use two motive attributes in
+Appraisal mechanisms. The \textit{importance} of a motive is determined by the
+corresponding beliefs about the effects of achieving or not achieving the
+associated goal. The \textit{urgency} of a motive defines how much time the self
+has to acknowledge and address that motive before it is too late. These
+attributes are involved in the comparison of newly generated motives based on
+the current state of the collaboration. Ultimately, the Robot forms or updates
+an intention associated with the winning motive in the Mental States.
+
+\subsubsection{Goals}
+\label{sec:goals}
+
+\textit{Goals} help the Robot to create and update the structure of the
+collaboration plan. Goals direct the formation of intentions to take appropriate
+corresponding actions during collaboration. Goals also drive the Motivation
+mechanism to generate required motive(s) in uncertain or ambiguous situations,
+e.g., to minimize the risk of impasse or to reprioritize goals. Goals have
+three attributes. The \textit{specificity} of goals has two functions for the
+Robot. First, it defines the performance standard for evaluating the progress
+and quality of the collaboration. Second, it serves the Robot to infer the
+winner of competing motives. The \textit{proximity} of goals distinguishes goals
+according to how ``far'' they are from the ongoing task. Proximal (or
+short-term) goals are achievable more quickly, and result in higher motivation
+and better self-regulation than more temporally distant (or long-term) goals.
+Goals can influence the \textit{strength} of beliefs, which is an important
+attribute for regulating the elicitation of social emotions. The
+\textit{Difficulty} of goals impacts collaborative events and decisions in the
+appraisal, reverse appraisal, motive generation and intention formation
+processes. For instance, overly easy goals do not motivate; neither are humans
+motivated to attempt what they believe are impossible goals.
+
+\subsubsection{Emotion Instances}
+
+\textit{Emotions} in Mental States are emotion instances that are elicited by
+the Appraisal mechanism. These emotion instances include the Robot's own
+emotions as well as the anticipated emotions of the human which are created with
+the help of the processes in the Theory of Mind mechanism, e.g., worry.
 
 \vspace*{-4mm}
 \subsection{Collaboration Mechanism}
@@ -950,116 +1066,6 @@ component to execute an appropriate behavior of the Robot. This input to Action
 has the same level of abstraction as the output of the Perception mechanism,
 i.e., it includes the Robot's utterances, primitive actions and emotional
 expressions.
-
-\subsection{Mental States \& Emotion Instances}
-\label{sec:mental-states}
-
-The Mental States shown in Fig.\,\ref{fig:cpm} comprise the knowledge base
-required for all the mechanisms in the overall framework.
-
-\subsubsection{Beliefs}
-\label{sec:beliefs}
-\vspace*{-2mm}
-\textit{Beliefs} are a crucial part of the Mental States. We have two different
-perspectives on categorization of beliefs. In one perspective, we categorize
-beliefs based on whether or not they are shared between the collaborators. The
-SharedPlans \cite{grosz:plans-discourse} theory is the foundation of this
-categorization in which for any given proposition the Robot may have: a) private
-beliefs (the Robot believes the human does not know these), b) the inferred
-beliefs of the human (the Robot believes the human collaborator has these
-beliefs), and c) mutual beliefs (the Robot believes both the Robot and the human
-have these same beliefs and both of them believe that). From another
-perspective, we categorize beliefs based on who or what they are about. In this
-categorization, beliefs can be about the Robot, the human, or the environment.
-Beliefs about the environment can be about internal events, such as outcomes of
-a new appraisal or a new motive, or external events such as the human's offer,
-question or request, and general beliefs about the environment in which the
-Robot is situated. Beliefs can be created and updated by different processes.
-They also affect how these processes function as time passes.
-
-Beliefs have attributes and they impact different processes of the framework
-such as the evaluation of an external event by the Appraisal mechanism, and
-updates to the collaboration plan. We use three belief attributes in the Appraisal mechanism.
-Belief \textit{strength} is about how strongly the self holds salient beliefs
-about an object, an entity, or an anticipated behavior. The \textit{saliency} of
-a belief is a cognitive attribute that pertains to how easily the self becomes
-aware of a belief. The \textit{persistence} of a belief refers to how resistant
-the belief is to changes.
-
-\vspace*{-3mm}
-\subsubsection{Intentions}
-\label{sec:intentions}
-\vspace*{-3mm}
-\textit{Intentions} are mental constructs directed at future actions. They play
-an essential role in: a) taking actions according to the collaboration plan, b)
-coordination of actions with the human collaborator, c) formation of beliefs
-about the Robot and anticipated beliefs about the human, and d) behavior
-selection in the Coping mechanism. First, taking actions means that the Robot
-will intend to take an action for primitive tasks that have gained the focus of
-attention, possess active motives, and have satisfied preconditions for which
-required temporal predecessors have been successfully achieved. Second,
-intentions are involved in action coordinations in which the human's behavior
-guides the Robot to infer an anticipated behavior of the human. Third,
-intentions play a role in belief formation, mainly as a result of the permanence
-and commitment inherent to intentions in subsequent processes, e.g., appraisal
-of the human's reaction to the current action and self-regulation. Lastly,
-intentions are involved in selecting intention-related strategies, e.g.,
-planning, seeking instrumental support and procrastination, which is an
-essential category of the strategies in the Coping mechanism
-\cite{marsella:ema-process-model}. Intentions possess a set of attributes, e.g.
-\textit{involvement, certainty, ambivalence} which moderate the consistency
-between intention and behavior. The issue of consistency between the intentions
-(in collaboration) and the behaviors (as a result of the Coping mechanism in the
-appraisal cycle) is important because neither of these two mechanisms alone
-provides solution for this concern.
-
-\subsubsection{Motives}
-\label{sec:motives}
-\vspace*{-3mm}
-\textit{Motives} are mental constructs which can initiate, direct and maintain
-goal-directed behaviors. They are created by the emotion-regulated Motivation
-mechanism. Motives can cause the formation of a new intention for the robot
-according to: a) its own emotional states, b) its own private goal, c) the
-collaboration (shared) goal, and d) other's anticipated beliefs. Motives possess
-a set of attributes. The Motivation mechanism compares motives based on the
-quality of these attributes and chooses the one which is the most related to the
-current state of the collaboration. We also use two motive attributes in
-Appraisal mechanisms. The \textit{importance} of a motive is determined by the
-corresponding beliefs about the effects of achieving or not achieving the
-associated goal. The \textit{urgency} of a motive defines how much time the self
-has to acknowledge and address that motive before it is too late. These
-attributes are involved in the comparison of newly generated motives based on
-the current state of the collaboration. Ultimately, the Robot forms or updates
-an intention associated with the winning motive in the Mental States.
-
-\subsubsection{Goals}
-\label{sec:goals}
-
-\textit{Goals} help the Robot to create and update the structure of the
-collaboration plan. Goals direct the formation of intentions to take appropriate
-corresponding actions during collaboration. Goals also drive the Motivation
-mechanism to generate required motive(s) in uncertain or ambiguous situations,
-e.g., to minimize the risk of impasse or to reprioritize goals. Goals have
-three attributes. The \textit{specificity} of goals has two functions for the
-Robot. First, it defines the performance standard for evaluating the progress
-and quality of the collaboration. Second, it serves the Robot to infer the
-winner of competing motives. The \textit{proximity} of goals distinguishes goals
-according to how ``far'' they are from the ongoing task. Proximal (or
-short-term) goals are achievable more quickly, and result in higher motivation
-and better self-regulation than more temporally distant (or long-term) goals.
-Goals can influence the \textit{strength} of beliefs, which is an important
-attribute for regulating the elicitation of social emotions. The
-\textit{Difficulty} of goals impacts collaborative events and decisions in the
-appraisal, reverse appraisal, motive generation and intention formation
-processes. For instance, overly easy goals do not motivate; neither are humans
-motivated to attempt what they believe are impossible goals.
-
-\subsubsection{Emotion Instances}
-
-\textit{Emotions} in Mental States are emotion instances that are elicited by
-the Appraisal mechanism. These emotion instances include the Robot's own
-emotions as well as the anticipated emotions of the human which are created with
-the help of the processes in the Theory of Mind mechanism, e.g., worry.
 
 \section{Appraisal in Collaboration}
 \label{sec:appraisalCollaboraiton}
@@ -1232,7 +1238,6 @@ motive associated with the recognized goal (see details below). We use three
 belief attributes (see Section \ref{sec:mental-states}) to compute the
 belief-related part of the utility:
 
-\vspace*{-3mm}
 \begin{algorithm}
 	\caption{(Relevance)}
 	\label{alg:relevance}

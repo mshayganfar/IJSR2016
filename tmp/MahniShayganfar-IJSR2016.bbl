@@ -6,6 +6,12 @@ C.~Adam and E.~Lorini.
 \newblock In {\em Workshop on Agents and multi-agent Systems for AAL and
   e-HEALTH (PAAMS)}, volume 430, pages 66--78. Springer, 2014.
 
+\bibitem{adams:mixed-initiative}
+J.~A. Adams, P.~Rani, and N.~Sarkar.
+\newblock Mixed initiative interaction and robotic systems.
+\newblock In {\em AAAI-04 Workshop on Supervisory Control of Learning and
+  Adaptive Systems, Technical Report}, 2004.
+
 \bibitem{arnold:emotion-personality}
 M.~B. Arnold.
 \newblock {\em Emotion and personality}.
@@ -33,7 +39,7 @@ J.~Bach.
 J.~Bach.
 \newblock Micropsi 2: The next generation of the micropsi framework.
 \newblock In {\em Proceedings of the 5th International Conference on Artificial
-  General Intelligence}, AGI'12, pages 11--20. Springer-Verlag, 2012.
+  General Intelligence}, AGI'12, pages 11--20, 2012.
 
 \bibitem{bratman:intentions-plans}
 M.~E. Bratman.
@@ -104,7 +110,7 @@ J.~Gratch and S.~C.Marsella.
 J.~Gratch, S.~Marsella, N.~Wang, and B.~Stankovic.
 \newblock Assessing the validity of appraisal-based models of emotion.
 \newblock In {\em International Conference on Affective Computing and
-  Intelligent Interaction}. IEEE, 2009.
+  Intelligent Interaction}, 2009.
 
 \bibitem{grosz:intention-dynamics-collaboration}
 B.~J. Grosz and L.~Hunsberger.
@@ -132,17 +138,19 @@ B.~J. Grosz and C.~L. Sidner.
 \newblock In P.~R. Cohen, J.~Morgan, and M.~E. Pollack, editors, {\em
   Intentions in Communication}, pages 417--444. MIT Press, Cambridge, MA, 1990.
 
+\bibitem{hayes:challenges-collaboration}
+B.~Hayes and B.~Scassellati.
+\newblock Challenges in shared-environment human-robot collaboration.
+\newblock In {\em Proceedings of the 8th ACM/IEEE International Conference on
+  Human-Robot Interaction (HRI 2013) Workshop on Collaborative Manipulation},
+  2013.
+
 \bibitem{hudlicka:emotinos-reasons}
 E.~Hudlicka.
 \newblock Reasons for emotinos: Modeling emotinos in integrated cognitive
   systems.
 \newblock In W.~D. Gary, editor, {\em Integrated Models of Cognitive Systems},
   volume~59, pages 1--37. New York: Oxford University Press, 2007.
-
-\bibitem{marinier:emotion-reinforcement}
-R.~P.~M. III and J.~E. Laird.
-\newblock Emotion-driven reinforcement learning.
-\newblock In {\em CogSci 2008}, 2008.
 
 \bibitem{kabil:coordination-mechanisms}
 A.~Kabil, C.~D. Keukelaere, and P.~Chavaillier.
@@ -210,6 +218,11 @@ C.~Marinetti, P.~Moore, P.~Lucas, and B.~Parkinson.
 \newblock In {\em Emotion-Oriented Systems, Cognitive Technologies}, pages
   31--46. Springer Berlin Heidelberg, 2011.
 
+\bibitem{marinier:emotion-reinforcement}
+R.~P. {Marinier III} and J.~E. Laird.
+\newblock Emotion-driven reinforcement learning.
+\newblock In {\em CogSci}, 2008.
+
 \bibitem{marsella:robocup}
 S.~Marsella, J.~Adibi, Y.~Al-Onaizan, A.~Erdem, R.~Hill, G.~A. Kaminka, Z.~Qiu,
   and M.~Tambe.
@@ -235,12 +248,27 @@ B.~Mutlu, A.~Terrell, and C.-M. Huang.
 \newblock In {\em Proceedings of the HRI 2013 Workshop on Collaborative
   Manipulation}, 2013.
 
+\bibitem{nakajima:social-intelligence-collaborative}
+H.~Nakajima, S.~Brave, H.~Maldonado, M.~Arao, Y.~Morishima, R.~Yamada, C.~Nass,
+  and S.~Kawaji.
+\newblock Toward an actualization of social intelligence in human and robot
+  collaborative systems.
+\newblock In {\em IROS}, pages 3238--3243, 2004.
+
 \bibitem{nikolaidis:collaboration-joint-action}
 S.~Nikolaidis, P.~A. Lasota, G.~F. Rossano, C.~Martinez, T.~A. Fuhlbrigge, and
   J.~A. Shah.
 \newblock Human-robot collaboration in manufacturing: Quantitative evaluation
   of predictable, convergent joint action.
 \newblock In {\em ISR}, pages 1--6, 2013.
+
+\bibitem{novikova:expressive-robot-collaboration}
+J.~Novikova, L.~A. Watts, and T.~Inamura.
+\newblock Emotionally expressive robot behavior improves human-robot
+  collaboration.
+\newblock In {\em 24th {IEEE} International Symposium on Robot and Human
+  Interactive Communication, {RO-MAN} 2015, Kobe, Japan, August 31 - September
+  4, 2015}, pages 7--12, 2015.
 
 \bibitem{paiva:agent-care}
 A.~Paiva, J.~Dias, D.~Sobral, R.~Aylett, P.~Sobreperez, S.~Woods, C.~Zoll, and
@@ -253,8 +281,8 @@ A.~Paiva, J.~Dias, D.~Sobral, R.~Aylett, P.~Sobreperez, S.~Woods, C.~Zoll, and
 \bibitem{paiva:emotion-modeling}
 A.~Paiva, I.~Leite, and T.~Ribeiro.
 \newblock Emotion modeling for sociable robots.
-\newblock In J.~G. A.~K. Rafael A.~Calvo, Sidney~D'Mello, editor, {\em Handbook
-  of Affective Computing}, pages 296--308. Oxford University Press, 2014.
+\newblock In {\em Handbook of Affective Computing}, pages 296--308. Oxford
+  University Press, 2014.
 
 \bibitem{planalp:communicating-emotion}
 S.~Planalp.
@@ -408,7 +436,7 @@ T.~Wehrle.
 \bibitem{wisecup:sociology-emotions}
 A.~K. Wisecup, D.~T. Robinson, and L.~Smith-Lovin.
 \newblock {\em The Sociology of Emotions}.
-\newblock SAGE Publications, Inc., 2007.
+\newblock SAGE Publications, 2007.
 
 \bibitem{yen:cast}
 J.~Yen, J.~Yin, T.~R. Ioerger, M.~S. Miller, D.~Xu, and R.~A. Volz.
